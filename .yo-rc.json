@@ -1,0 +1,23 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "bfi",
+    "buildTool": "gradle",
+    "clientFramework": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "enableHibernateCache": false,
+    "entities": ["Location", "Evse", "Connector"],
+    "jhipsterVersion": "8.3.0",
+    "jwtSecretKey": "NWIwYTdkZTRiYWZiZTg2ZDM1YjMwOWMwMjA4ZDE4ODZiODViZmVjNDhkNzE4Y2NmZTEyYTE4ZDBkZTJhZDY3NmFkZWE0ZWE5ZjVkNTJkNjAwZjY0MGIzNDFjNmE5Nzk3ZjgxNDhhOTdkNTU1NDE2YTJhODJjMzgwZWMzM2Q1M2Y=",
+    "languages": ["ko", "en"],
+    "lastLiquibaseTimestamp": 1713249399000,
+    "nativeLanguage": "ko",
+    "packageFolder": "com/example/bfi",
+    "packageName": "com.example.bfi",
+    "prodDatabaseType": "mongodb",
+    "skipClient": true
+  }
+}

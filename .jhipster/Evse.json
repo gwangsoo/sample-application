@@ -1,0 +1,57 @@
+{
+  "annotations": {
+    "changelogDate": "20240416063539"
+  },
+  "applications": ["bfi"],
+  "documentation": "충전기",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "36"
+    },
+    {
+      "fieldName": "evseId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "48"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "EvseStatus",
+      "fieldTypeDocumentation": "충전기상태",
+      "fieldValues": "AVAILABLE,BLOCKED,CHARGING,INOPERATIVE,OUTOFORDER,PLANNED,REMOVED,RESERVED,UNKNOWN"
+    },
+    {
+      "fieldName": "directions",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "fieldName": "lastUpdated",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "Evse",
+  "relationships": [
+    {
+      "otherEntityName": "connector",
+      "otherEntityRelationshipName": "evse",
+      "relationshipName": "connector",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "evse",
+      "relationshipName": "location",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
