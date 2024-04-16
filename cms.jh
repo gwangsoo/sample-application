@@ -1,0 +1,1021 @@
+application {
+  config {
+    baseName toss
+    applicationType monolith
+    packageName com.phoenix.toss
+    authenticationType jwt
+    prodDatabaseType postgresql
+    clientFramework vue
+    buildTool gradle
+    languages [en,ko,jp]
+    nativeLanguage ko
+  }
+  entities *
+  dto * with mapstruct
+  service * with serviceImpl
+//  paginate Reservation with infinite-scroll
+//  paginate Room with pagination
+}
+
+//DEFAULT_MIN_LENGTH = 1
+//DEFAULT_MAX_LENGTH = 42
+//DEFAULT_USER_NAME_MAX_LENGTH = 128
+//DEFAULT_MIN_BYTES = 20
+//DEFAULT_MAX_BYTES = 40
+//DEFAULT_MIN = 0
+//DEFAULT_MAX = 41
+
+/** 국가 https://help.ads.microsoft.com/#apex/18/ko/10004/-1 */
+entity Nation (tb_nation) {
+  id String required maxlength(16) unique
+  name String required maxlength(128)
+}
+
+/** 언어 */
+entity Language (tb_language) {
+  id String required maxlength(3) unique
+  name String required maxlength(128)
+}
+
+/** 통화 https://namu.wiki/w/ISO%204217 */
+entity Currency (tb_currency) {
+  id String required maxlength(3) unique
+  name String required maxlength(128)
+}
+
+/** 납부방법 */
+enum PaymentMethodType {
+  PG("Payment Gateway"),
+  CASH("현금")
+}
+
+/** 경기유형 */
+enum TournamentType {
+  ROUND_ROBIN("Round robin"),
+  S_ELIMINATION("S.Elimination"),
+  D_ELIMINATION("D.Elimination"),
+  RR_ELIMINATION("RoundRobin Elimination")
+}
+
+/** 경기유형(서브) */
+enum SubTournamentType {
+  S_ELIMINATION("S.Elimination"),
+  D_ELIMINATION("D.Elimination")
+}
+
+/** 대회상태 */
+enum CompetitionStatus {
+  PREPARE("Open 대기"),
+  OPENING("Open 중"),
+  CLOSE("종료")
+}
+
+/** 역할(권한) */
+//enum OperatorRole {
+//  SUPERVISOR,
+//  NATIONAL_DEALER,
+//  GENERAL_USER,
+//  PLAYER
+//}
+
+/** 참가신청방법 */
+enum EntryApplyType {
+  APP("App(user)"),
+  DIRECT("직접입력(Operator)")
+}
+
+/** 참가래이팅유형 */
+enum EntryRatingType {
+  AUTO("자동산출(Card)"),
+  DIRECT("직접등록(Player)")
+}
+
+/** 참가승인방법 */
+enum EntryApprovalType {
+  AUTO("자동승인"),
+  MANUAL("수동승인")
+}
+
+/** 오퍼레이터 */
+//entity Operator {
+//  id String required maxlength(16) unique
+//  location String maxlength(128)
+//  name String required maxlength(256)
+//  phone String maxlength(20)
+//  email String maxlength(128)
+//
+//  permission OperatorRole required
+//}
+
+/** 대회 */
+entity Competition (tb_competition) {
+  id String required maxlength(16) unique
+  /** 대회명 */
+  name String required maxlength(256)
+  /** 대회기간(시작일자) */
+  startDateTime Instant required
+  /** 대회기간(종료일자) */
+  endDateTime Instant required
+  /** 참가기간(시작일자) */
+  entryStartDateTime Instant required
+  /** 참가기간(종료일자) */
+  entryEndDateTime Instant required
+  /** 대회상태 */
+  status CompetitionStatus required
+  /** 대회 승인 상태*/
+  approval Boolean required
+  /** 참가신청방법 */
+  entryApplyType EntryApplyType required
+  /** 참가래이팅유형 */
+  entryRatingType EntryRatingType required
+}
+
+/** Seeding Rule */
+enum SeedingRuleType {
+  RANDOM("Random"),
+  RATING("Rating"),
+  PPD("PPD"),
+  MPR("MPR"),
+  SHUFFLE("Shuffle"),
+  SPANISH("Spanish"),
+  CSV_SEED_LOADING("CSV Seed Loading"),
+  ROUND_ROBIN("Round Robin 연동")
+}
+
+/** Division Rule */
+enum DivisionRuleType {
+  CARD_RATING("Card Rating"),
+  GENERAL_RATING("General Rating"),
+  COMPETITION_RATING("Competition Rating"),
+  INPUT_RATING("Input Rating (Operator)"),
+  HIGHER_RATING("Higher Rating (Competition, General)"),
+  NO_CLASSIFICATION("No Classification"),
+  EVENT_POINT("Event Point")
+}
+
+/** 토너먼트 Play Mode */
+enum TournamentPlayMode {
+  SINGLE("Single"),
+  DOUBLE("Double"),
+  TRIO("Trio"),
+  GALLON("Gallon")
+}
+
+/** 디비전 배정 방법 */
+enum DivisionAssignMethod {
+  AUTO("자동배정 (미공개)"),
+  PLAYER("플레이어 선택 (공개)")
+}
+
+/** 참가자 성별 */
+enum EntryGengerType {
+  ALL("All"),
+  MALE("Male"),
+  FEMALE("Female"),
+  CONCOCTION("Concoction")
+}
+
+/** Handicap */
+enum HandicapType {
+  NO("No Handicap"),
+  OFFICIAL("Official Handicap"),
+  BIGINNER("Biginner Handicap")
+}
+
+/** 토너먼트 */
+entity Tournament (tb_tournament) {
+  id String required maxlength(16) unique
+  /** 토너먼트명 */
+  name String required maxlength(256)
+  /** 대회진행일(차수) */
+  day Integer required min(1)
+  /** 패자 부활 Tournament 여부 */
+  eventTournament Boolean
+  /** 참가마감 버튼 */
+  entryClose Boolean
+  /** 참가승인방법 */
+  entryApprovalType EntryApprovalType required
+  /** 토너먼트유형 */
+  tournamentType TournamentType required
+  /** 서브토너먼트유형 */
+  subTournamentType SubTournamentType
+  /** Seeding Rule */
+  seedingRule SeedingRuleType required
+  /** 토너먼트 Play Mode */
+  tournamentPlayMode TournamentPlayMode required
+  /** 3위 결정 여부 */
+  thirdPlaceDecision Boolean
+  /** Division 구분 기준 */
+  divisionRule DivisionRuleType required
+  /** 엔트리 인원수 설정 false: unlimited, true: limit*/
+  entryLimit Boolean required
+  /** 엔트리인원수 */
+  numOfEntry Integer required min(0)
+  /** 디비전배정방법 */
+  divisionAssignMethod DivisionAssignMethod required
+  /** 참가자 성별 */
+  entryGenderType EntryGengerType required
+  /** Handicap */
+  handicap HandicapType required
+}
+
+/** 라운드로빈 순위 결정 방식 */
+enum RoundRobinRankingDecisionType {
+  PERFECT("Perfect"),
+  AMATEUR1("아마추어1"),
+  AMATEUR2("아마추어2"),
+  AMATEUR3("아마추어3"),
+  AMATEUR4("아마추어4")
+}
+
+/** 라운드로빈 그룹 종류 */
+enum RoundRobinGroupType {
+  TEAM4("4 (Team) / Group"),
+  TEAM5("5 (Team) / Group"),
+  TEAM6("6 (Team) / Group"),
+  TEAM6_4MATCH("6 (Team) / Group - 4 Matches"),
+  TEAM4_2TIME_MATCH("4 (Team) / Group - Matche x 2 Times")
+}
+
+/** 다음(결승) 라운드 진출 방식 */
+enum NextRoundDecisionType {
+  FIRST("1위"),
+  FIRST_SECOND("1위 ~ 2위"),
+  FIRST_THIRD("1위 ~ 3위"),
+  FIRST_FOURTH("1위 ~ 4위"),
+  FIRST_FIFTH("1위 ~ 5위")
+}
+
+/** 라운드로빈 3위 결승 진출 랭킹 기준 */
+enum ThirdDecisionRankingRule {
+  RATING("Rating"),
+  PPD("PPD"),
+  MPR("MPR"),
+  WIN_LOSE("Win / Lose"),
+  MANUAL_DECISION("Manual Decision")
+}
+
+/** AttendanceStatusType */
+enum AttendanceStatusType {
+  RESTORE("원복"),
+  GIVE_UP("기권"),
+  ATTEND("출석")
+}
+
+/** Event Range 구분 기준 */
+enum EventRangeType {
+  CARD_RATING("Card Rating"),
+  GENERAL_RATING("General Rating"),
+  COMPETITION_RATING("Competition Rating"),
+  HIGHER_RATING("Higher Rating(Competition, Genera)")
+}
+
+/** 디비전 */
+entity Division (tb_division) {
+  id String required maxlength(16) unique
+  /** 디비전명 */
+  name String required maxlength(256)
+  /** 팀합산 Rating (최소) */
+  ratingRuleTeamMin Float min(0)
+  /** 팀합산 Rating (최대) */
+  ratingRuleTeamMax Float min(0)
+  /** 개인 레이팅 제한 여부 false: unlimited, true: limit */
+  ratingRuleIndividualLimit Boolean
+  /** 개인 Rating (최소) */
+  ratingRuleIndividualMin Float min(0)
+  /** 개인 Rating (최대) */
+  ratingRuleIndividualMax Float min(0)
+  /** 참가자 인원수 설정 false: unlimited, true: limit*/
+  entryLimit Boolean required
+  /** 라운드로빈 순위 결정 방식 */
+  roundRobinRankingDecisionType RoundRobinRankingDecisionType
+  /** 라운드로빈 그룹 종류 */
+  roundRobinGroupType RoundRobinGroupType
+  /** 다음(결승) 라운드 진출 방식 */
+  nextRoundDecisionType NextRoundDecisionType
+  /** 라운드로빈 3위 결승 진출 여부 */
+  roundRoginThirdDecision Boolean
+  /** 라운드로빈 3위 결승 진출 랭킹 기준 */
+  thirdDecisionRankingRule ThirdDecisionRankingRule
+  /** 모든 Round 동일 Format 사용 */
+  useAllRoundSameFormat Boolean
+  /** Event Range 구분 기준 */
+  eventRangeType EventRangeType
+  /** elimination team 수 */
+  eliminationTeamCount Integer
+}
+
+/** 매치포맷 유형 */
+enum MatchFormatType {
+  GENERAL("General"),
+  TEMPLATE("Template")
+}
+
+/** 게임 */
+entity Game (tb_game) {
+  id String required maxlength(16) unique
+  /** 게임카테고리 */
+  gameCategoryType GameCategoryType required
+  /** 게임명 */
+  name String required maxlength(256)
+  /** 게임설명 */
+  description String required maxlength(256)
+  /** 라운드수 기본값 */
+  roundNumDefault Integer
+  /** 라운드수 범위(최소) */
+  roundNumMin Integer
+  /** 라운드수 범위(최대) */
+  roundNumMax Integer
+  /** 라운드수 무제한 */
+  roundNumUnlimit Integer
+}
+
+/** 선공설정 */
+enum FirstStrikeType {
+  COIN_TOSS("Coin Toss"),
+  CENTER_CORK("Center Cork"),
+  PREV_LOSER_FIRST("Previous Loser First"),
+  RESERVE("Reserve")
+}
+
+/** Leg Play Mode */
+enum LegPlayMode {
+  SINGLE("Single"),
+  DOUBLE("Double"),
+  TRIO("Trio"),
+  GALLON("Gallon"),
+  TEAM_2("Team 2")
+}
+
+/** 매치포맷 */
+entity MatchFormat (tb_matchformat) {
+  id String required maxlength(16) unique
+  /** 매치포맷명 */
+  name String required maxlength(256)
+  /** 매치포맷 설명 */
+  description String required maxlength(256)
+  /** 매치포맷유형 */
+  matchFormatType MatchFormatType required
+  /** Set 선공 설정 */
+  firstSet FirstStrikeType
+  middleSet FirstStrikeType
+  lastSet FirstStrikeType
+}
+
+/** 게임카테고리 */
+enum GameCategoryType {
+  GAME_01("01 Game"),
+  CRICKET("Cricket"),
+  PRACTICE("Practice")
+}
+
+/** 게임 */
+enum GameType {
+  GAME_301("301 Game"),
+  GAME_501("501 Game"),
+  GAME_701("701 Game"),
+  GAME_901("901 Game"),
+  GAME_1101("1101 Game"),
+  GAME_151("1501 Game"),
+  CRICKET_STANDARD("Standard Cricket"),
+  CRICKET_CUT_THROAT("Cut-Throat Cricket"),
+  COUNT_UP("Count-Up"),
+  CRICKET_COUNT_UP("Cricket Count-Up"),
+  BULL_SHOT("Bull Shot"),
+  HALF_IT("Half-It")
+}
+
+/** Credit(별도 게임비용) */
+enum MachineCreditType {
+  MACHINE_DEFAULT("Machine Default Credit"),
+  FREE("Free"),
+  NUM_1("1"),
+  NUM_2("2"),
+  NUM_3("3"),
+  NUM_4("4"),
+  NUM_5("5"),
+  NUM_6("6"),
+  NUM_7("7"),
+  NUM_8("8"),
+  NUM_9("9"),
+  NUM_10("10"),
+  NUM_11("11"),
+  NUM_12("12"),
+  NUM_13("13"),
+  NUM_14("14"),
+  NUM_15("15"),
+  NUM_16("16"),
+  NUM_17("17"),
+  NUM_18("18"),
+  NUM_19("19"),
+  NUM_20("20")
+}
+
+/** 매치포맷 게임 */
+entity MatchFormatGame (tb_matchformat_game) {
+  id String required maxlength(16) unique
+  /** 게임카테고리 */
+  gameCategoryType GameCategoryType required
+  /** 라운드수 */
+  roundNum Integer required
+  /** Credit(별도 게임비용) */
+  machineCreditType MachineCreditType required
+  /** Choice 게임 포함 여부 */
+  includingChoiceGame Boolean
+}
+
+/** 매치포맷 In Option */
+enum MatchFormatInOptionType {
+  OPEN("Open"),
+  DOUBLE("Double"),
+  TRIPLE("Triple"),
+  MASTER("Master"),
+  MASTER_BULL_0("Master Bull -> 0"),
+  MASTER_BULL_BUST("Master Bull -> Bust"),
+  MASTER_BULL_LOSE("Master Bull -> Lose"),
+  DOUBLE_BULL_0("Double Bull -> 0"),
+  DOUBLE_BULL_BUST("Double Bull -> Bust"),
+  DOUBLE_BULL_LOSE("Double Bull -> Lose")
+}
+
+/** 매치포맷 Out Option */
+enum MatchFormatOutOptionType {
+  OPEN("Open"),
+  DOUBLE("Double"),
+  MASTER("Master"),
+  MASTER_BULL_0("Master Bull -> 0"),
+  MASTER_BULL_BUST("Master Bull -> Bust"),
+  MASTER_BULL_LOSE("Master Bull -> Lose"),
+  DOUBLE_BULL_0("Double Bull -> 0"),
+  DOUBLE_BULL_BUST("Double Bull -> Bust"),
+  DOUBLE_BULL_LOSE("Double Bull -> Lose")
+}
+
+/** 매치포맷 Bull Option */
+enum MatchFormatBullOptionType {
+  BULL_25_50("25/50 (Separator Bull)"),
+  BULL_50_50("50/50 (Fat Bull)")
+}
+
+/** 매치포맷 Freeze Option */
+enum MatchFormatFreezeOptionType {
+  BUST("Bust"),
+  LOSE("Lose")
+}
+
+/** 매치포맷 Team Finish Option */
+enum MatchFormatTeamFinishOptionType {
+  ONE_PLAYER_ONLY("1Player Only"),
+  ALL_PLAYER("1P & 2P")
+}
+
+/** 매치포맷 옵션 */
+entity MatchFormatOption (tb_matchformat_option) {
+  id String required maxlength(16) unique
+
+  /** 01게임 In Option */
+  game01InOptionType MatchFormatInOptionType
+  /** 01게임 Out Option */
+  game01OutOptionType MatchFormatOutOptionType
+  /** 01게임 Bull Option */
+  game01BullOptionType MatchFormatBullOptionType
+  /** 01게임 arrange */
+  game01Arrange Boolean
+
+  /** Cricket Over Kill */
+  cricketOverKill Boolean
+  /** Cricket Score */
+  cricketScore Integer
+
+  /** Team 01게임 Freeze View */
+  teamGame01FreezeView Boolean
+  /** Team 01게임 Freeze Option */
+  teamGame01FreezeView MatchFormatFreezeOptionType
+  /** Team 01게임 Point */
+  teamGame01Point Boolean
+
+  /** Team Cricket Mark */
+  teamCricketMark Boolean
+  /** Team Cricket Finish */
+  teamCricketFinish MatchFormatTeamFinishOptionType
+  /** Team Cricket Point */
+  teamCricketPoint Boolean
+}
+
+/** 매치포맷 SET */
+entity MatchFormatSet (tb_matchformat_Set) {
+  id String required maxlength(16) unique
+  /** 승리 시에 획득하는 Point */
+  point Integer required min(1)
+}
+
+/** 매치포맷 LEG */
+entity MatchFormatLeg (tb_matchformat_leg) {
+  id String required maxlength(16) unique
+  /** LEG 순서 */
+  seq Integer
+  /** 선공설정 */
+  firstStrikeType FirstStrikeType required
+  /** 플레이모드 */
+  playMode LegPlayMode
+}
+
+/** 이벤트 포인트 */
+entity EventPoint (tb_eventpoint) {
+  id String required maxlength(16) unique
+  /** 순서 */
+  seq Integer required
+  /** Rating */
+  rating Integer required
+  /** Rating 범위(최소) */
+  ratingMin Double
+  /** Rating 범위(최대) */
+  ratingMax Double
+}
+
+/** 그룹 */
+entity Group (tb_group) {
+  id String required maxlength(16) unique
+}
+
+/** Team */
+entity Team (tb_team) {
+  id String required maxlength(16) unique
+}
+
+/** 매치상태 */
+enum MatchStatus {
+  WAIT("대기"),
+  PLAYING("진행중"),
+  CLOSE("종료")
+}
+
+/** 매치(테니스-매치) */
+entity Match (tb_match) {
+  id String required maxlength(16) unique
+  /** Match 번호 */
+  matchNumber Integer required
+  /** 출석 상황*/
+  attendanceStatusType AttendanceStatusType
+  /** 매치상태 */
+  matchStatus MatchStatus required
+}
+
+/** 세트(테니스-세트) */
+entity Set (tb_set) {
+  id String required maxlength(16) unique
+}
+
+/** 레그(테이니-게임) */
+entity Leg (tb_leg) {
+  id String required maxlength(16) unique
+}
+
+/** Player (비회원 포함) */
+entity Player (tb_player) {
+  id String required maxlength(16) unique
+  /** 선수 이름 */
+  name String maxlength(DEFAULT_USER_NAME_MAX_LENGTH) required
+  /** 비회원 구분 */
+  nonMembers Boolean required
+  /** 주문번호 */
+  orderNum Integer required
+  /** 결제 수단 */
+  paymentMethod PaymentMethodType required
+  /** 결제 상태 */
+  paymentStatus PaymentStatusType required
+  /** 결제 일시 */
+  paymentDateTime ZonedDateTime required
+}
+
+/** 참가비 구분 */
+enum EntryFeeType{
+  FREE("무료"),
+  PAY("유료")
+}
+
+/** 참가비 상세 구분 */
+enum EntryFeeSubType{
+  DAY("일별"),
+  TOURNAMENT("토너먼트별")
+}
+
+/** 참가비 */
+entity EntryFee (tb_entry_fee) {
+  id String required maxlength(16) unique
+  /** 참가비 구분 */
+  entryFeeType EntryFeeType required
+  /** 참가비 상세 구분 */
+  entryFeeSubType EntryFeeSubType
+  /** 참가비 납부 방법*/
+  paymentMethodType PaymentMethodType
+  /** 일별/토너먼트 */
+  scheduleNumber Integer max(1) required
+  /** 유료 시 참가비 */
+  fee Integer
+}
+
+/** 파일정보 */
+entity FileInfo (tb_fileinfo) {
+  id String required maxlength(16) unique
+  /** 원래파일명 */
+  originalName String required maxlength(256)
+  /** MIME */
+  mimeType String required maxlength(128)
+  /** 파일사이즈 */
+  fileSize Long
+  /** 파일저장경로 */
+  savedPath String required maxlength(256)
+}
+
+relationship OneToMany {
+  Competition to Tournament
+  Tournament to Division
+  Division to MatchFormat
+  Division to EventPoint
+  Division to Group
+  Group to Team
+
+  MatchFormat to MatchFormatGame
+  MatchFormat to MatchFormatOption
+  MatchFormat to MatchFormatSet
+  MatchFormatSet to MatchFormatLeg
+
+  Match to Set
+  Set to Leg
+
+  Reward to RewardDetail
+  RewardDetail to RewardItem
+}
+
+relationship ManyToOne {
+  Competition to Nation
+  Competition{competitionImage} to FileInfo
+  Competition to Operator
+  Competition{originalCompetition} to Competition
+  Competition to EntryFee
+
+  MatchFormatGame to Game
+  MatchFormatLeg to Game
+  MatchFormatLeg{option} to MatchFormatOption
+
+  Match{homeTeam} to Team
+  Match{awayTeam} to Team
+  Match to MachineInfo
+
+  Entry to Division
+  Entry to Player
+  Entry to Team
+  Entry to ShopInfo
+  Entry to ClubInfo
+  Entry to PaymentInfo
+
+  EntryFee to Currency
+
+  Team to Player
+
+  Operator to Nation
+  ShopInfo to FileInfo
+  MachineInfo to MachinePlace
+  MachineInfo to Tournament
+  Tournament to EntryFee
+
+  OperatorRole to Operator
+  Country to Operator
+  Leg to RoundRobinScore
+  Group to RoundRobinScore
+  Match to EliminationScore
+  Seed to EliminationScore
+
+  Result to Match{homeTeam}
+  Result to Match{awayTeam}
+  Result to Match{winnerTeam}
+  RoundRobinScore  to Match{homeTeam}
+  RoundRobinScore  to Match{awayTeam}
+  EliminationScore to Match{homeTeam}
+  EliminationScore to Match{awayTeam}
+
+  Competition to Reward
+  RewardItem{itemImage} to FileInfo
+
+  Bracket to Match
+  Bracket to Group
+  Bracket to Entry
+  Bracket to Result
+  Bracket to PlayerCall
+  Bracket to EliminationScore
+}
+
+
+/** 04-08 창건 작업*/
+
+/** 결제 상태 */
+enum PaymentStatusType {
+  /** 결제 대기/요청*/
+  WAITING_PAYMENT("1"),
+  /** 결제 완료*/
+  COMPLETE_PAYMENT("2"),
+  /** 취소 대기*/
+  WAITING_PAYMENT_CANCELLATION("3"),
+  /** 취소 완료*/
+  PAYMENT_CANCELLATION_COMPLETED("4")
+}
+
+/** 참가자 참여 여부 상태 */
+enum EntryApprovalStatusType {
+  WAITING_ENTRY("승인 대기"),
+  COMPLETE_ENTRY("승인 완료"),
+  WAITING_ENTRY_CANCELLATION("취소 대기"),
+  ENTRY_CANCELLATION_COMPLETED("취소 완료")
+}
+
+/** 등급 구분*/
+enum DivisionType{
+  PERFECT("Perfect"),
+  PLATINUM("Platinum"),
+  GOLD("Gold"),
+  SILVER("Silver"),
+  BRONZE("Bronze")
+}
+
+/**  Apply 구분 */
+enum ApplyType{
+  SHOP("Shop"),
+  CLUB("Club")
+}
+
+/** 머신 종류*/
+enum MachineKindType{
+  VSS_S4("VSS[S4]"),
+  VSX("VSX"),
+  VSX_MAX("VSX-Max")
+}
+
+/** 머신 상태*/
+enum MachineStatusType{
+  NOT_USE("빈머신"),
+  R_ROBIN("R.Robin"),
+  WAIT("대기중"),
+  PROGRESS("진행중"),
+  FAULT("고장")
+}
+
+/** shop */
+entity ShopInfo (tb_shop_info) {
+  id String required maxlength(16) unique
+  name String required maxlength(500)
+  address String required maxlength(500)
+  tel String required maxlength(30)
+  homepageUrl String maxlength(150)
+}
+
+/** club */
+entity ClubInfo (tb_club_info) {
+  id String required maxlength(16) unique
+  name String required maxlength(500)
+  address String required maxlength(500)
+  tel String required maxlength(30)
+  homepageUrl String maxlength(150)
+}
+
+/** 참가자 */
+entity Entry (tb_entry) {
+  id String required maxlength(16) unique
+  /** 참가자 참여 여부 상태 */
+  approvalStatus EntryApprovalStatusType required
+  /** shop/club 구분 동호회는 kr만 존재 */
+  applyType ApplyType required
+  
+  /*
+    // 참가자 선수 정보
+    Entry to Player
+    // 참가자 팀 정보
+    Entry to Team
+    // 참가자 샵 정보
+    Entry to ShopInfo
+    // 참가자 클럽 정보
+    Entry to ClubInfo
+    // 참가자 결제 정보
+    Entry to PaymentInfo
+  */
+}
+
+/** 결제 정보*/
+entity PaymentInfo (tb_payment_info){
+  id String required maxlength(16) unique
+  /** 참가자 결제 상태 */
+  orderNumber String maxlength(50)
+  /** 결제 일자 */
+  paymentCompletedDate Instant
+  /** 결제 수단*/
+  status PaymentStatusType required
+  /** 결제 수단*/
+  paymentMethodType PaymentMethodType
+  /** PG 결제 TID */
+  pgTID Integer
+  /** PG 결제 상태 */
+  pgStatus Integer min(1)
+  /** PG 결제 상세내용 */
+  pgDetail String maxlength(255)
+  /** 결제자 정보 */
+  payer String maxlength(50)
+  payerPhone String maxlength(20)
+}
+
+/** 머신 정보*/
+entity MachineInfo (tb_machine_info){
+  id String required maxlength(16) unique
+  /** 머신 종류 */
+  machineType MachineKindType required
+  /** 머신 상태 */
+  status MachineStatusType required
+}
+
+/** 머신 위치*/
+entity MachinePlace (tb_machine_place){
+  id String required maxlength(16) unique
+  /** 머신명*/
+  name String maxlength(50) required
+  /** 머신 위치 출력(열) 순서*/
+  order Integer required
+}
+
+/** 대회 View */
+enum OperatorGradeType {
+  GLOBAL("전체국가대회")
+  NATIONAL("해당국가대회"),
+  REGION("해당지역대회"),
+  SHOP("해당Shop엔트리")
+}
+
+enum OperatorGradeAuthType {
+  WRITE("Write"),
+  VIEW("View"),
+  OPEN("Open")
+}
+
+/** 국가 코드 */
+entity Country(tb_nation){
+  id String required maxlength(16) unique
+  /** 국가코드 */
+  nationCode String required maxlength(3) unique
+  koName String required maxlength(50)
+  enName String required maxlength(50)
+}
+
+/** 관리자 Role */
+entity OperatorRole (tb_operator_role){
+  id String required maxlength(16) unique
+  /** Role 명*/
+  name String required maxlength(50)
+  /** 등급 */
+  gradeType OperatorGradeType required
+  /** 권한등급 */
+  authType OperatorGradeAuthType required
+  /** 출력 순서 */
+  order Integer required
+}
+
+/** 관리자 */
+entity Operator (tb_operator){
+  id String required maxlength(16) unique
+  /** 계정 */
+  userId String required maxlength(50) unique
+  /** 이름 */
+  userName String required maxlength(50) unique
+  /** 모바일 */
+  phone String maxlength(20)
+  /** 이메일 */
+  email String maxlength(128)
+  /** 주소 */
+  address String maxlength(256)
+  /** 승인상태 */
+  approvalStatus Boolean required
+}
+
+
+/** 04-09 창건 작업*/
+
+/** 경기 결과*/
+entity Result (tb_result){
+  id String required maxlength(16) unique
+  /** 좌측/위 점수 **/
+  homeTeamTotalScore Integer required
+  /** 우측/아래 점수 **/
+  awayTeamTotalScore Integer required
+  /** 집에간 팀? */
+  byeTeam Boolean
+}
+
+/** 라운드 로빈 경기 결과*/
+entity RoundRobinScore (tb_roundrobin_score){
+  id String required maxlength(16) unique
+  homeTeamScore Integer
+  awayTeamScore Integer
+}
+
+/** Elimination 경기 결과*/
+entity EliminationScore (tb_elimination_score){
+  id String required maxlength(16) unique
+  homeTeamScore Integer
+  awayTeamScore Integer
+}
+
+/** seed num*/
+entity Seed (tb_seed){
+  id String required maxlength(16) unique
+  /** seed 번호 */
+  number Integer required
+}
+
+/** 리워드지급방법1 */
+enum RewardMethodType {
+  DAY("일별"),
+  TOURNAMENT("토너먼트별")
+}
+
+/** 리워드지급방법2 */
+enum RewardMethodSubType {
+  ALL("All Division"),
+  DIVISION("Division별")
+}
+
+/** 리워드 */
+entity Reward (tb_reward) {
+  id String required maxlength(16) unique
+
+  /** 지급방법1 (리워드설정) */
+  rewardMethodType RewardMethodType required
+  /** 지급방법2 (리워드설정) */
+  rewardMethodSubType RewardMethodSubType required
+  /** 아이템카테고리 수 */
+  rewardCategoryNum Integer required
+  /** 머신종류 */
+  machineKindType MachineKindType
+}
+
+/** 리워드 */
+entity RewardDetail (tb_reward_detail) {
+  id String required maxlength(16) unique
+
+  /** 지급방법이 DAY대회명 + Day + Entry Item */
+  name String maxlength(256)
+
+  /** TODO */
+  tournamentId String
+  divisionId String
+}
+
+/** RewardItem */
+entity RewardItem (tb_rewad_item) {
+  id String required maxlength(16) unique
+  /** 아이템명*/
+  name String required maxlength(50) unique
+}
+
+/** 대진 진행 상태*/
+enum BracketProgressType{
+  PLAYING("진행중"),
+  WAIT("대기"),
+  END("종료")
+}
+
+/** 선수 호출 구분*/
+enum PlayerCallModeType{
+  AUTO_PROGRESS("자동 진행"),
+  MANUAL_PROGRESS("수동 진행")
+}
+
+/** 대진표 */
+entity Bracket (tb_bracket){
+  id String required maxlength(16) unique
+  /** 진행 상태*/
+  progress BracketProgressType required
+  /** memo */
+  memo String maxlength(1024)
+  /** 시작시간 */
+  startDateTime Instant
+  /** 종료시간 */
+  endDateTime Instant
+}
+
+/** 선수 호출 관리 */
+entity PlayerCall (tb_player_call){
+  id String required maxlength(16) unique
+  /**  선수 호출 구분 */
+  callMode PlayerCallModeType required
+  /** 1차 알림 상태*/
+  firstCallStatus Boolean
+  /** 1차 알림 방송 시간*/
+  firstCallDateTime Instant
+  /** 2차 알림 상태*/
+  secondCallStatus Boolean
+  /** 2차 알림 방송 시간*/
+  secondCallDateTime Instant
+  /** 3차 알림 상태*/
+  thirdCallStatus Boolean
+  /** 3차 알림 방송 시간*/
+  thirdCallDateTime Instant
+  /** TTS 메세지*/
+  ttsMessage String maxlength(1024)
+}
