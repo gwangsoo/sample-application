@@ -1,0 +1,74 @@
+
+application {
+  config {
+    baseName bfi
+    applicationType monolith
+    packageName com.example.bfi
+    authenticationType jwt
+    databaseType mongodb
+    clientFramework no
+    buildTool gradle
+    languages [en,ko,jp]
+    nativeLanguage ko
+  }
+  entities *
+//  dto * with mapstruct
+//  service * with serviceClass
+//  service * with serviceImpl
+//  paginate Reservation with infinite-scroll
+//  paginate Room with pagination
+}
+
+/** 충전소 */
+entity Location {
+  id String required maxlength(36) unique
+  countryCode String maxlength(2)
+  partyId String maxlength(36)
+  publish Boolean
+  name String maxlength(255)
+  address String maxlength(45)
+  city String maxlength(45)
+  postalCode String maxlength(10)
+  state String maxlength(20)
+  country String maxlength(3)
+  timeZone String maxlength(255)
+  chargingWhenClosed Boolean
+  lastUpdated ZonedDateTime
+}
+
+/** 충전기상태 */
+enum EvseStatus {
+  AVAILABLE,
+  BLOCKED,
+  CHARGING,
+  INOPERATIVE,
+  OUTOFORDER,
+  PLANNED,
+  REMOVED,
+  RESERVED,
+  UNKNOWN
+}
+
+/** 충전기 */
+entity Evse {
+  uid String required maxlength(36) unique
+  evseId String maxlength(48)
+  status EvseStatus
+  directions String maxlength(256)
+  lastUpdated ZonedDateTime
+}
+
+/** 컨넥터 */
+entity Connector {
+  id String required maxlength(36) unique
+  maxVoltage Integer
+  maxAmperage Integer
+  maxElectricPower Integer
+  tariffIds String maxlength(36)
+  lastUpdated ZonedDateTime
+}
+
+relationship OneToMany {
+  Location to Evse
+  Evse to Connector
+}
