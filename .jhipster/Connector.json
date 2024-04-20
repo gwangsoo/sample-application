@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240420091635"
+  },
+  "applications": ["bfi"],
+  "documentation": "컨넥터",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "36"
+    },
+    {
+      "fieldName": "maxVoltage",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxAmperage",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxElectricPower",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "tariffIds",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "36"
+    },
+    {
+      "fieldName": "lastUpdated",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "Connector",
+  "relationships": [
+    {
+      "otherEntityName": "evse",
+      "otherEntityRelationshipName": "connector",
+      "relationshipName": "evse",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
