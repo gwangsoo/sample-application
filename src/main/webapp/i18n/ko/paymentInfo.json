@@ -1,0 +1,43 @@
+{
+  "tossApp": {
+    "paymentInfo": {
+      "home": {
+        "title": "Payment Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Payment Info",
+        "createOrEditLabel": "Create or edit a Payment Info",
+        "notFound": "No Payment Infos found"
+      },
+      "created": "A new Payment Info is created with identifier { param }",
+      "updated": "A Payment Info is updated with identifier { param }",
+      "deleted": "A Payment Info is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Payment Info { id }?"
+      },
+      "detail": {
+        "title": "Payment Info"
+      },
+      "id": "Id",
+      "orderNumber": "Order Number",
+      "paymentCompletedDate": "Payment Completed Date",
+      "status": "Status",
+      "paymentMethodType": "Payment Method Type",
+      "pgTID": "Pg TID",
+      "pgStatus": "Pg Status",
+      "pgDetail": "Pg Detail",
+      "payer": "Payer",
+      "payerPhone": "Payer Phone",
+      "team": "Team",
+      "help": {
+        "orderNumber": "참가자 결제 상태",
+        "paymentCompletedDate": "결제 일자",
+        "status": "결제 수단",
+        "paymentMethodType": "결제 수단",
+        "pgTID": "PG 결제 TID",
+        "pgStatus": "PG 결제 상태",
+        "pgDetail": "PG 결제 상세내용",
+        "payer": "결제자 정보"
+      }
+    }
+  }
+}

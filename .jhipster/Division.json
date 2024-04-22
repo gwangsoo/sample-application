@@ -1,0 +1,161 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012330"
+  },
+  "applications": ["toss"],
+  "documentation": "디비전",
+  "dto": "mapstruct",
+  "entityTableName": "tb_division",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "디비전순서 (노출순서와 매치ID에 사용)",
+      "fieldName": "seq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "99",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "디비전명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "팀합산 Rating (최소)",
+      "fieldName": "ratingRuleTeamMin",
+      "fieldType": "Float",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "팀합산 Rating (최대)",
+      "fieldName": "ratingRuleTeamMax",
+      "fieldType": "Float",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "개인 레이팅 제한 여부 false unlimited, true limit",
+      "fieldName": "ratingRuleIndividualLimit",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "개인 Rating (최소)",
+      "fieldName": "ratingRuleIndividualMin",
+      "fieldType": "Float",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "개인 Rating (최대)",
+      "fieldName": "ratingRuleIndividualMax",
+      "fieldType": "Float",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "참가자 인원수 설정 false unlimited, true limit",
+      "fieldName": "entryLimit",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "라운드로빈 순위 결정 방식",
+      "fieldName": "roundRobinRankingDecisionType",
+      "fieldType": "RoundRobinRankingDecisionType",
+      "fieldTypeDocumentation": "라운드로빈 순위 결정 방식",
+      "fieldValues": "PERFECT (Perfect),AMATEUR1 (아마추어1),AMATEUR2 (아마추어2),AMATEUR3 (아마추어3),AMATEUR4 (아마추어4)"
+    },
+    {
+      "documentation": "라운드로빈 그룹 종류",
+      "fieldName": "roundRobinGroupType",
+      "fieldType": "RoundRobinGroupType",
+      "fieldTypeDocumentation": "라운드로빈 그룹 종류",
+      "fieldValues": "TEAM4 (4 (Team) / Group),TEAM5 (5 (Team) / Group),TEAM6 (6 (Team) / Group),TEAM6_4MATCH (6 (Team) / Group - 4 Matches),TEAM4_2TIME_MATCH (4 (Team) / Group - Matche x 2 Times)"
+    },
+    {
+      "documentation": "다음(결승) 라운드 진출 방식",
+      "fieldName": "nextRoundDecisionType",
+      "fieldType": "NextRoundDecisionType",
+      "fieldTypeDocumentation": "다음(결승) 라운드 진출 방식",
+      "fieldValues": "FIRST (1위),FIRST_SECOND (1위 ~ 2위),FIRST_THIRD (1위 ~ 3위),FIRST_FOURTH (1위 ~ 4위),FIRST_FIFTH (1위 ~ 5위)"
+    },
+    {
+      "documentation": "라운드로빈 3위 결승 진출 여부",
+      "fieldName": "roundRoginThirdDecision",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "라운드로빈 3위 결승 진출 랭킹 기준",
+      "fieldName": "thirdDecisionRankingRule",
+      "fieldType": "ThirdDecisionRankingRule",
+      "fieldTypeDocumentation": "라운드로빈 3위 결승 진출 랭킹 기준",
+      "fieldValues": "RATING (Rating),PPD (PPD),MPR (MPR),WIN_LOSE (Win / Lose),MANUAL_DECISION (Manual Decision)"
+    },
+    {
+      "documentation": "모든 Round 동일 Format 사용",
+      "fieldName": "useAllRoundSameFormat",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Event Range 구분 기준",
+      "fieldName": "eventRangeType",
+      "fieldType": "EventRangeType",
+      "fieldTypeDocumentation": "Event Range 구분 기준",
+      "fieldValues": "CARD_RATING (Card Rating),GENERAL_RATING (General Rating),COMPETITION_RATING (Competition Rating),HIGHER_RATING (Higher Rating(Competition Genera))"
+    },
+    {
+      "documentation": "elimination team 수",
+      "fieldName": "eliminationTeamCount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Division",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormat",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "matchFormat",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "eventPoint",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "eventPoint",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "team",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "tournament",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "tournament",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "match",
+      "otherEntityRelationshipName": "division",
+      "relationshipName": "match",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

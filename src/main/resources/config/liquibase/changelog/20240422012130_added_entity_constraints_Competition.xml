@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Competition.
+    -->
+    <changeSet id="20240422012130-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="competition_image_id"
+                                 baseTableName="tb_competition"
+                                 constraintName="fk_tb_competition__competition_image_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_fileinfo"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="reward_id"
+                                 baseTableName="tb_competition"
+                                 constraintName="fk_tb_competition__reward_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_reward"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="tb_competition"
+                                 constraintName="fk_tb_competition__country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_country"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="operator_id"
+                                 baseTableName="tb_competition"
+                                 constraintName="fk_tb_competition__operator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_operator"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="entry_fee_id"
+                                 baseTableName="tb_competition"
+                                 constraintName="fk_tb_competition__entry_fee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_entry_fee"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+{
+  "tossApp": {
+    "rewardDetail": {
+      "home": {
+        "title": "Reward Details",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Reward Detail",
+        "createOrEditLabel": "Create or edit a Reward Detail",
+        "notFound": "No Reward Details found"
+      },
+      "created": "A new Reward Detail is created with identifier { param }",
+      "updated": "A Reward Detail is updated with identifier { param }",
+      "deleted": "A Reward Detail is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Reward Detail { id }?"
+      },
+      "detail": {
+        "title": "Reward Detail"
+      },
+      "id": "Id",
+      "name": "Name",
+      "tournamentId": "Tournament Id",
+      "divisionId": "Division Id",
+      "rewardItem": "Reward Item",
+      "reward": "Reward",
+      "help": {
+        "name": "지급방법이 DAY대회명 + Day + Entry Item",
+        "tournamentId": "토너먼트ID",
+        "divisionId": "디비전ID"
+      }
+    }
+  }
+}

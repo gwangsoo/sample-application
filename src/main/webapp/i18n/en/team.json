@@ -1,0 +1,46 @@
+{
+  "tossApp": {
+    "team": {
+      "home": {
+        "title": "Teams",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Team",
+        "createOrEditLabel": "Create or edit a Team",
+        "notFound": "No Teams found"
+      },
+      "created": "A new Team is created with identifier { param }",
+      "updated": "A Team is updated with identifier { param }",
+      "deleted": "A Team is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Team { id }?"
+      },
+      "detail": {
+        "title": "Team"
+      },
+      "id": "Id",
+      "teamNo": "Team No",
+      "approvalStatus": "Approval Status",
+      "entryDate": "Entry Date",
+      "memo": "Memo",
+      "groupNo": "Group No",
+      "groupSeq": "Group Seq",
+      "seedNo": "Seed No",
+      "entry": "Entry",
+      "captain": "Captain",
+      "tteam": "Tteam",
+      "affiliatedInfo": "Affiliated Info",
+      "paymentInfo": "Payment Info",
+      "division": "Division",
+      "matchTeam": "Match Team",
+      "help": {
+        "teamNo": "참가팀번호",
+        "approvalStatus": "참가자 참여 여부 상태",
+        "entryDate": "Entry date",
+        "memo": "메모",
+        "groupNo": "그룹번호(RoundRobin속성) RounRobin의 경우 unique(DivisionId,GroupNo,GroupSeq)",
+        "groupSeq": "그룹순서(RoundRobin속성)",
+        "seedNo": "시드번호 (토너먼트별 시드값 정책)"
+      }
+    }
+  }
+}

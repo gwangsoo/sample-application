@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012730"
+  },
+  "applications": ["toss"],
+  "documentation": "매치포맷 옵션",
+  "dto": "mapstruct",
+  "entityTableName": "tb_matchformat_option",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "01게임 In Option",
+      "fieldName": "game01InOptionType",
+      "fieldType": "MatchFormatInOptionType",
+      "fieldTypeDocumentation": "매치포맷 In Option",
+      "fieldValues": "OPEN (Open),DOUBLE (Double),TRIPLE (Triple),MASTER (Master),MASTER_BULL_0 (Master Bull -> 0),MASTER_BULL_BUST (Master Bull -> Bust),MASTER_BULL_LOSE (Master Bull -> Lose),DOUBLE_BULL_0 (Double Bull -> 0),DOUBLE_BULL_BUST (Double Bull -> Bust),DOUBLE_BULL_LOSE (Double Bull -> Lose)"
+    },
+    {
+      "documentation": "01게임 Out Option",
+      "fieldName": "game01OutOptionType",
+      "fieldType": "MatchFormatOutOptionType",
+      "fieldTypeDocumentation": "매치포맷 Out Option",
+      "fieldValues": "OPEN (Open),DOUBLE (Double),MASTER (Master),MASTER_BULL_0 (Master Bull -> 0),MASTER_BULL_BUST (Master Bull -> Bust),MASTER_BULL_LOSE (Master Bull -> Lose),DOUBLE_BULL_0 (Double Bull -> 0),DOUBLE_BULL_BUST (Double Bull -> Bust),DOUBLE_BULL_LOSE (Double Bull -> Lose)"
+    },
+    {
+      "documentation": "01게임 Bull Option",
+      "fieldName": "game01BullOptionType",
+      "fieldType": "MatchFormatBullOptionType",
+      "fieldTypeDocumentation": "매치포맷 Bull Option",
+      "fieldValues": "BULL_25_50 (25/50 (Separator Bull)),BULL_50_50 (50/50 (Fat Bull))"
+    },
+    {
+      "documentation": "01게임 arrange",
+      "fieldName": "game01Arrange",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Cricket Over Kill",
+      "fieldName": "cricketOverKill",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Cricket Score",
+      "fieldName": "cricketScore",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Team 01게임 Freeze Option",
+      "fieldName": "teamGame01FreezeView",
+      "fieldType": "MatchFormatFreezeOptionType",
+      "fieldTypeDocumentation": "매치포맷 Freeze Option",
+      "fieldValues": "BUST (Bust),LOSE (Lose)"
+    },
+    {
+      "documentation": "Team 01게임 Point",
+      "fieldName": "teamGame01Point",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Team Cricket Mark",
+      "fieldName": "teamCricketMark",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Team Cricket Finish",
+      "fieldName": "teamCricketFinish",
+      "fieldType": "MatchFormatTeamFinishOptionType",
+      "fieldTypeDocumentation": "매치포맷 Team Finish Option",
+      "fieldValues": "ONE_PLAYER_ONLY (1Player Only),ALL_PLAYER (1P & 2P)"
+    },
+    {
+      "documentation": "Team Cricket Point",
+      "fieldName": "teamCricketPoint",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "MatchFormatOption",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormat",
+      "otherEntityRelationshipName": "matchFormatOption",
+      "relationshipName": "matchFormat",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

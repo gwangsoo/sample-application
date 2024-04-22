@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013930"
+  },
+  "applications": ["toss"],
+  "documentation": "호출정보",
+  "dto": "mapstruct",
+  "entityTableName": "tb_match_call",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "호출시간",
+      "fieldName": "callDateTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "documentation": "호출내용",
+      "fieldName": "callMessage",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "2048"
+    }
+  ],
+  "name": "MatchCall",
+  "relationships": [
+    {
+      "otherEntityName": "matchTeam",
+      "otherEntityRelationshipName": "matchCall",
+      "relationshipName": "matchTeam",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

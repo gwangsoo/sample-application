@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity EntryFee.
+    -->
+    <changeSet id="20240422012030-1" author="jhipster">
+        <createTable tableName="tb_entry_fee" remarks="참가비">
+            <column name="id" type="varchar(16)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="entry_fee_type" type="varchar(255)" remarks="참가비 구분">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_fee_sub_type" type="varchar(255)" remarks="참가비 상세 구분">
+                <constraints nullable="true" />
+            </column>
+            <column name="payment_method_type" type="varchar(255)" remarks="참가비 납부 방법">
+                <constraints nullable="true" />
+            </column>
+            <column name="schedule_number" type="integer" remarks="일별/토너먼트">
+                <constraints nullable="false" />
+            </column>
+            <column name="fee" type="integer" remarks="유료 시 참가비">
+                <constraints nullable="true" />
+            </column>
+            <column name="currency_id" type="varchar(3)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240422012030-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/tb_entry_fee.csv"
+                  separator=";"
+                  tableName="tb_entry_fee"
+                  usePreparedStatements="true">
+            <column name="id" type="string"/>
+            <column name="entry_fee_type" type="string"/>
+            <column name="entry_fee_sub_type" type="string"/>
+            <column name="payment_method_type" type="string"/>
+            <column name="schedule_number" type="numeric"/>
+            <column name="fee" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

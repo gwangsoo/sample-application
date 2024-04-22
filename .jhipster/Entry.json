@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013430"
+  },
+  "applications": ["toss"],
+  "documentation": "참가자",
+  "dto": "mapstruct",
+  "entityTableName": "tb_entry",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "참가번호 (토너먼트기준 unique)",
+      "fieldName": "entryNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "4"
+    },
+    {
+      "documentation": "Phoenix ID",
+      "fieldName": "phoenixNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "Card No",
+      "fieldName": "cardNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "이름",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "영문명",
+      "fieldName": "englishName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "Rating",
+      "fieldName": "rating",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "휴대폰",
+      "fieldName": "mobileNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "documentation": "생년월일",
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "documentation": "email",
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "성별",
+      "fieldName": "genderType",
+      "fieldType": "GenderType",
+      "fieldTypeDocumentation": "성별",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MALE (남자),FEMAIL (여자)"
+    },
+    {
+      "documentation": "출석상태",
+      "fieldName": "attendanceStatusType",
+      "fieldType": "AttendanceStatusType",
+      "fieldTypeDocumentation": "AttendanceStatusType",
+      "fieldValues": "NON_ATTENDANCE (미출석),GIVE_UP (기권),ATTENDANCE (출석)"
+    }
+  ],
+  "name": "Entry",
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "entry",
+      "relationshipName": "team",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "matchAttendance",
+      "otherEntityRelationshipName": "entry",
+      "relationshipName": "matchAttendance",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

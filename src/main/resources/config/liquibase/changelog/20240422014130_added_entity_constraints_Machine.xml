@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Machine.
+    -->
+    <changeSet id="20240422014130-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="match_id"
+                                 baseTableName="tb_machine"
+                                 constraintName="fk_tb_machine__match_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_match"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="machine_area_id"
+                                 baseTableName="tb_machine"
+                                 constraintName="fk_tb_machine__machine_area_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_machine_area"
+                                 />
+    </changeSet>
+</databaseChangeLog>

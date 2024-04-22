@@ -1,0 +1,49 @@
+{
+  "tossApp": {
+    "entry": {
+      "home": {
+        "title": "Entries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Entry",
+        "createOrEditLabel": "Create or edit a Entry",
+        "notFound": "No Entries found"
+      },
+      "created": "A new Entry is created with identifier { param }",
+      "updated": "A Entry is updated with identifier { param }",
+      "deleted": "A Entry is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Entry { id }?"
+      },
+      "detail": {
+        "title": "Entry"
+      },
+      "id": "Id",
+      "entryNo": "Entry No",
+      "phoenixNo": "Phoenix No",
+      "cardNo": "Card No",
+      "name": "Name",
+      "englishName": "English Name",
+      "rating": "Rating",
+      "mobileNo": "Mobile No",
+      "birthDate": "Birth Date",
+      "email": "Email",
+      "genderType": "Gender Type",
+      "attendanceStatusType": "Attendance Status Type",
+      "team": "Team",
+      "matchAttendance": "Match Attendance",
+      "help": {
+        "entryNo": "참가번호 (토너먼트기준 unique)",
+        "phoenixNo": "Phoenix ID",
+        "cardNo": "Card No",
+        "name": "이름",
+        "englishName": "영문명",
+        "rating": "Rating",
+        "mobileNo": "휴대폰",
+        "birthDate": "생년월일",
+        "email": "email",
+        "genderType": "성별",
+        "attendanceStatusType": "출석상태"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "MatchFormatType": {
+      "null": "",
+      "GENERAL": "General",
+      "TEMPLATE": "Template"
+    }
+  }
+}

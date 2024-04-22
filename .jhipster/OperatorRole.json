@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011730"
+  },
+  "applications": ["toss"],
+  "documentation": "관리자 Role (National dealer..)",
+  "dto": "mapstruct",
+  "entityTableName": "tb_operator_role",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "관리자 Role 명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "출력 순서",
+      "fieldName": "displayOrder",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "OperatorRole",
+  "relationships": [
+    {
+      "otherEntityName": "role",
+      "otherEntityRelationshipName": "operatorRole",
+      "relationshipName": "role",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "operator",
+      "otherEntityRelationshipName": "operatorRole",
+      "relationshipName": "operator",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

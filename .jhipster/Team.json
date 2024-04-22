@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013330"
+  },
+  "applications": ["toss"],
+  "documentation": "Team",
+  "dto": "mapstruct",
+  "entityTableName": "tb_team",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "참가팀번호",
+      "fieldName": "teamNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "8"
+    },
+    {
+      "documentation": "참가자 참여 여부 상태",
+      "fieldName": "approvalStatus",
+      "fieldType": "EntryApprovalStatusType",
+      "fieldTypeDocumentation": "참가자 참여 여부 상태",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WAITING_ENTRY (승인 대기),COMPLETE_ENTRY (승인 완료),WAITING_ENTRY_CANCELLATION (취소 대기),ENTRY_CANCELLATION_COMPLETED (취소 완료)"
+    },
+    {
+      "documentation": "Entry date",
+      "fieldName": "entryDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "documentation": "메모",
+      "fieldName": "memo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "그룹번호(RoundRobin속성) RounRobin의 경우 unique(DivisionId,GroupNo,GroupSeq)",
+      "fieldName": "groupNo",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "999",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "그룹순서(RoundRobin속성)",
+      "fieldName": "groupSeq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "9",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "시드번호 (토너먼트별 시드값 정책)",
+      "fieldName": "seedNo",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "999",
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "name": "Team",
+  "relationships": [
+    {
+      "otherEntityName": "entry",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "entry",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "entry",
+      "relationshipName": "captain",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "division",
+      "relationshipName": "tteam",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "affiliatedInfo",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "affiliatedInfo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "paymentInfo",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "paymentInfo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "division",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "division",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "matchTeam",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "matchTeam",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

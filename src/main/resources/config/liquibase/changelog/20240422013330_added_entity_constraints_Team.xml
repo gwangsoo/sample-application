@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Team.
+    -->
+    <changeSet id="20240422013330-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="captain_id"
+                                 baseTableName="tb_team"
+                                 constraintName="fk_tb_team__captain_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_entry"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tteam_id"
+                                 baseTableName="tb_team"
+                                 constraintName="fk_tb_team__tteam_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_division"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="affiliated_info_id"
+                                 baseTableName="tb_team"
+                                 constraintName="fk_tb_team__affiliated_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_affiliated_info"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="payment_info_id"
+                                 baseTableName="tb_team"
+                                 constraintName="fk_tb_team__payment_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_payment_info"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="division_id"
+                                 baseTableName="tb_team"
+                                 constraintName="fk_tb_team__division_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_division"
+                                 />
+    </changeSet>
+</databaseChangeLog>

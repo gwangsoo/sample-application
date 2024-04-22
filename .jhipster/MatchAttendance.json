@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013830"
+  },
+  "applications": ["toss"],
+  "documentation": "매치 출석",
+  "dto": "mapstruct",
+  "entityTableName": "tb_match_attendance",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "출석 상태",
+      "fieldName": "attendanceStatusType",
+      "fieldType": "AttendanceStatusType",
+      "fieldTypeDocumentation": "AttendanceStatusType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "NON_ATTENDANCE (미출석),GIVE_UP (기권),ATTENDANCE (출석)"
+    },
+    {
+      "documentation": "출석시간",
+      "fieldName": "attendanceDateTime",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "MatchAttendance",
+  "relationships": [
+    {
+      "otherEntityName": "entry",
+      "otherEntityRelationshipName": "matchAttendance",
+      "relationshipName": "entry",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "matchTeam",
+      "otherEntityRelationshipName": "matchAttendance",
+      "relationshipName": "matchTeam",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

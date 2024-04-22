@@ -1,0 +1,55 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012930"
+  },
+  "applications": ["toss"],
+  "documentation": "매치포맷 LEG",
+  "dto": "mapstruct",
+  "entityTableName": "tb_matchformat_leg",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "LEG 순서",
+      "fieldName": "seq",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "선공설정",
+      "fieldName": "firstThrowType",
+      "fieldType": "FirstThrowType",
+      "fieldTypeDocumentation": "선공설정",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "COIN_TOSS (Coin Toss),CENTER_CORK (Center Cork),PREV_LOSER_FIRST (Previous Loser First),RESERVE (Reserve)"
+    },
+    {
+      "documentation": "플레이모드",
+      "fieldName": "playMode",
+      "fieldType": "LegPlayMode",
+      "fieldTypeDocumentation": "Leg Play Mode",
+      "fieldValues": "SINGLE (Single),DOUBLE (Double),TRIO (Trio),GALLON (Gallon),TEAM_2 (Team 2)"
+    }
+  ],
+  "name": "MatchFormatLeg",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormatOption",
+      "relationshipName": "option",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "matchFormatSet",
+      "otherEntityRelationshipName": "matchFormatLeg",
+      "relationshipName": "matchFormatSet",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

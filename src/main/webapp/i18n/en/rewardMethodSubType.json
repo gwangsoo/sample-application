@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "RewardMethodSubType": {
+      "null": "",
+      "ALL": "All Division",
+      "DIVISION": "Division별"
+    }
+  }
+}

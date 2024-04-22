@@ -1,0 +1,84 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011830"
+  },
+  "applications": ["toss"],
+  "documentation": "관리자",
+  "dto": "mapstruct",
+  "entityTableName": "tb_operator",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "계정",
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "이름",
+      "fieldName": "userName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "모바일",
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "documentation": "이메일",
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "documentation": "주소",
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "승인상태",
+      "fieldName": "approvalStatus",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Operator",
+  "relationships": [
+    {
+      "otherEntityName": "operatorRole",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "operatorRole",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "region",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "region",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

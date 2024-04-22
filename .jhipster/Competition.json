@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012130"
+  },
+  "applications": ["toss"],
+  "documentation": "대회",
+  "dto": "mapstruct",
+  "entityTableName": "tb_competition",
+  "fields": [
+    {
+      "documentation": "대회번호 국가(2)+년도(2)+일련번호(4) (KR240001)",
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "대회명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "대회기간(시작일자)",
+      "fieldName": "startDateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "대회기간(종료일자)",
+      "fieldName": "endDateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "참가기간(시작일자)",
+      "fieldName": "entryStartDateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "참가기간(종료일자)",
+      "fieldName": "entryEndDateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "대회상태",
+      "fieldName": "status",
+      "fieldType": "CompetitionStatus",
+      "fieldTypeDocumentation": "대회상태",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PREPARE (Open 대기),OPENING (Open 중),CLOSE (종료)"
+    },
+    {
+      "documentation": "대회 승인 상태",
+      "fieldName": "approval",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "참가신청방법",
+      "fieldName": "entryApplyType",
+      "fieldType": "EntryApplyType",
+      "fieldTypeDocumentation": "참가신청방법",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "APP (App(user)),DIRECT (직접입력(Operator))"
+    },
+    {
+      "documentation": "참가래이팅유형",
+      "fieldName": "entryRatingType",
+      "fieldType": "EntryRatingType",
+      "fieldTypeDocumentation": "참가래이팅유형",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AUTO (자동산출(Card)),DIRECT (직접등록(Player))"
+    }
+  ],
+  "name": "Competition",
+  "relationships": [
+    {
+      "otherEntityName": "tournament",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "tournament",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "machineArea",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "machineArea",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "fileInfo",
+      "relationshipName": "competitionImage",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "reward",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "reward",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "country",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "country",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "operator",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "operator",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "entryFee",
+      "otherEntityRelationshipName": "competition",
+      "relationshipName": "entryFee",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

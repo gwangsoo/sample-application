@@ -1,0 +1,35 @@
+{
+  "tossApp": {
+    "reward": {
+      "home": {
+        "title": "Rewards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Reward",
+        "createOrEditLabel": "Create or edit a Reward",
+        "notFound": "No Rewards found"
+      },
+      "created": "A new Reward is created with identifier { param }",
+      "updated": "A Reward is updated with identifier { param }",
+      "deleted": "A Reward is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Reward { id }?"
+      },
+      "detail": {
+        "title": "Reward"
+      },
+      "id": "Id",
+      "rewardMethodType": "Reward Method Type",
+      "rewardMethodSubType": "Reward Method Sub Type",
+      "rewardCategoryNum": "Reward Category Num",
+      "machineKindType": "Machine Kind Type",
+      "rewardDetail": "Reward Detail",
+      "competition": "Competition",
+      "help": {
+        "rewardMethodType": "지급방법1 (리워드설정)",
+        "rewardMethodSubType": "지급방법2 (리워드설정)",
+        "rewardCategoryNum": "아이템카테고리 수",
+        "machineKindType": "머신종류"
+      }
+    }
+  }
+}

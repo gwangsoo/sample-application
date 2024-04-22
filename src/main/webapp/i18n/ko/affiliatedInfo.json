@@ -1,0 +1,39 @@
+{
+  "tossApp": {
+    "affiliatedInfo": {
+      "home": {
+        "title": "Affiliated Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Affiliated Info",
+        "createOrEditLabel": "Create or edit a Affiliated Info",
+        "notFound": "No Affiliated Infos found"
+      },
+      "created": "A new Affiliated Info is created with identifier { param }",
+      "updated": "A Affiliated Info is updated with identifier { param }",
+      "deleted": "A Affiliated Info is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Affiliated Info { id }?"
+      },
+      "detail": {
+        "title": "Affiliated Info"
+      },
+      "id": "Id",
+      "affiliatedType": "Affiliated Type",
+      "seq": "Seq",
+      "name": "Name",
+      "address": "Address",
+      "telNo": "Tel No",
+      "homepageUrl": "Homepage Url",
+      "fileInfo": "File Info",
+      "team": "Team",
+      "help": {
+        "affiliatedType": "소속구분",
+        "seq": "seq (shop, club)",
+        "name": "명칭",
+        "address": "주소",
+        "telNo": "전화번호",
+        "homepageUrl": "홈페이지"
+      }
+    }
+  }
+}

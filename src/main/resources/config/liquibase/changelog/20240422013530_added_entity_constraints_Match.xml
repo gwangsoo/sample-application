@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Match.
+    -->
+    <changeSet id="20240422013530-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="home_id"
+                                 baseTableName="tb_match"
+                                 constraintName="fk_tb_match__home_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_match_detail"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="away_id"
+                                 baseTableName="tb_match"
+                                 constraintName="fk_tb_match__away_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_match_detail"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tmatch_id"
+                                 baseTableName="tb_match"
+                                 constraintName="fk_tb_match__tmatch_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_machine"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="division_id"
+                                 baseTableName="tb_match"
+                                 constraintName="fk_tb_match__division_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_division"
+                                 />
+    </changeSet>
+</databaseChangeLog>

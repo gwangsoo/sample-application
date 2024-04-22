@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011430"
+  },
+  "applications": ["toss"],
+  "documentation": "국가",
+  "dto": "mapstruct",
+  "entityTableName": "tb_country",
+  "fields": [
+    {
+      "documentation": "국가코드",
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "name": "Country",
+  "relationships": [
+    {
+      "otherEntityName": "fileInfo",
+      "relationshipName": "image",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "region",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "region",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

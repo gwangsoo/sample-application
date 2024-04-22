@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "GenderType": {
+      "null": "",
+      "MALE": "남자",
+      "FEMAIL": "여자"
+    }
+  }
+}

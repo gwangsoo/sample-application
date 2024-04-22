@@ -1,0 +1,11 @@
+id;seq;name;rating_rule_team_min;rating_rule_team_max;rating_rule_individual_limit;rating_rule_individual_min;rating_rule_individual_max;entry_limit;round_robin_ranking_decision_type;round_robin_group_type;next_round_decision_type;round_rogin_third_decision;third_decision_ranking_rule;use_all_round_same_format;event_range_type;elimination_team_count
+8af4b98f-3031-4e;7;겁 없는 boohoo;12421.83;27159.95;false;11031.95;27883.57;false;AMATEUR2;TEAM4_2TIME_MATCH;FIRST_SECOND;false;PPD;true;HIGHER_RATING;22931
+b6a9b85e-d71f-47;3;모범적인 능숙한 listen;6850.46;25111.94;true;24379.69;14682.93;true;PERFECT;TEAM5;FIRST_FIFTH;true;WIN_LOSE;false;HIGHER_RATING;24472
+7c033f59-65a7-48;26;알고 있는 승인;13438.03;17711.91;false;1027.13;6290.63;true;AMATEUR1;TEAM6_4MATCH;FIRST;false;MPR;false;CARD_RATING;9379
+76521fe5-cf16-43;17;underneath;8999.79;21411.27;false;20561.5;11683.81;false;AMATEUR3;TEAM4_2TIME_MATCH;FIRST;false;WIN_LOSE;false;CARD_RATING;23107
+ed508d79-883e-4b;83;worth 배당;2836.66;19530.92;true;12992.28;16751.07;true;AMATEUR2;TEAM6_4MATCH;FIRST_FIFTH;false;MPR;false;GENERAL_RATING;25162
+ef651ce8-91d0-45;67;before 대담하게;1566.38;7;true;2384.49;7474.63;false;AMATEUR1;TEAM4_2TIME_MATCH;FIRST_FOURTH;false;RATING;false;COMPETITION_RATING;30177
+bfcd1db4-6346-40;19;whoa;5403.11;16136.19;true;23083.9;32413.51;true;AMATEUR3;TEAM5;FIRST;false;RATING;false;COMPETITION_RATING;23298
+cbac6b52-a8e0-4e;6;합금 다채롭게;23333.86;17203.01;false;13857.42;18412;false;PERFECT;TEAM6;FIRST_FIFTH;false;WIN_LOSE;false;GENERAL_RATING;19429
+b88860db-3f40-42;59;성인 cant;13505.57;3262.55;true;13983.34;29996.74;true;AMATEUR1;TEAM6_4MATCH;FIRST;false;WIN_LOSE;true;HIGHER_RATING;21870
+c0f4d527-b06d-4b;91;hmph mishit;15825.92;10560.27;true;6875.65;19574.33;true;AMATEUR3;TEAM6;FIRST_SECOND;true;MANUAL_DECISION;false;CARD_RATING;17017

@@ -1,0 +1,36 @@
+{
+  "tossApp": {
+    "matchScore": {
+      "home": {
+        "title": "Match Scores",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Score",
+        "createOrEditLabel": "Create or edit a Match Score",
+        "notFound": "No Match Scores found"
+      },
+      "created": "A new Match Score is created with identifier { param }",
+      "updated": "A Match Score is updated with identifier { param }",
+      "deleted": "A Match Score is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Score { id }?"
+      },
+      "detail": {
+        "title": "Match Score"
+      },
+      "id": "Id",
+      "setNo": "Set No",
+      "lgeNo": "Lge No",
+      "legGameName": "Leg Game Name",
+      "homeLegScore": "Home Leg Score",
+      "awayLegScore": "Away Leg Score",
+      "match": "Match",
+      "help": {
+        "setNo": "세트순서",
+        "lgeNo": "레그순서",
+        "legGameName": "레그게임명",
+        "homeLegScore": "레그 홈팀 점수",
+        "awayLegScore": "레그 어웨이팀 점수"
+      }
+    }
+  }
+}

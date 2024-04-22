@@ -1,0 +1,10 @@
+{
+  "tossApp": {
+    "AuthLevelType": {
+      "null": "",
+      "WRITE": "Write",
+      "VIEW": "View",
+      "OPEN": "Open"
+    }
+  }
+}

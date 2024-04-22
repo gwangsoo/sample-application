@@ -1,0 +1,112 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013530"
+  },
+  "applications": ["toss"],
+  "documentation": "매치리스트",
+  "dto": "mapstruct",
+  "entityTableName": "tb_match",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "매치번호 unique(divisionId, matchNo)",
+      "fieldName": "matchNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "9"
+    },
+    {
+      "documentation": "매치구분",
+      "fieldName": "matchType",
+      "fieldType": "MatchType",
+      "fieldTypeDocumentation": "매치구분",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ROUND_ROBIN (Round Robin),WINNER_ELIMINATION (Winner Elimination),LOSER_ELIMINATION (Loser Elimination)"
+    },
+    {
+      "documentation": "그룹번호(RoundRobin)",
+      "fieldName": "groupNo",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "999",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "그룹시합순서(RoundRobin)",
+      "fieldName": "groupMatchSeq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "999",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "Elimination 라운드번호",
+      "fieldName": "roundNum",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "매치상태",
+      "fieldName": "matchStatus",
+      "fieldType": "MatchStatus",
+      "fieldTypeDocumentation": "매치상태",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WAIT (대기중),PLAYING (진행중),CLOSE (종료)"
+    },
+    {
+      "documentation": "다음매치번호",
+      "fieldName": "nextMatchNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "9"
+    }
+  ],
+  "name": "Match",
+  "relationships": [
+    {
+      "otherEntityName": "matchScore",
+      "otherEntityRelationshipName": "match",
+      "relationshipName": "matchScore",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "matchTeam",
+      "relationshipName": "home",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "matchTeam",
+      "relationshipName": "away",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "machine",
+      "relationshipName": "tmatch",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "division",
+      "otherEntityRelationshipName": "match",
+      "relationshipName": "division",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "match",
+      "relationshipName": "machine",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

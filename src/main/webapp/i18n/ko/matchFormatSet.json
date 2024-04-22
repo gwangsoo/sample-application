@@ -1,0 +1,29 @@
+{
+  "tossApp": {
+    "matchFormatSet": {
+      "home": {
+        "title": "Match Format Sets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Format Set",
+        "createOrEditLabel": "Create or edit a Match Format Set",
+        "notFound": "No Match Format Sets found"
+      },
+      "created": "A new Match Format Set is created with identifier { param }",
+      "updated": "A Match Format Set is updated with identifier { param }",
+      "deleted": "A Match Format Set is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Format Set { id }?"
+      },
+      "detail": {
+        "title": "Match Format Set"
+      },
+      "id": "Id",
+      "point": "Point",
+      "matchFormatLeg": "Match Format Leg",
+      "matchFormat": "Match Format",
+      "help": {
+        "point": "승리 시에 획득하는 Point"
+      }
+    }
+  }
+}

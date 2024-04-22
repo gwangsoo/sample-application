@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012830"
+  },
+  "applications": ["toss"],
+  "documentation": "매치포맷 SET",
+  "dto": "mapstruct",
+  "entityTableName": "tb_matchformat_Set",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "승리 시에 획득하는 Point",
+      "fieldName": "point",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "name": "MatchFormatSet",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormatLeg",
+      "otherEntityRelationshipName": "matchFormatSet",
+      "relationshipName": "matchFormatLeg",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "matchFormat",
+      "otherEntityRelationshipName": "matchFormatSet",
+      "relationshipName": "matchFormat",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

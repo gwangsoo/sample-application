@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "MachineStatusType": {
+      "null": "",
+      "GOOD": "정상",
+      "BREAKDOWN": "고장"
+    }
+  }
+}

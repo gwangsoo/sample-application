@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240422014130"
+  },
+  "applications": ["toss"],
+  "documentation": "머신",
+  "dto": "mapstruct",
+  "entityTableName": "tb_machine",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "순서",
+      "fieldName": "machineNo",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "머신 상태",
+      "fieldName": "machineStatusType",
+      "fieldType": "MachineStatusType",
+      "fieldTypeDocumentation": "머신 상태",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GOOD (정상),BREAKDOWN (고장)"
+    }
+  ],
+  "name": "Machine",
+  "relationships": [
+    {
+      "otherEntityName": "match",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "match",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "machineArea",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "machineArea",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

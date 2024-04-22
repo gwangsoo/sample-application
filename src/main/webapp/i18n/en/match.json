@@ -1,0 +1,45 @@
+{
+  "tossApp": {
+    "match": {
+      "home": {
+        "title": "Matches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match",
+        "createOrEditLabel": "Create or edit a Match",
+        "notFound": "No Matches found"
+      },
+      "created": "A new Match is created with identifier { param }",
+      "updated": "A Match is updated with identifier { param }",
+      "deleted": "A Match is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match { id }?"
+      },
+      "detail": {
+        "title": "Match"
+      },
+      "id": "Id",
+      "matchNo": "Match No",
+      "matchType": "Match Type",
+      "groupNo": "Group No",
+      "groupMatchSeq": "Group Match Seq",
+      "roundNum": "Round Num",
+      "matchStatus": "Match Status",
+      "nextMatchNo": "Next Match No",
+      "matchScore": "Match Score",
+      "home": "Home",
+      "away": "Away",
+      "tmatch": "Tmatch",
+      "division": "Division",
+      "machine": "Machine",
+      "help": {
+        "matchNo": "매치번호 unique(divisionId, matchNo)",
+        "matchType": "매치구분",
+        "groupNo": "그룹번호(RoundRobin)",
+        "groupMatchSeq": "그룹시합순서(RoundRobin)",
+        "roundNum": "Elimination 라운드번호",
+        "matchStatus": "매치상태",
+        "nextMatchNo": "다음매치번호"
+      }
+    }
+  }
+}

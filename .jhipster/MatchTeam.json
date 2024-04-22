@@ -1,0 +1,76 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013630"
+  },
+  "applications": ["toss"],
+  "documentation": "매치상세정보",
+  "dto": "mapstruct",
+  "entityTableName": "tb_match_detail",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "승패여부",
+      "fieldName": "isWinner",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "AVG. PPD",
+      "fieldName": "avgPpd",
+      "fieldType": "Float"
+    },
+    {
+      "documentation": "AVG. MPR",
+      "fieldName": "avgMpr",
+      "fieldType": "Float"
+    },
+    {
+      "documentation": "winSet",
+      "fieldName": "winSet",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "winLeg",
+      "fieldName": "winLeg",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "선수 호출 구분",
+      "fieldName": "playerCallModeType",
+      "fieldType": "PlayerCallModeType",
+      "fieldTypeDocumentation": "선수 호출 구분",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AUTO_PROGRESS (자동 진행),MANUAL_PROGRESS (수동 진행)"
+    }
+  ],
+  "name": "MatchTeam",
+  "relationships": [
+    {
+      "otherEntityName": "matchAttendance",
+      "otherEntityRelationshipName": "matchTeam",
+      "relationshipName": "matchAttendance",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "matchCall",
+      "otherEntityRelationshipName": "matchTeam",
+      "relationshipName": "matchCall",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "matchTeam",
+      "relationshipName": "team",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

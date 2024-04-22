@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011630"
+  },
+  "applications": ["toss"],
+  "documentation": "권한",
+  "dto": "mapstruct",
+  "entityTableName": "tb_role",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "Role (전체국가...) 명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "관리범위 (GLOBAL...)",
+      "fieldName": "authScopeType",
+      "fieldType": "AuthScopeType",
+      "fieldTypeDocumentation": "권한범위",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GLOBAL (전체국가대회),COUNTRY (해당국가대회),REGION (해당지역대회),SHOP (해당Shop엔트리)"
+    },
+    {
+      "documentation": "권한등급 (View...)",
+      "fieldName": "authLevelType",
+      "fieldType": "AuthLevelType",
+      "fieldTypeDocumentation": "권한수준",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WRITE (Write),VIEW (View),OPEN (Open)"
+    },
+    {
+      "documentation": "출력 순서",
+      "fieldName": "displayOrder",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Role",
+  "relationships": [
+    {
+      "otherEntityName": "operatorRole",
+      "otherEntityRelationshipName": "role",
+      "relationshipName": "operatorRole",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

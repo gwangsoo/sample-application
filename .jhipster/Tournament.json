@@ -1,0 +1,157 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012230"
+  },
+  "applications": ["toss"],
+  "documentation": "토너먼트",
+  "dto": "mapstruct",
+  "entityTableName": "tb_tournament",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "토너먼트순서 (노출순서와 매치ID에 사용)",
+      "fieldName": "seq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "99",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "토너먼트명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "대회진행일(차수)",
+      "fieldName": "day",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "패자 부활 Tournament 여부",
+      "fieldName": "eventTournament",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "참가마감 버튼",
+      "fieldName": "entryClose",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "참가승인방법",
+      "fieldName": "entryApprovalType",
+      "fieldType": "EntryApprovalType",
+      "fieldTypeDocumentation": "참가승인방법",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AUTO (자동승인),MANUAL (수동승인)"
+    },
+    {
+      "documentation": "토너먼트유형",
+      "fieldName": "tournamentType",
+      "fieldType": "TournamentType",
+      "fieldTypeDocumentation": "경기유형",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ROUNDROBIN (RoundRobin),SINGLE_ELIMINATION (SingleElimination),DOUBLE_ELIMINATION (DoubleElimination),ROUNDROBIN_SINGLE_ELIMINATION (RoundRobin + SingleElimination),ROUNDROBIN_DOUBLE_ELIMINATION (RoundRobin + DoubleElimination)"
+    },
+    {
+      "documentation": "Seeding Rule",
+      "fieldName": "seedingRule",
+      "fieldType": "SeedingRuleType",
+      "fieldTypeDocumentation": "Seeding Rule",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "RANDOM (Random),RATING (Rating),PPD (PPD),MPR (MPR),SHUFFLE (Shuffle),SPANISH (Spanish),CSV_SEED_LOADING (CSV Seed Loading),ROUND_ROBIN (Round Robin 연동)"
+    },
+    {
+      "documentation": "토너먼트 Play Mode",
+      "fieldName": "tournamentPlayMode",
+      "fieldType": "TournamentPlayMode",
+      "fieldTypeDocumentation": "토너먼트 Play Mode",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SINGLE (Single),DOUBLE (Double),TRIO (Trio),GALLON (Gallon)"
+    },
+    {
+      "documentation": "3위 결정 여부",
+      "fieldName": "thirdPlaceDecision",
+      "fieldType": "Boolean"
+    },
+    {
+      "documentation": "Division 구분 기준",
+      "fieldName": "divisionRule",
+      "fieldType": "DivisionRuleType",
+      "fieldTypeDocumentation": "Division Rule",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CARD_RATING (Card Rating),GENERAL_RATING (General Rating),COMPETITION_RATING (Competition Rating),INPUT_RATING (Input Rating Operator),HIGHER_RATING (Higher Rating Competition General),NO_CLASSIFICATION (No Classification),EVENT_POINT (Event Point)"
+    },
+    {
+      "documentation": "엔트리 인원수 설정 false unlimited, true limit",
+      "fieldName": "entryLimit",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "엔트리인원수",
+      "fieldName": "numOfEntry",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "documentation": "디비전배정방법",
+      "fieldName": "divisionAssignMethod",
+      "fieldType": "DivisionAssignMethod",
+      "fieldTypeDocumentation": "디비전 배정 방법",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AUTO (자동배정 (미공개)),PLAYER (플레이어 선택 (공개))"
+    },
+    {
+      "documentation": "참가자 성별",
+      "fieldName": "entryGenderType",
+      "fieldType": "EntryGenderType",
+      "fieldTypeDocumentation": "참가자 성별",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ALL (All),MALE (Male),FEMALE (Female),CONCOCTION (Concoction)"
+    },
+    {
+      "documentation": "Handicap",
+      "fieldName": "handicap",
+      "fieldType": "HandicapType",
+      "fieldTypeDocumentation": "Handicap",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "NO (No Handicap),OFFICIAL (Official Handicap),BIGINNER (Biginner Handicap)"
+    }
+  ],
+  "name": "Tournament",
+  "relationships": [
+    {
+      "otherEntityName": "division",
+      "otherEntityRelationshipName": "tournament",
+      "relationshipName": "division",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "entryFee",
+      "otherEntityRelationshipName": "tournament",
+      "relationshipName": "entryFee",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "tournament",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

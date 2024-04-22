@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240422014430"
+  },
+  "applications": ["toss"],
+  "documentation": "RewardItem",
+  "dto": "mapstruct",
+  "entityTableName": "tb_rewad_item",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "아이템명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "name": "RewardItem",
+  "relationships": [
+    {
+      "otherEntityName": "fileInfo",
+      "relationshipName": "itemImage",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "rewardDetail",
+      "otherEntityRelationshipName": "rewardItem",
+      "relationshipName": "rewardDetail",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

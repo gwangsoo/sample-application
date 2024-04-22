@@ -1,0 +1,40 @@
+{
+  "tossApp": {
+    "operator": {
+      "home": {
+        "title": "Operators",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Operator",
+        "createOrEditLabel": "Create or edit a Operator",
+        "notFound": "No Operators found"
+      },
+      "created": "A new Operator is created with identifier { param }",
+      "updated": "A Operator is updated with identifier { param }",
+      "deleted": "A Operator is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Operator { id }?"
+      },
+      "detail": {
+        "title": "Operator"
+      },
+      "id": "Id",
+      "userId": "User Id",
+      "userName": "User Name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "approvalStatus": "Approval Status",
+      "operatorRole": "Operator Role",
+      "region": "Region",
+      "competition": "Competition",
+      "help": {
+        "userId": "계정",
+        "userName": "이름",
+        "phone": "모바일",
+        "email": "이메일",
+        "address": "주소",
+        "approvalStatus": "승인상태"
+      }
+    }
+  }
+}

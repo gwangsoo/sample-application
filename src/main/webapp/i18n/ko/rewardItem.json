@@ -1,0 +1,29 @@
+{
+  "tossApp": {
+    "rewardItem": {
+      "home": {
+        "title": "Reward Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Reward Item",
+        "createOrEditLabel": "Create or edit a Reward Item",
+        "notFound": "No Reward Items found"
+      },
+      "created": "A new Reward Item is created with identifier { param }",
+      "updated": "A Reward Item is updated with identifier { param }",
+      "deleted": "A Reward Item is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Reward Item { id }?"
+      },
+      "detail": {
+        "title": "Reward Item"
+      },
+      "id": "Id",
+      "name": "Name",
+      "itemImage": "Item Image",
+      "rewardDetail": "Reward Detail",
+      "help": {
+        "name": "아이템명"
+      }
+    }
+  }
+}

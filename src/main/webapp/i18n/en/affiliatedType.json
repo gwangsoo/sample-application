@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "AffiliatedType": {
+      "null": "",
+      "SHOP": "Shop",
+      "CLUB": "Club"
+    }
+  }
+}
