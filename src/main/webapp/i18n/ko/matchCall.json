@@ -1,0 +1,30 @@
+{
+  "tossApp": {
+    "matchCall": {
+      "home": {
+        "title": "Match Calls",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Call",
+        "createOrEditLabel": "Create or edit a Match Call",
+        "notFound": "No Match Calls found"
+      },
+      "created": "A new Match Call is created with identifier { param }",
+      "updated": "A Match Call is updated with identifier { param }",
+      "deleted": "A Match Call is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Call { id }?"
+      },
+      "detail": {
+        "title": "Match Call"
+      },
+      "id": "Id",
+      "callDateTime": "Call Date Time",
+      "callMessage": "Call Message",
+      "matchTeam": "Match Team",
+      "help": {
+        "callDateTime": "호출시간",
+        "callMessage": "호출내용"
+      }
+    }
+  }
+}

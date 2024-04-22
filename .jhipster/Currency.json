@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011230"
+  },
+  "applications": ["toss"],
+  "documentation": "통화",
+  "dto": "mapstruct",
+  "entityTableName": "tb_currency",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "3"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "128"
+    }
+  ],
+  "name": "Currency",
+  "relationships": [
+    {
+      "otherEntityName": "entryFee",
+      "otherEntityRelationshipName": "currency",
+      "relationshipName": "entryFee",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

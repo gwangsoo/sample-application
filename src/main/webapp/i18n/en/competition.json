@@ -1,0 +1,51 @@
+{
+  "tossApp": {
+    "competition": {
+      "home": {
+        "title": "Competitions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Competition",
+        "createOrEditLabel": "Create or edit a Competition",
+        "notFound": "No Competitions found"
+      },
+      "created": "A new Competition is created with identifier { param }",
+      "updated": "A Competition is updated with identifier { param }",
+      "deleted": "A Competition is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Competition { id }?"
+      },
+      "detail": {
+        "title": "Competition"
+      },
+      "id": "Id",
+      "name": "Name",
+      "startDateTime": "Start Date Time",
+      "endDateTime": "End Date Time",
+      "entryStartDateTime": "Entry Start Date Time",
+      "entryEndDateTime": "Entry End Date Time",
+      "status": "Status",
+      "approval": "Approval",
+      "entryApplyType": "Entry Apply Type",
+      "entryRatingType": "Entry Rating Type",
+      "tournament": "Tournament",
+      "machineArea": "Machine Area",
+      "competitionImage": "Competition Image",
+      "reward": "Reward",
+      "country": "Country",
+      "operator": "Operator",
+      "entryFee": "Entry Fee",
+      "help": {
+        "id": "대회번호 국가(2)+년도(2)+일련번호(4) (KR240001)",
+        "name": "대회명",
+        "startDateTime": "대회기간(시작일자)",
+        "endDateTime": "대회기간(종료일자)",
+        "entryStartDateTime": "참가기간(시작일자)",
+        "entryEndDateTime": "참가기간(종료일자)",
+        "status": "대회상태",
+        "approval": "대회 승인 상태",
+        "entryApplyType": "참가신청방법",
+        "entryRatingType": "참가래이팅유형"
+      }
+    }
+  }
+}

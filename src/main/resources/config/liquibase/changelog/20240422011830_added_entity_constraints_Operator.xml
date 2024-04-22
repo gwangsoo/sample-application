@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Operator.
+    -->
+    <changeSet id="20240422011830-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="operator_role_id"
+                                 baseTableName="tb_operator"
+                                 constraintName="fk_tb_operator__operator_role_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_operator_role"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="region_id"
+                                 baseTableName="tb_operator"
+                                 constraintName="fk_tb_operator__region_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_region"
+                                 />
+    </changeSet>
+</databaseChangeLog>

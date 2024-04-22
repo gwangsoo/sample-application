@@ -1,0 +1,12 @@
+{
+  "tossApp": {
+    "LegPlayMode": {
+      "null": "",
+      "SINGLE": "Single",
+      "DOUBLE": "Double",
+      "TRIO": "Trio",
+      "GALLON": "Gallon",
+      "TEAM_2": "Team 2"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "tossApp": {
+    "matchFormatOption": {
+      "home": {
+        "title": "Match Format Options",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Format Option",
+        "createOrEditLabel": "Create or edit a Match Format Option",
+        "notFound": "No Match Format Options found"
+      },
+      "created": "A new Match Format Option is created with identifier { param }",
+      "updated": "A Match Format Option is updated with identifier { param }",
+      "deleted": "A Match Format Option is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Format Option { id }?"
+      },
+      "detail": {
+        "title": "Match Format Option"
+      },
+      "id": "Id",
+      "game01InOptionType": "Game 01 In Option Type",
+      "game01OutOptionType": "Game 01 Out Option Type",
+      "game01BullOptionType": "Game 01 Bull Option Type",
+      "game01Arrange": "Game 01 Arrange",
+      "cricketOverKill": "Cricket Over Kill",
+      "cricketScore": "Cricket Score",
+      "teamGame01FreezeView": "Team Game 01 Freeze View",
+      "teamGame01Point": "Team Game 01 Point",
+      "teamCricketMark": "Team Cricket Mark",
+      "teamCricketFinish": "Team Cricket Finish",
+      "teamCricketPoint": "Team Cricket Point",
+      "matchFormat": "Match Format",
+      "help": {
+        "game01InOptionType": "01게임 In Option",
+        "game01OutOptionType": "01게임 Out Option",
+        "game01BullOptionType": "01게임 Bull Option",
+        "game01Arrange": "01게임 arrange",
+        "cricketOverKill": "Cricket Over Kill",
+        "cricketScore": "Cricket Score",
+        "teamGame01FreezeView": "Team 01게임 Freeze Option",
+        "teamGame01Point": "Team 01게임 Point",
+        "teamCricketMark": "Team Cricket Mark",
+        "teamCricketFinish": "Team Cricket Finish",
+        "teamCricketPoint": "Team Cricket Point"
+      }
+    }
+  }
+}

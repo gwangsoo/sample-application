@@ -1,0 +1,53 @@
+{
+  "annotations": {
+    "changelogDate": "20240422014330"
+  },
+  "applications": ["toss"],
+  "documentation": "리워드",
+  "dto": "mapstruct",
+  "entityTableName": "tb_reward_detail",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "지급방법이 DAY대회명 + Day + Entry Item",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "토너먼트ID",
+      "fieldName": "tournamentId",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "디비전ID",
+      "fieldName": "divisionId",
+      "fieldType": "String"
+    }
+  ],
+  "name": "RewardDetail",
+  "relationships": [
+    {
+      "otherEntityName": "rewardItem",
+      "otherEntityRelationshipName": "rewardDetail",
+      "relationshipName": "rewardItem",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "reward",
+      "otherEntityRelationshipName": "rewardDetail",
+      "relationshipName": "reward",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

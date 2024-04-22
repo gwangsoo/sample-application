@@ -1,0 +1,31 @@
+{
+  "tossApp": {
+    "operatorRole": {
+      "home": {
+        "title": "Operator Roles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Operator Role",
+        "createOrEditLabel": "Create or edit a Operator Role",
+        "notFound": "No Operator Roles found"
+      },
+      "created": "A new Operator Role is created with identifier { param }",
+      "updated": "A Operator Role is updated with identifier { param }",
+      "deleted": "A Operator Role is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Operator Role { id }?"
+      },
+      "detail": {
+        "title": "Operator Role"
+      },
+      "id": "Id",
+      "name": "Name",
+      "displayOrder": "Display Order",
+      "role": "Role",
+      "operator": "Operator",
+      "help": {
+        "name": "관리자 Role 명",
+        "displayOrder": "출력 순서"
+      }
+    }
+  }
+}

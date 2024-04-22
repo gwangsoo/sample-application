@@ -1,0 +1,77 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012030"
+  },
+  "applications": ["toss"],
+  "documentation": "참가비",
+  "dto": "mapstruct",
+  "entityTableName": "tb_entry_fee",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "참가비 구분",
+      "fieldName": "entryFeeType",
+      "fieldType": "EntryFeeType",
+      "fieldTypeDocumentation": "참가비 구분",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "FREE (무료),PAY (유료)"
+    },
+    {
+      "documentation": "참가비 상세 구분",
+      "fieldName": "entryFeeSubType",
+      "fieldType": "EntryFeeSubType",
+      "fieldTypeDocumentation": "참가비 상세 구분",
+      "fieldValues": "DAY (일별),TOURNAMENT (토너먼트별)"
+    },
+    {
+      "documentation": "참가비 납부 방법",
+      "fieldName": "paymentMethodType",
+      "fieldType": "PaymentMethodType",
+      "fieldTypeDocumentation": "납부방법",
+      "fieldValues": "PG (Payment Gateway),CASH (현금)"
+    },
+    {
+      "documentation": "일별/토너먼트",
+      "fieldName": "scheduleNumber",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["max", "required"],
+      "fieldValidateRulesMax": "1"
+    },
+    {
+      "documentation": "유료 시 참가비",
+      "fieldName": "fee",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "EntryFee",
+  "relationships": [
+    {
+      "otherEntityName": "currency",
+      "otherEntityRelationshipName": "entryFee",
+      "relationshipName": "currency",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "tournament",
+      "otherEntityRelationshipName": "entryFee",
+      "relationshipName": "tournament",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "entryFee",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

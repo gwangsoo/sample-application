@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013030"
+  },
+  "applications": ["toss"],
+  "documentation": "이벤트 포인트",
+  "dto": "mapstruct",
+  "entityTableName": "tb_eventpoint",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "순서",
+      "fieldName": "seq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "Rating",
+      "fieldName": "rating",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "Rating 범위(최소)",
+      "fieldName": "ratingMin",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Rating 범위(최대)",
+      "fieldName": "ratingMax",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "EventPoint",
+  "relationships": [
+    {
+      "otherEntityName": "division",
+      "otherEntityRelationshipName": "eventPoint",
+      "relationshipName": "division",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

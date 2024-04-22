@@ -1,0 +1,60 @@
+{
+  "tossApp": {
+    "tournament": {
+      "home": {
+        "title": "Tournaments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tournament",
+        "createOrEditLabel": "Create or edit a Tournament",
+        "notFound": "No Tournaments found"
+      },
+      "created": "A new Tournament is created with identifier { param }",
+      "updated": "A Tournament is updated with identifier { param }",
+      "deleted": "A Tournament is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Tournament { id }?"
+      },
+      "detail": {
+        "title": "Tournament"
+      },
+      "id": "Id",
+      "seq": "Seq",
+      "name": "Name",
+      "day": "Day",
+      "eventTournament": "Event Tournament",
+      "entryClose": "Entry Close",
+      "entryApprovalType": "Entry Approval Type",
+      "tournamentType": "Tournament Type",
+      "seedingRule": "Seeding Rule",
+      "tournamentPlayMode": "Tournament Play Mode",
+      "thirdPlaceDecision": "Third Place Decision",
+      "divisionRule": "Division Rule",
+      "entryLimit": "Entry Limit",
+      "numOfEntry": "Num Of Entry",
+      "divisionAssignMethod": "Division Assign Method",
+      "entryGenderType": "Entry Gender Type",
+      "handicap": "Handicap",
+      "division": "Division",
+      "entryFee": "Entry Fee",
+      "competition": "Competition",
+      "help": {
+        "seq": "토너먼트순서 (노출순서와 매치ID에 사용)",
+        "name": "토너먼트명",
+        "day": "대회진행일(차수)",
+        "eventTournament": "패자 부활 Tournament 여부",
+        "entryClose": "참가마감 버튼",
+        "entryApprovalType": "참가승인방법",
+        "tournamentType": "토너먼트유형",
+        "seedingRule": "Seeding Rule",
+        "tournamentPlayMode": "토너먼트 Play Mode",
+        "thirdPlaceDecision": "3위 결정 여부",
+        "divisionRule": "Division 구분 기준",
+        "entryLimit": "엔트리 인원수 설정 false unlimited, true limit",
+        "numOfEntry": "엔트리인원수",
+        "divisionAssignMethod": "디비전배정방법",
+        "entryGenderType": "참가자 성별",
+        "handicap": "Handicap"
+      }
+    }
+  }
+}

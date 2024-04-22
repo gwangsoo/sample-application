@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Team.
+    -->
+    <changeSet id="20240422013330-1" author="jhipster">
+        <createTable tableName="tb_team" remarks="Team">
+            <column name="id" type="varchar(16)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="team_no" type="varchar(8)" remarks="참가팀번호">
+                <constraints nullable="true" />
+            </column>
+            <column name="approval_status" type="varchar(255)" remarks="참가자 참여 여부 상태">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_date" type="${datetimeType}" remarks="Entry date">
+                <constraints nullable="true" />
+            </column>
+            <column name="memo" type="varchar(256)" remarks="메모">
+                <constraints nullable="true" />
+            </column>
+            <column name="group_no" type="integer" remarks="그룹번호(RoundRobin속성) RounRobin의 경우 unique(DivisionId,GroupNo,GroupSeq)">
+                <constraints nullable="true" />
+            </column>
+            <column name="group_seq" type="integer" remarks="그룹순서(RoundRobin속성)">
+                <constraints nullable="true" />
+            </column>
+            <column name="seed_no" type="integer" remarks="시드번호 (토너먼트별 시드값 정책)">
+                <constraints nullable="true" />
+            </column>
+            <column name="captain_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tteam_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <column name="affiliated_info_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <column name="payment_info_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <column name="division_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="tb_team" columnName="entry_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240422013330-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/tb_team.csv"
+                  separator=";"
+                  tableName="tb_team"
+                  usePreparedStatements="true">
+            <column name="id" type="string"/>
+            <column name="team_no" type="string"/>
+            <column name="approval_status" type="string"/>
+            <column name="entry_date" type="date"/>
+            <column name="memo" type="string"/>
+            <column name="group_no" type="numeric"/>
+            <column name="group_seq" type="numeric"/>
+            <column name="seed_no" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

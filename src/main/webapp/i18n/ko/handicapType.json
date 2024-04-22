@@ -1,0 +1,10 @@
+{
+  "tossApp": {
+    "HandicapType": {
+      "null": "",
+      "NO": "No Handicap",
+      "OFFICIAL": "Official Handicap",
+      "BIGINNER": "Biginner Handicap"
+    }
+  }
+}

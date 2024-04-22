@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013730"
+  },
+  "applications": ["toss"],
+  "documentation": "매치점수",
+  "dto": "mapstruct",
+  "entityTableName": "tb_match_score",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "세트순서",
+      "fieldName": "setNo",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "레그순서",
+      "fieldName": "lgeNo",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "레그게임명",
+      "fieldName": "legGameName",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "레그 홈팀 점수",
+      "fieldName": "homeLegScore",
+      "fieldType": "Float"
+    },
+    {
+      "documentation": "레그 어웨이팀 점수",
+      "fieldName": "awayLegScore",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "MatchScore",
+  "relationships": [
+    {
+      "otherEntityName": "match",
+      "otherEntityRelationshipName": "matchScore",
+      "relationshipName": "match",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

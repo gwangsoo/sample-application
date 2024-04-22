@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "MatchFormatFreezeOptionType": {
+      "null": "",
+      "BUST": "Bust",
+      "LOSE": "Lose"
+    }
+  }
+}

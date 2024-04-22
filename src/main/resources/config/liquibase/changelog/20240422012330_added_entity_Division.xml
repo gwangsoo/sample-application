@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Division.
+    -->
+    <changeSet id="20240422012330-1" author="jhipster">
+        <createTable tableName="tb_division" remarks="디비전">
+            <column name="id" type="varchar(16)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="seq" type="integer" remarks="디비전순서 (노출순서와 매치ID에 사용)">
+                <constraints nullable="false" />
+            </column>
+            <column name="name" type="varchar(256)" remarks="디비전명">
+                <constraints nullable="false" />
+            </column>
+            <column name="rating_rule_team_min" type="${floatType}" remarks="팀합산 Rating (최소)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rating_rule_team_max" type="${floatType}" remarks="팀합산 Rating (최대)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rating_rule_individual_limit" type="boolean" remarks="개인 레이팅 제한 여부 false unlimited, true limit">
+                <constraints nullable="true" />
+            </column>
+            <column name="rating_rule_individual_min" type="${floatType}" remarks="개인 Rating (최소)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rating_rule_individual_max" type="${floatType}" remarks="개인 Rating (최대)">
+                <constraints nullable="true" />
+            </column>
+            <column name="entry_limit" type="boolean" remarks="참가자 인원수 설정 false unlimited, true limit">
+                <constraints nullable="false" />
+            </column>
+            <column name="round_robin_ranking_decision_type" type="varchar(255)" remarks="라운드로빈 순위 결정 방식">
+                <constraints nullable="true" />
+            </column>
+            <column name="round_robin_group_type" type="varchar(255)" remarks="라운드로빈 그룹 종류">
+                <constraints nullable="true" />
+            </column>
+            <column name="next_round_decision_type" type="varchar(255)" remarks="다음(결승) 라운드 진출 방식">
+                <constraints nullable="true" />
+            </column>
+            <column name="round_rogin_third_decision" type="boolean" remarks="라운드로빈 3위 결승 진출 여부">
+                <constraints nullable="true" />
+            </column>
+            <column name="third_decision_ranking_rule" type="varchar(255)" remarks="라운드로빈 3위 결승 진출 랭킹 기준">
+                <constraints nullable="true" />
+            </column>
+            <column name="use_all_round_same_format" type="boolean" remarks="모든 Round 동일 Format 사용">
+                <constraints nullable="true" />
+            </column>
+            <column name="event_range_type" type="varchar(255)" remarks="Event Range 구분 기준">
+                <constraints nullable="true" />
+            </column>
+            <column name="elimination_team_count" type="integer" remarks="elimination team 수">
+                <constraints nullable="true" />
+            </column>
+            <column name="tournament_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240422012330-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/tb_division.csv"
+                  separator=";"
+                  tableName="tb_division"
+                  usePreparedStatements="true">
+            <column name="id" type="string"/>
+            <column name="seq" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="rating_rule_team_min" type="numeric"/>
+            <column name="rating_rule_team_max" type="numeric"/>
+            <column name="rating_rule_individual_limit" type="boolean"/>
+            <column name="rating_rule_individual_min" type="numeric"/>
+            <column name="rating_rule_individual_max" type="numeric"/>
+            <column name="entry_limit" type="boolean"/>
+            <column name="round_robin_ranking_decision_type" type="string"/>
+            <column name="round_robin_group_type" type="string"/>
+            <column name="next_round_decision_type" type="string"/>
+            <column name="round_rogin_third_decision" type="boolean"/>
+            <column name="third_decision_ranking_rule" type="string"/>
+            <column name="use_all_round_same_format" type="boolean"/>
+            <column name="event_range_type" type="string"/>
+            <column name="elimination_team_count" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

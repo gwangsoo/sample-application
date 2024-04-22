@@ -1,0 +1,31 @@
+{
+  "tossApp": {
+    "machine": {
+      "home": {
+        "title": "Machines",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Machine",
+        "createOrEditLabel": "Create or edit a Machine",
+        "notFound": "No Machines found"
+      },
+      "created": "A new Machine is created with identifier { param }",
+      "updated": "A Machine is updated with identifier { param }",
+      "deleted": "A Machine is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Machine { id }?"
+      },
+      "detail": {
+        "title": "Machine"
+      },
+      "id": "Id",
+      "machineNo": "Machine No",
+      "machineStatusType": "Machine Status Type",
+      "match": "Match",
+      "machineArea": "Machine Area",
+      "help": {
+        "machineNo": "순서",
+        "machineStatusType": "머신 상태"
+      }
+    }
+  }
+}

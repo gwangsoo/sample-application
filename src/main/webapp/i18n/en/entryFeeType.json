@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "EntryFeeType": {
+      "null": "",
+      "FREE": "무료",
+      "PAY": "유료"
+    }
+  }
+}

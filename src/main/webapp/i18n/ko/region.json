@@ -1,0 +1,31 @@
+{
+  "tossApp": {
+    "region": {
+      "home": {
+        "title": "Regions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Region",
+        "createOrEditLabel": "Create or edit a Region",
+        "notFound": "No Regions found"
+      },
+      "created": "A new Region is created with identifier { param }",
+      "updated": "A Region is updated with identifier { param }",
+      "deleted": "A Region is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Region { id }?"
+      },
+      "detail": {
+        "title": "Region"
+      },
+      "id": "Id",
+      "name": "Name",
+      "parentAreaId": "Parent Area Id",
+      "country": "Country",
+      "operator": "Operator",
+      "help": {
+        "id": "지역코드",
+        "parentAreaId": "상위지역코드"
+      }
+    }
+  }
+}

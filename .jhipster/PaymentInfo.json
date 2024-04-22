@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013230"
+  },
+  "applications": ["toss"],
+  "documentation": "결제 정보",
+  "dto": "mapstruct",
+  "entityTableName": "tb_payment_info",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "참가자 결제 상태",
+      "fieldName": "orderNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "결제 일자",
+      "fieldName": "paymentCompletedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "documentation": "결제 수단",
+      "fieldName": "status",
+      "fieldType": "PaymentStatusType",
+      "fieldTypeDocumentation": "결제 상태",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WAITING_PAYMENT (1),COMPLETE_PAYMENT (2),WAITING_PAYMENT_CANCELLATION (3),PAYMENT_CANCELLATION_COMPLETED (4)",
+      "fieldValuesJavadocs": {
+        "COMPLETE_PAYMENT": "결제 완료",
+        "PAYMENT_CANCELLATION_COMPLETED": "취소 완료",
+        "WAITING_PAYMENT": "결제 대기/요청",
+        "WAITING_PAYMENT_CANCELLATION": "취소 대기"
+      }
+    },
+    {
+      "documentation": "결제 수단",
+      "fieldName": "paymentMethodType",
+      "fieldType": "PaymentMethodType",
+      "fieldTypeDocumentation": "납부방법",
+      "fieldValues": "PG (Payment Gateway),CASH (현금)"
+    },
+    {
+      "documentation": "PG 결제 TID",
+      "fieldName": "pgTID",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "PG 결제 상태",
+      "fieldName": "pgStatus",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "documentation": "PG 결제 상세내용",
+      "fieldName": "pgDetail",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "documentation": "결제자 정보",
+      "fieldName": "payer",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "payerPhone",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    }
+  ],
+  "name": "PaymentInfo",
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "paymentInfo",
+      "relationshipName": "team",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,79 @@
+{
+  "annotations": {
+    "changelogDate": "20240422013130"
+  },
+  "applications": ["toss"],
+  "documentation": "소속정보 (Shop,동호회)",
+  "dto": "mapstruct",
+  "entityTableName": "tb_affiliated_info",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "소속구분",
+      "fieldName": "affiliatedType",
+      "fieldType": "AffiliatedType",
+      "fieldTypeDocumentation": "플레이어소속",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SHOP (Shop),CLUB (Club)"
+    },
+    {
+      "documentation": "seq (shop, club)",
+      "fieldName": "seq",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    },
+    {
+      "documentation": "명칭",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "주소",
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "documentation": "전화번호",
+      "fieldName": "telNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "documentation": "홈페이지",
+      "fieldName": "homepageUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    }
+  ],
+  "name": "AffiliatedInfo",
+  "relationships": [
+    {
+      "otherEntityName": "fileInfo",
+      "otherEntityRelationshipName": "affiliatedInfo",
+      "relationshipName": "fileInfo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "affiliatedInfo",
+      "relationshipName": "team",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

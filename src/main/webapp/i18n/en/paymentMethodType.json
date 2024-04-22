@@ -1,0 +1,9 @@
+{
+  "tossApp": {
+    "PaymentMethodType": {
+      "null": "",
+      "PG": "Payment Gateway",
+      "CASH": "현금"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "tossApp": {
+    "entryFee": {
+      "home": {
+        "title": "Entry Fees",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Entry Fee",
+        "createOrEditLabel": "Create or edit a Entry Fee",
+        "notFound": "No Entry Fees found"
+      },
+      "created": "A new Entry Fee is created with identifier { param }",
+      "updated": "A Entry Fee is updated with identifier { param }",
+      "deleted": "A Entry Fee is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Entry Fee { id }?"
+      },
+      "detail": {
+        "title": "Entry Fee"
+      },
+      "id": "Id",
+      "entryFeeType": "Entry Fee Type",
+      "entryFeeSubType": "Entry Fee Sub Type",
+      "paymentMethodType": "Payment Method Type",
+      "scheduleNumber": "Schedule Number",
+      "fee": "Fee",
+      "currency": "Currency",
+      "tournament": "Tournament",
+      "competition": "Competition",
+      "help": {
+        "entryFeeType": "참가비 구분",
+        "entryFeeSubType": "참가비 상세 구분",
+        "paymentMethodType": "참가비 납부 방법",
+        "scheduleNumber": "일별/토너먼트",
+        "fee": "유료 시 참가비"
+      }
+    }
+  }
+}

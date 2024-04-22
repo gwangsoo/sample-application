@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011530"
+  },
+  "applications": ["toss"],
+  "documentation": "지역정보",
+  "dto": "mapstruct",
+  "entityTableName": "tb_region",
+  "fields": [
+    {
+      "documentation": "지역코드",
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "6"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "documentation": "상위지역코드",
+      "fieldName": "parentAreaId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "6"
+    }
+  ],
+  "name": "Region",
+  "relationships": [
+    {
+      "otherEntityName": "country",
+      "otherEntityRelationshipName": "region",
+      "relationshipName": "country",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "operator",
+      "otherEntityRelationshipName": "region",
+      "relationshipName": "operator",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

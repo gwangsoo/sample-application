@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012530"
+  },
+  "applications": ["toss"],
+  "documentation": "매치포맷",
+  "dto": "mapstruct",
+  "entityTableName": "tb_matchformat",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "매치포맷명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "매치포맷 설명",
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "매치포맷유형",
+      "fieldName": "matchFormatType",
+      "fieldType": "MatchFormatType",
+      "fieldTypeDocumentation": "매치포맷 유형",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GENERAL (General),TEMPLATE (Template)"
+    },
+    {
+      "documentation": "Set 선공 설정",
+      "fieldName": "firstSet",
+      "fieldType": "FirstThrowType",
+      "fieldTypeDocumentation": "선공설정",
+      "fieldValues": "COIN_TOSS (Coin Toss),CENTER_CORK (Center Cork),PREV_LOSER_FIRST (Previous Loser First),RESERVE (Reserve)"
+    },
+    {
+      "fieldName": "middleSet",
+      "fieldType": "FirstThrowType",
+      "fieldTypeDocumentation": "선공설정",
+      "fieldValues": "COIN_TOSS (Coin Toss),CENTER_CORK (Center Cork),PREV_LOSER_FIRST (Previous Loser First),RESERVE (Reserve)"
+    },
+    {
+      "fieldName": "lastSet",
+      "fieldType": "FirstThrowType",
+      "fieldTypeDocumentation": "선공설정",
+      "fieldValues": "COIN_TOSS (Coin Toss),CENTER_CORK (Center Cork),PREV_LOSER_FIRST (Previous Loser First),RESERVE (Reserve)"
+    }
+  ],
+  "name": "MatchFormat",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormatGame",
+      "otherEntityRelationshipName": "matchFormat",
+      "relationshipName": "matchFormatGame",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "matchFormatOption",
+      "otherEntityRelationshipName": "matchFormat",
+      "relationshipName": "matchFormatOption",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "matchFormatSet",
+      "otherEntityRelationshipName": "matchFormat",
+      "relationshipName": "matchFormatSet",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "division",
+      "otherEntityRelationshipName": "matchFormat",
+      "relationshipName": "division",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

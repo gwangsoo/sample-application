@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011930"
+  },
+  "applications": ["toss"],
+  "documentation": "언어",
+  "dto": "mapstruct",
+  "entityTableName": "tb_language",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "128"
+    }
+  ],
+  "name": "Language",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

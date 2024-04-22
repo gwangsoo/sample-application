@@ -1,0 +1,11 @@
+{
+  "tossApp": {
+    "TournamentPlayMode": {
+      "null": "",
+      "SINGLE": "Single",
+      "DOUBLE": "Double",
+      "TRIO": "Trio",
+      "GALLON": "Gallon"
+    }
+  }
+}

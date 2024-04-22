@@ -1,0 +1,40 @@
+{
+  "tossApp": {
+    "matchTeam": {
+      "home": {
+        "title": "Match Teams",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Team",
+        "createOrEditLabel": "Create or edit a Match Team",
+        "notFound": "No Match Teams found"
+      },
+      "created": "A new Match Team is created with identifier { param }",
+      "updated": "A Match Team is updated with identifier { param }",
+      "deleted": "A Match Team is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Team { id }?"
+      },
+      "detail": {
+        "title": "Match Team"
+      },
+      "id": "Id",
+      "isWinner": "Is Winner",
+      "avgPpd": "Avg Ppd",
+      "avgMpr": "Avg Mpr",
+      "winSet": "Win Set",
+      "winLeg": "Win Leg",
+      "playerCallModeType": "Player Call Mode Type",
+      "matchAttendance": "Match Attendance",
+      "matchCall": "Match Call",
+      "team": "Team",
+      "help": {
+        "isWinner": "승패여부",
+        "avgPpd": "AVG. PPD",
+        "avgMpr": "AVG. MPR",
+        "winSet": "winSet",
+        "winLeg": "winLeg",
+        "playerCallModeType": "선수 호출 구분"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "tossApp": {
+    "matchFormatGame": {
+      "home": {
+        "title": "Match Format Games",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Format Game",
+        "createOrEditLabel": "Create or edit a Match Format Game",
+        "notFound": "No Match Format Games found"
+      },
+      "created": "A new Match Format Game is created with identifier { param }",
+      "updated": "A Match Format Game is updated with identifier { param }",
+      "deleted": "A Match Format Game is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Format Game { id }?"
+      },
+      "detail": {
+        "title": "Match Format Game"
+      },
+      "id": "Id",
+      "gameCategoryType": "Game Category Type",
+      "gameType": "Game Type",
+      "roundNum": "Round Num",
+      "machineCreditType": "Machine Credit Type",
+      "includingChoiceGame": "Including Choice Game",
+      "game": "Game",
+      "matchFormat": "Match Format",
+      "help": {
+        "gameCategoryType": "게임카테고리",
+        "gameType": "게임",
+        "roundNum": "라운드수",
+        "machineCreditType": "Credit(별도 게임비용)",
+        "includingChoiceGame": "Choice 게임 포함 여부"
+      }
+    }
+  }
+}

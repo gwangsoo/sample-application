@@ -1,0 +1,71 @@
+{
+  "annotations": {
+    "changelogDate": "20240422012430"
+  },
+  "applications": ["toss"],
+  "documentation": "게임",
+  "dto": "mapstruct",
+  "entityTableName": "tb_game",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "게임카테고리",
+      "fieldName": "gameCategoryType",
+      "fieldType": "GameCategoryType",
+      "fieldTypeDocumentation": "게임카테고리",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GAME_01 (01 Game),CRICKET (Cricket),PRACTICE (Practice)"
+    },
+    {
+      "documentation": "게임명",
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "게임설명",
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "라운드수 기본값",
+      "fieldName": "roundNumDefault",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "라운드수 범위(최소)",
+      "fieldName": "roundNumMin",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "라운드수 범위(최대)",
+      "fieldName": "roundNumMax",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "라운드수 무제한",
+      "fieldName": "roundNumUnlimit",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Game",
+  "relationships": [
+    {
+      "otherEntityName": "matchFormatGame",
+      "otherEntityRelationshipName": "game",
+      "relationshipName": "matchFormatGame",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

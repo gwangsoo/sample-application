@@ -1,0 +1,9 @@
+export enum PaymentStatusType {
+  WAITING_PAYMENT = '1',
+
+  COMPLETE_PAYMENT = '2',
+
+  WAITING_PAYMENT_CANCELLATION = '3',
+
+  PAYMENT_CANCELLATION_COMPLETED = '4',
+}

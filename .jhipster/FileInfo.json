@@ -1,0 +1,55 @@
+{
+  "annotations": {
+    "changelogDate": "20240422011330"
+  },
+  "applications": ["toss"],
+  "documentation": "파일정보",
+  "dto": "mapstruct",
+  "entityTableName": "tb_fileinfo",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "원래파일명",
+      "fieldName": "originalName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "MIME",
+      "fieldName": "mimeType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "128"
+    },
+    {
+      "documentation": "파일사이즈",
+      "fieldName": "fileSize",
+      "fieldType": "Long"
+    },
+    {
+      "documentation": "파일저장경로",
+      "fieldName": "savedPath",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    }
+  ],
+  "name": "FileInfo",
+  "relationships": [
+    {
+      "otherEntityName": "affiliatedInfo",
+      "otherEntityRelationshipName": "fileInfo",
+      "relationshipName": "affiliatedInfo",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

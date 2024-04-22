@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Tournament.
+    -->
+    <changeSet id="20240422012230-1" author="jhipster">
+        <createTable tableName="tb_tournament" remarks="토너먼트">
+            <column name="id" type="varchar(16)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="seq" type="integer" remarks="토너먼트순서 (노출순서와 매치ID에 사용)">
+                <constraints nullable="false" />
+            </column>
+            <column name="name" type="varchar(256)" remarks="토너먼트명">
+                <constraints nullable="false" />
+            </column>
+            <column name="day" type="integer" remarks="대회진행일(차수)">
+                <constraints nullable="false" />
+            </column>
+            <column name="event_tournament" type="boolean" remarks="패자 부활 Tournament 여부">
+                <constraints nullable="true" />
+            </column>
+            <column name="entry_close" type="boolean" remarks="참가마감 버튼">
+                <constraints nullable="true" />
+            </column>
+            <column name="entry_approval_type" type="varchar(255)" remarks="참가승인방법">
+                <constraints nullable="false" />
+            </column>
+            <column name="tournament_type" type="varchar(255)" remarks="토너먼트유형">
+                <constraints nullable="false" />
+            </column>
+            <column name="seeding_rule" type="varchar(255)" remarks="Seeding Rule">
+                <constraints nullable="false" />
+            </column>
+            <column name="tournament_play_mode" type="varchar(255)" remarks="토너먼트 Play Mode">
+                <constraints nullable="false" />
+            </column>
+            <column name="third_place_decision" type="boolean" remarks="3위 결정 여부">
+                <constraints nullable="true" />
+            </column>
+            <column name="division_rule" type="varchar(255)" remarks="Division 구분 기준">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_limit" type="boolean" remarks="엔트리 인원수 설정 false unlimited, true limit">
+                <constraints nullable="false" />
+            </column>
+            <column name="num_of_entry" type="integer" remarks="엔트리인원수">
+                <constraints nullable="false" />
+            </column>
+            <column name="division_assign_method" type="varchar(255)" remarks="디비전배정방법">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_gender_type" type="varchar(255)" remarks="참가자 성별">
+                <constraints nullable="false" />
+            </column>
+            <column name="handicap" type="varchar(255)" remarks="Handicap">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_fee_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <column name="competition_id" type="varchar(16)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240422012230-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/tb_tournament.csv"
+                  separator=";"
+                  tableName="tb_tournament"
+                  usePreparedStatements="true">
+            <column name="id" type="string"/>
+            <column name="seq" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="day" type="numeric"/>
+            <column name="event_tournament" type="boolean"/>
+            <column name="entry_close" type="boolean"/>
+            <column name="entry_approval_type" type="string"/>
+            <column name="tournament_type" type="string"/>
+            <column name="seeding_rule" type="string"/>
+            <column name="tournament_play_mode" type="string"/>
+            <column name="third_place_decision" type="boolean"/>
+            <column name="division_rule" type="string"/>
+            <column name="entry_limit" type="boolean"/>
+            <column name="num_of_entry" type="numeric"/>
+            <column name="division_assign_method" type="string"/>
+            <column name="entry_gender_type" type="string"/>
+            <column name="handicap" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

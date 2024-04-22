@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity MatchAttendance.
+    -->
+    <changeSet id="20240422013830-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="entry_id"
+                                 baseTableName="tb_match_attendance"
+                                 constraintName="fk_tb_match_attendance__entry_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_entry"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="match_team_id"
+                                 baseTableName="tb_match_attendance"
+                                 constraintName="fk_tb_match_attendance__match_team_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_match_detail"
+                                 />
+    </changeSet>
+</databaseChangeLog>

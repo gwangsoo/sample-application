@@ -1,0 +1,62 @@
+{
+  "tossApp": {
+    "division": {
+      "home": {
+        "title": "Divisions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Division",
+        "createOrEditLabel": "Create or edit a Division",
+        "notFound": "No Divisions found"
+      },
+      "created": "A new Division is created with identifier { param }",
+      "updated": "A Division is updated with identifier { param }",
+      "deleted": "A Division is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Division { id }?"
+      },
+      "detail": {
+        "title": "Division"
+      },
+      "id": "Id",
+      "seq": "Seq",
+      "name": "Name",
+      "ratingRuleTeamMin": "Rating Rule Team Min",
+      "ratingRuleTeamMax": "Rating Rule Team Max",
+      "ratingRuleIndividualLimit": "Rating Rule Individual Limit",
+      "ratingRuleIndividualMin": "Rating Rule Individual Min",
+      "ratingRuleIndividualMax": "Rating Rule Individual Max",
+      "entryLimit": "Entry Limit",
+      "roundRobinRankingDecisionType": "Round Robin Ranking Decision Type",
+      "roundRobinGroupType": "Round Robin Group Type",
+      "nextRoundDecisionType": "Next Round Decision Type",
+      "roundRoginThirdDecision": "Round Rogin Third Decision",
+      "thirdDecisionRankingRule": "Third Decision Ranking Rule",
+      "useAllRoundSameFormat": "Use All Round Same Format",
+      "eventRangeType": "Event Range Type",
+      "eliminationTeamCount": "Elimination Team Count",
+      "matchFormat": "Match Format",
+      "eventPoint": "Event Point",
+      "team": "Team",
+      "tournament": "Tournament",
+      "match": "Match",
+      "help": {
+        "seq": "디비전순서 (노출순서와 매치ID에 사용)",
+        "name": "디비전명",
+        "ratingRuleTeamMin": "팀합산 Rating (최소)",
+        "ratingRuleTeamMax": "팀합산 Rating (최대)",
+        "ratingRuleIndividualLimit": "개인 레이팅 제한 여부 false unlimited, true limit",
+        "ratingRuleIndividualMin": "개인 Rating (최소)",
+        "ratingRuleIndividualMax": "개인 Rating (최대)",
+        "entryLimit": "참가자 인원수 설정 false unlimited, true limit",
+        "roundRobinRankingDecisionType": "라운드로빈 순위 결정 방식",
+        "roundRobinGroupType": "라운드로빈 그룹 종류",
+        "nextRoundDecisionType": "다음(결승) 라운드 진출 방식",
+        "roundRoginThirdDecision": "라운드로빈 3위 결승 진출 여부",
+        "thirdDecisionRankingRule": "라운드로빈 3위 결승 진출 랭킹 기준",
+        "useAllRoundSameFormat": "모든 Round 동일 Format 사용",
+        "eventRangeType": "Event Range 구분 기준",
+        "eliminationTeamCount": "elimination team 수"
+      }
+    }
+  }
+}

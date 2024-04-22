@@ -1,0 +1,11 @@
+id;game_01_in_option_type;game_01_out_option_type;game_01_bull_option_type;game_01_arrange;cricket_over_kill;cricket_score;team_game_01_freeze_view;team_game_01_point;team_cricket_mark;team_cricket_finish;team_cricket_point
+720a6f3c-7ff1-48;DOUBLE;DOUBLE_BULL_BUST;BULL_25_50;true;false;9076;LOSE;true;false;ONE_PLAYER_ONLY;false
+4dbd78ee-570a-42;MASTER;MASTER_BULL_LOSE;BULL_50_50;true;true;32477;LOSE;false;false;ONE_PLAYER_ONLY;false
+d8be0cf9-a5f9-46;DOUBLE_BULL_BUST;MASTER;BULL_25_50;true;true;9970;LOSE;true;false;ALL_PLAYER;false
+45182547-b274-4f;MASTER_BULL_LOSE;DOUBLE_BULL_LOSE;BULL_50_50;false;false;23132;LOSE;true;false;ALL_PLAYER;false
+52e300b1-89eb-42;MASTER_BULL_0;DOUBLE_BULL_0;BULL_50_50;false;true;16854;BUST;false;true;ONE_PLAYER_ONLY;true
+ce8f0bd4-6f09-47;DOUBLE;MASTER_BULL_0;BULL_50_50;false;false;6443;BUST;false;false;ALL_PLAYER;true
+54c635a2-cf73-49;MASTER;MASTER_BULL_BUST;BULL_25_50;true;false;27991;LOSE;false;true;ALL_PLAYER;true
+7638b152-62b2-49;MASTER_BULL_BUST;MASTER_BULL_LOSE;BULL_25_50;false;true;5635;BUST;true;true;ALL_PLAYER;true
+d2a6c6f8-673f-48;DOUBLE_BULL_0;DOUBLE;BULL_50_50;true;true;29340;LOSE;false;false;ONE_PLAYER_ONLY;false
+11060202-fa60-40;DOUBLE_BULL_BUST;DOUBLE_BULL_LOSE;BULL_25_50;true;false;19508;BUST;false;true;ALL_PLAYER;false

@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240422014030"
+  },
+  "applications": ["toss"],
+  "documentation": "머신 배치",
+  "dto": "mapstruct",
+  "entityTableName": "tb_machine_area",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "구역명",
+      "fieldName": "mame",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "documentation": "순서",
+      "fieldName": "seq",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "머신수",
+      "fieldName": "numOfMachine",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "MachineArea",
+  "relationships": [
+    {
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "machineArea",
+      "relationshipName": "machine",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "machineArea",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

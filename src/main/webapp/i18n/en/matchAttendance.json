@@ -1,0 +1,31 @@
+{
+  "tossApp": {
+    "matchAttendance": {
+      "home": {
+        "title": "Match Attendances",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Attendance",
+        "createOrEditLabel": "Create or edit a Match Attendance",
+        "notFound": "No Match Attendances found"
+      },
+      "created": "A new Match Attendance is created with identifier { param }",
+      "updated": "A Match Attendance is updated with identifier { param }",
+      "deleted": "A Match Attendance is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Attendance { id }?"
+      },
+      "detail": {
+        "title": "Match Attendance"
+      },
+      "id": "Id",
+      "attendanceStatusType": "Attendance Status Type",
+      "attendanceDateTime": "Attendance Date Time",
+      "entry": "Entry",
+      "matchTeam": "Match Team",
+      "help": {
+        "attendanceStatusType": "출석 상태",
+        "attendanceDateTime": "출석시간"
+      }
+    }
+  }
+}

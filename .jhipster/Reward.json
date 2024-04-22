@@ -1,0 +1,65 @@
+{
+  "annotations": {
+    "changelogDate": "20240422014230"
+  },
+  "applications": ["toss"],
+  "documentation": "리워드",
+  "dto": "mapstruct",
+  "entityTableName": "tb_reward",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "unique"],
+      "fieldValidateRulesMaxlength": "16"
+    },
+    {
+      "documentation": "지급방법1 (리워드설정)",
+      "fieldName": "rewardMethodType",
+      "fieldType": "RewardMethodType",
+      "fieldTypeDocumentation": "리워드지급방법1",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DAY (일별),TOURNAMENT (토너먼트별)"
+    },
+    {
+      "documentation": "지급방법2 (리워드설정)",
+      "fieldName": "rewardMethodSubType",
+      "fieldType": "RewardMethodSubType",
+      "fieldTypeDocumentation": "리워드지급방법2",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ALL (All Division),DIVISION (Division별)"
+    },
+    {
+      "documentation": "아이템카테고리 수",
+      "fieldName": "rewardCategoryNum",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "documentation": "머신종류",
+      "fieldName": "machineKindType",
+      "fieldType": "MachineKindType",
+      "fieldTypeDocumentation": "머신 종류",
+      "fieldValues": "VSS_S4 (VSS[S4]),VSX (VSX),VSX_MAX (VSX-Max)"
+    }
+  ],
+  "name": "Reward",
+  "relationships": [
+    {
+      "otherEntityName": "rewardDetail",
+      "otherEntityRelationshipName": "reward",
+      "relationshipName": "rewardDetail",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "competition",
+      "otherEntityRelationshipName": "reward",
+      "relationshipName": "competition",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

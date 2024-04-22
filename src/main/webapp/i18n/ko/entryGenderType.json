@@ -1,0 +1,11 @@
+{
+  "tossApp": {
+    "EntryGenderType": {
+      "null": "",
+      "ALL": "All",
+      "MALE": "Male",
+      "FEMALE": "Female",
+      "CONCOCTION": "Concoction"
+    }
+  }
+}

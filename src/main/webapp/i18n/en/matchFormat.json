@@ -1,0 +1,39 @@
+{
+  "tossApp": {
+    "matchFormat": {
+      "home": {
+        "title": "Match Formats",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Match Format",
+        "createOrEditLabel": "Create or edit a Match Format",
+        "notFound": "No Match Formats found"
+      },
+      "created": "A new Match Format is created with identifier { param }",
+      "updated": "A Match Format is updated with identifier { param }",
+      "deleted": "A Match Format is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Match Format { id }?"
+      },
+      "detail": {
+        "title": "Match Format"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "matchFormatType": "Match Format Type",
+      "firstSet": "First Set",
+      "middleSet": "Middle Set",
+      "lastSet": "Last Set",
+      "matchFormatGame": "Match Format Game",
+      "matchFormatOption": "Match Format Option",
+      "matchFormatSet": "Match Format Set",
+      "division": "Division",
+      "help": {
+        "name": "매치포맷명",
+        "description": "매치포맷 설명",
+        "matchFormatType": "매치포맷유형",
+        "firstSet": "Set 선공 설정"
+      }
+    }
+  }
+}
