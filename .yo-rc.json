@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "bff",
+    "buildTool": "gradle",
+    "clientFramework": "no",
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "enableHibernateCache": false,
+    "entities": [],
+    "jhipsterVersion": "8.4.0",
+    "jwtSecretKey": "ZGU4ZTBlNGExNDA3NDg3MTM4NmNjZjBlZTEyYzVjZjc1MjcwYjcyNjQzMjcwNTViNDlhNmI2M2Y4ZjE1Y2Q3NGNmYTZhMzk2NzUxMmZiZjE0ODMyYjkyOWRjNzhiNmUxNTQ1OThmOTBjZTRhYTQ4ZmE3ZjE1MmNhNjRmNzI4ZjQ=",
+    "languages": ["en"],
+    "nativeLanguage": "en",
+    "packageFolder": "com/example/bff",
+    "packageName": "com.example.bff",
+    "prodDatabaseType": "no",
+    "reactive": true,
+    "serviceDiscoveryType": "no",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

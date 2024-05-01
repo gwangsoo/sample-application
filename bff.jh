@@ -1,0 +1,15 @@
+application {
+  config {
+    baseName bff
+    applicationType microservice
+    packageName com.example.bff
+    authenticationType oauth2
+    prodDatabaseType mysql
+    reactive true
+    buildTool gradle
+    clientFramework no
+    databaseType no
+    prodDatabaseType no
+    serviceDiscoveryType no
+  }
+}
