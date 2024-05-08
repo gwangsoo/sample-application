@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
 import com.phoenixdarts.toss.aop.logging.LoggingAspect;
 import org.springframework.context.annotation.*;

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.EventPoint} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.EventPoint} entity.
  */
 @Schema(description = "이벤트 포인트")
 @SuppressWarnings("common-java:DuplicatedBlocks")

@@ -1,13 +1,13 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.AffiliatedType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AffiliatedType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.AffiliatedInfo} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.AffiliatedInfo} entity.
  */
 @Schema(description = "소속정보 (Shop,동호회)")
 @SuppressWarnings("common-java:DuplicatedBlocks")

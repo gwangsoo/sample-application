@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.MatchStatus;
-import com.phoenixdarts.toss.domain.enumeration.MatchType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchStatus;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Match} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Match} entity.
  */
 @Schema(description = "매치리스트")
 @SuppressWarnings("common-java:DuplicatedBlocks")

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

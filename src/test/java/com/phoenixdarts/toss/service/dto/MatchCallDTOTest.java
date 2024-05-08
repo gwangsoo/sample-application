@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class MatchCallDTOTest {

@@ -1,4 +1,4 @@
 /**
  * Application security utilities.
  */
-package com.phoenixdarts.toss.security;
+package com.phoenixdarts.toss.backend.security;

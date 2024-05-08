@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.OperatorRole;
-import com.phoenixdarts.toss.repository.OperatorRoleRepository;
-import com.phoenixdarts.toss.service.OperatorRoleService;
-import com.phoenixdarts.toss.service.dto.OperatorRoleDTO;
-import com.phoenixdarts.toss.service.mapper.OperatorRoleMapper;
+import com.phoenixdarts.toss.backend.domain.OperatorRole;
+import com.phoenixdarts.toss.backend.repository.OperatorRoleRepository;
+import com.phoenixdarts.toss.backend.service.OperatorRoleService;
+import com.phoenixdarts.toss.backend.service.dto.OperatorRoleDTO;
+import com.phoenixdarts.toss.backend.service.mapper.OperatorRoleMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.OperatorRole}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.OperatorRole}.
  */
 @Service
 @Transactional

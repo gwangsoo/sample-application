@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.phoenixdarts.toss.repository;
+package com.phoenixdarts.toss.backend.repository;

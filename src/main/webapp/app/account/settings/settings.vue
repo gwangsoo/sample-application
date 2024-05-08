@@ -6,11 +6,11 @@
           <span v-html="t$('settings.title', { username: username })"></span>
         </h2>
 
-        <div class="alert alert-success" role="alert" v-if="success" v-html="t$('settings.messages.success')"></div>
+        <div class="alert alert-success" auth="alert" v-if="success" v-html="t$('settings.messages.success')"></div>
 
-        <div class="alert alert-danger" role="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
+        <div class="alert alert-danger" auth="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
 
-        <form name="form" id="settings-form" role="form" v-on:submit.prevent="save()" v-if="settingsAccount" novalidate>
+        <form name="form" id="settings-form" auth="form" v-on:submit.prevent="save()" v-if="settingsAccount" novalidate>
           <div class="form-group">
             <label class="form-control-label" for="firstName" v-text="t$('settings.form.firstname')"></label>
             <input

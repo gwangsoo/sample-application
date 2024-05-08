@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.OperatorRoleTestSamples.*;
-import static com.phoenixdarts.toss.domain.OperatorTestSamples.*;
-import static com.phoenixdarts.toss.domain.RoleTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.OperatorRoleTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.OperatorTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.RoleTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

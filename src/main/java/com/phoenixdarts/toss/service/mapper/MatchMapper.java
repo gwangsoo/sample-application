@@ -1,13 +1,13 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Division;
-import com.phoenixdarts.toss.domain.Machine;
-import com.phoenixdarts.toss.domain.Match;
-import com.phoenixdarts.toss.domain.MatchTeam;
-import com.phoenixdarts.toss.service.dto.DivisionDTO;
-import com.phoenixdarts.toss.service.dto.MachineDTO;
-import com.phoenixdarts.toss.service.dto.MatchDTO;
-import com.phoenixdarts.toss.service.dto.MatchTeamDTO;
+import com.phoenixdarts.toss.backend.domain.Division;
+import com.phoenixdarts.toss.backend.domain.Machine;
+import com.phoenixdarts.toss.backend.domain.Match;
+import com.phoenixdarts.toss.backend.domain.MatchTeam;
+import com.phoenixdarts.toss.backend.service.dto.DivisionDTO;
+import com.phoenixdarts.toss.backend.service.dto.MachineDTO;
+import com.phoenixdarts.toss.backend.service.dto.MatchDTO;
+import com.phoenixdarts.toss.backend.service.dto.MatchTeamDTO;
 import org.mapstruct.*;
 
 /**

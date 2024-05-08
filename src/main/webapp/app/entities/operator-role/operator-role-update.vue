@@ -1,24 +1,24 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-8">
-      <form name="editForm" role="form" novalidate v-on:submit.prevent="save()">
+      <form name="editForm" auth="form" novalidate v-on:submit.prevent="save()">
         <h2
-          id="tossApp.operatorRole.home.createOrEditLabel"
+          id="tossApp.role.home.createOrEditLabel"
           data-cy="OperatorRoleCreateUpdateHeading"
-          v-text="t$('tossApp.operatorRole.home.createOrEditLabel')"
+          v-text="t$('tossApp.role.home.createOrEditLabel')"
         ></h2>
         <div>
-          <div class="form-group" v-if="operatorRole.id">
+          <div class="form-group" v-if="role.id">
             <label for="id" v-text="t$('global.field.id')"></label>
-            <input type="text" class="form-control" id="id" name="id" v-model="operatorRole.id" readonly />
+            <input type="text" class="form-control" id="id" name="id" v-model="role.id" readonly />
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.operatorRole.name')" for="operator-role-name"></label>
+            <label class="form-control-label" v-text="t$('tossApp.role.name')" for="operator-auth-name"></label>
             <input
               type="text"
               class="form-control"
               name="name"
-              id="operator-role-name"
+              id="operator-auth-name"
               data-cy="name"
               :class="{ valid: !v$.name.$invalid, invalid: v$.name.$invalid }"
               v-model="v$.name.$model"
@@ -29,12 +29,12 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.operatorRole.displayOrder')" for="operator-role-displayOrder"></label>
+            <label class="form-control-label" v-text="t$('tossApp.role.displayOrder')" for="operator-auth-displayOrder"></label>
             <input
               type="number"
               class="form-control"
               name="displayOrder"
-              id="operator-role-displayOrder"
+              id="operator-auth-displayOrder"
               data-cy="displayOrder"
               :class="{ valid: !v$.displayOrder.$invalid, invalid: v$.displayOrder.$invalid }"
               v-model.number="v$.displayOrder.$model"
@@ -63,4 +63,4 @@
     </div>
   </div>
 </template>
-<script lang="ts" src="./operator-role-update.component.ts"></script>
+<script lang="ts" src="./operator-auth-update.component.ts"></script>

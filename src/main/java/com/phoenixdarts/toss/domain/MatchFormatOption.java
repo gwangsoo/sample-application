@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatBullOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatFreezeOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatInOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatOutOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatTeamFinishOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatBullOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatFreezeOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatInOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatOutOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatTeamFinishOptionType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

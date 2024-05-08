@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Language;
-import com.phoenixdarts.toss.service.dto.LanguageDTO;
+import com.phoenixdarts.toss.backend.domain.Language;
+import com.phoenixdarts.toss.backend.service.dto.LanguageDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
@@ -7,7 +7,7 @@ import java.time.ZonedDateTime;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchCall} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchCall} entity.
  */
 @Schema(description = "호출정보")
 @SuppressWarnings("common-java:DuplicatedBlocks")

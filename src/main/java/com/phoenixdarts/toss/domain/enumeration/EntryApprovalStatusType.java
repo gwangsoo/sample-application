@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain.enumeration;
+package com.phoenixdarts.toss.backend.domain.enumeration;
 
 /**
  * 참가자 참여 여부 상태

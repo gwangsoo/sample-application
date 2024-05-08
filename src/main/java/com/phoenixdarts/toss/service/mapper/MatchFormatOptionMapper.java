@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.MatchFormat;
-import com.phoenixdarts.toss.domain.MatchFormatOption;
-import com.phoenixdarts.toss.service.dto.MatchFormatDTO;
-import com.phoenixdarts.toss.service.dto.MatchFormatOptionDTO;
+import com.phoenixdarts.toss.backend.domain.MatchFormat;
+import com.phoenixdarts.toss.backend.domain.MatchFormatOption;
+import com.phoenixdarts.toss.backend.service.dto.MatchFormatDTO;
+import com.phoenixdarts.toss.backend.service.dto.MatchFormatOptionDTO;
 import org.mapstruct.*;
 
 /**

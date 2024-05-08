@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -13,10 +13,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 /**
  * Persistent tokens are used by Spring Security to automatically log in users.
  *
- * @see com.phoenixdarts.toss.security.PersistentTokenRememberMeServices
+ * @see com.phoenixdarts.toss.backend.security.PersistentTokenRememberMeServices
  */
 @Entity
-@Table(name = "jhi_persistent_token")
+@Table(name = "tb_persistent_token")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class PersistentToken implements Serializable {
 

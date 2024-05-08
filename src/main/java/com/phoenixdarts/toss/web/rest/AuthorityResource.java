@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import com.phoenixdarts.toss.domain.Authority;
-import com.phoenixdarts.toss.repository.AuthorityRepository;
-import com.phoenixdarts.toss.web.rest.errors.BadRequestAlertException;
+import com.phoenixdarts.toss.backend.domain.Authority;
+import com.phoenixdarts.toss.backend.repository.AuthorityRepository;
+import com.phoenixdarts.toss.backend.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -15,11 +15,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import tech.jhipster.web.util.HeaderUtil;
-import tech.jhipster.web.util.ResponseUtil;
+import com.phoenixdarts.toss.backend.util.HeaderUtil;
+import com.phoenixdarts.toss.backend.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.phoenixdarts.toss.domain.Authority}.
+ * REST controller for managing {@link com.phoenixdarts.toss.backend.domain.Authority}.
  */
 @RestController
 @RequestMapping("/api/authorities")

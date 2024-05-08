@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.MatchAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.MatchAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,12 +10,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Match;
-import com.phoenixdarts.toss.domain.enumeration.MatchStatus;
-import com.phoenixdarts.toss.domain.enumeration.MatchType;
-import com.phoenixdarts.toss.repository.MatchRepository;
-import com.phoenixdarts.toss.service.dto.MatchDTO;
-import com.phoenixdarts.toss.service.mapper.MatchMapper;
+import com.phoenixdarts.toss.backend.domain.Match;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchStatus;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchType;
+import com.phoenixdarts.toss.backend.repository.MatchRepository;
+import com.phoenixdarts.toss.backend.service.dto.MatchDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MatchMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

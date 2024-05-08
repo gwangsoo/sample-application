@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.CountryDTO;
+import com.phoenixdarts.toss.backend.service.dto.CountryDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Country}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Country}.
  */
 public interface CountryService {
     /**

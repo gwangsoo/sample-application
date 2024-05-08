@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.repository;
+package com.phoenixdarts.toss.backend.repository;
 
-import com.phoenixdarts.toss.domain.PersistentToken;
-import com.phoenixdarts.toss.domain.User;
+import com.phoenixdarts.toss.backend.domain.PersistentToken;
+import com.phoenixdarts.toss.backend.domain.User;
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;

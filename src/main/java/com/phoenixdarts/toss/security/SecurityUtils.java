@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.security;
+package com.phoenixdarts.toss.backend.security;
 
 import java.util.Arrays;
 import java.util.Optional;

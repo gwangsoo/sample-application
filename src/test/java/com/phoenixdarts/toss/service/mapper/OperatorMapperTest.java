@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.OperatorAsserts.*;
-import static com.phoenixdarts.toss.domain.OperatorTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.OperatorAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.OperatorTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

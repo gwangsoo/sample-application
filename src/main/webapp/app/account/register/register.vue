@@ -4,18 +4,18 @@
       <div class="col-md-8 toastify-container">
         <h1 v-text="t$('register.title')" id="register-title" data-cy="registerTitle"></h1>
 
-        <div class="alert alert-success" role="alert" v-if="success" v-html="t$('register.messages.success')"></div>
+        <div class="alert alert-success" auth="alert" v-if="success" v-html="t$('register.messages.success')"></div>
 
-        <div class="alert alert-danger" role="alert" v-if="error" v-html="t$('register.messages.error.fail')"></div>
+        <div class="alert alert-danger" auth="alert" v-if="error" v-html="t$('register.messages.error.fail')"></div>
 
-        <div class="alert alert-danger" role="alert" v-if="errorUserExists" v-html="t$('register.messages.error.userexists')"></div>
+        <div class="alert alert-danger" auth="alert" v-if="errorUserExists" v-html="t$('register.messages.error.userexists')"></div>
 
-        <div class="alert alert-danger" role="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
+        <div class="alert alert-danger" auth="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <form id="register-form" name="registerForm" role="form" v-on:submit.prevent="register()" v-if="!success" no-validate>
+        <form id="register-form" name="registerForm" auth="form" v-on:submit.prevent="register()" v-if="!success" no-validate>
           <div class="form-group">
             <label class="form-control-label" for="username" v-text="t$('global.form[\'username.label\']')"></label>
             <input

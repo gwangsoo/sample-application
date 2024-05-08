@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.MatchFormatSetDTO;
+import com.phoenixdarts.toss.backend.service.dto.MatchFormatSetDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.MatchFormatSet}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.MatchFormatSet}.
  */
 public interface MatchFormatSetService {
     /**

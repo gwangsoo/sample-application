@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.MatchFormatOptionTestSamples.*;
-import static com.phoenixdarts.toss.domain.MatchFormatTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatOptionTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class MatchFormatOptionTest {

@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.RewardDetail;
-import com.phoenixdarts.toss.repository.RewardDetailRepository;
-import com.phoenixdarts.toss.service.RewardDetailService;
-import com.phoenixdarts.toss.service.dto.RewardDetailDTO;
-import com.phoenixdarts.toss.service.mapper.RewardDetailMapper;
+import com.phoenixdarts.toss.backend.domain.RewardDetail;
+import com.phoenixdarts.toss.backend.repository.RewardDetailRepository;
+import com.phoenixdarts.toss.backend.service.RewardDetailService;
+import com.phoenixdarts.toss.backend.service.dto.RewardDetailDTO;
+import com.phoenixdarts.toss.backend.service.mapper.RewardDetailMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.RewardDetail}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.RewardDetail}.
  */
 @Service
 @Transactional

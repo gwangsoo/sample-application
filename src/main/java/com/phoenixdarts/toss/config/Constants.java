@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
 /**
  * Application constants.

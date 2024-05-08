@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Currency;
-import com.phoenixdarts.toss.repository.CurrencyRepository;
-import com.phoenixdarts.toss.service.CurrencyService;
-import com.phoenixdarts.toss.service.dto.CurrencyDTO;
-import com.phoenixdarts.toss.service.mapper.CurrencyMapper;
+import com.phoenixdarts.toss.backend.domain.Currency;
+import com.phoenixdarts.toss.backend.repository.CurrencyRepository;
+import com.phoenixdarts.toss.backend.service.CurrencyService;
+import com.phoenixdarts.toss.backend.service.dto.CurrencyDTO;
+import com.phoenixdarts.toss.backend.service.mapper.CurrencyMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Currency}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Currency}.
  */
 @Service
 @Transactional

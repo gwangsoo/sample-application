@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Country;
-import com.phoenixdarts.toss.repository.CountryRepository;
-import com.phoenixdarts.toss.service.CountryService;
-import com.phoenixdarts.toss.service.dto.CountryDTO;
-import com.phoenixdarts.toss.service.mapper.CountryMapper;
+import com.phoenixdarts.toss.backend.domain.Country;
+import com.phoenixdarts.toss.backend.repository.CountryRepository;
+import com.phoenixdarts.toss.backend.service.CountryService;
+import com.phoenixdarts.toss.backend.service.dto.CountryDTO;
+import com.phoenixdarts.toss.backend.service.mapper.CountryMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Country}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Country}.
  */
 @Service
 @Transactional

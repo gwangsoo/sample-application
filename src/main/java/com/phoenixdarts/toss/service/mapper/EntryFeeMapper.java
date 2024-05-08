@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Currency;
-import com.phoenixdarts.toss.domain.EntryFee;
-import com.phoenixdarts.toss.service.dto.CurrencyDTO;
-import com.phoenixdarts.toss.service.dto.EntryFeeDTO;
+import com.phoenixdarts.toss.backend.domain.Currency;
+import com.phoenixdarts.toss.backend.domain.EntryFee;
+import com.phoenixdarts.toss.backend.service.dto.CurrencyDTO;
+import com.phoenixdarts.toss.backend.service.dto.EntryFeeDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest.errors;
+package com.phoenixdarts.toss.backend.web.rest.errors;
 
 import static org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation;
 
@@ -32,9 +32,9 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import tech.jhipster.config.JHipsterConstants;
-import tech.jhipster.web.rest.errors.ProblemDetailWithCause;
-import tech.jhipster.web.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
-import tech.jhipster.web.util.HeaderUtil;
+import com.phoenixdarts.toss.backend.rest.errors.ProblemDetailWithCause;
+import com.phoenixdarts.toss.backend.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
+import com.phoenixdarts.toss.backend.util.HeaderUtil;
 
 /**
  * Controller advice to translate the server side exceptions to client-friendly json structures.
@@ -82,13 +82,13 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
 
     private ProblemDetailWithCause getProblemDetailWithCause(Throwable ex) {
         if (
-            ex instanceof com.phoenixdarts.toss.service.UsernameAlreadyUsedException
+            ex instanceof com.phoenixdarts.toss.backend.service.UsernameAlreadyUsedException
         ) return (ProblemDetailWithCause) new LoginAlreadyUsedException().getBody();
         if (
-            ex instanceof com.phoenixdarts.toss.service.EmailAlreadyUsedException
+            ex instanceof com.phoenixdarts.toss.backend.service.EmailAlreadyUsedException
         ) return (ProblemDetailWithCause) new EmailAlreadyUsedException().getBody();
         if (
-            ex instanceof com.phoenixdarts.toss.service.InvalidPasswordException
+            ex instanceof com.phoenixdarts.toss.backend.service.InvalidPasswordException
         ) return (ProblemDetailWithCause) new InvalidPasswordException().getBody();
 
         if (

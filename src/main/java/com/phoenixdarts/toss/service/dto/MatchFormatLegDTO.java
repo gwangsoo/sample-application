@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.FirstThrowType;
-import com.phoenixdarts.toss.domain.enumeration.LegPlayMode;
+import com.phoenixdarts.toss.backend.domain.enumeration.FirstThrowType;
+import com.phoenixdarts.toss.backend.domain.enumeration.LegPlayMode;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchFormatLeg} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchFormatLeg} entity.
  */
 @Schema(description = "매치포맷 LEG")
 @SuppressWarnings("common-java:DuplicatedBlocks")

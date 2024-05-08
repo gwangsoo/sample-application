@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain.enumeration;
+package com.phoenixdarts.toss.backend.domain.enumeration;
 
 /**
  * 게임카테고리

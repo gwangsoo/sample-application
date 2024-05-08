@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest.errors;
+package com.phoenixdarts.toss.backend.web.rest.errors;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

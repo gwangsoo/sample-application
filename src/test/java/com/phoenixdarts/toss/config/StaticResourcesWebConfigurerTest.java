@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
-import static com.phoenixdarts.toss.config.StaticResourcesWebConfiguration.*;
+import static com.phoenixdarts.toss.backend.config.StaticResourcesWebConfiguration.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 

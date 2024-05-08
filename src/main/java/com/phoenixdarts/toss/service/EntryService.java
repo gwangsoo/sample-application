@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.EntryDTO;
+import com.phoenixdarts.toss.backend.service.dto.EntryDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Entry}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Entry}.
  */
 public interface EntryService {
     /**

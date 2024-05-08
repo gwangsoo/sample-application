@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain.enumeration;
+package com.phoenixdarts.toss.backend.domain.enumeration;
 
 /**
  * 다음(결승) 라운드 진출 방식

@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.MatchFormatOptionAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatOptionAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,15 +10,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.MatchFormatOption;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatBullOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatFreezeOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatInOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatOutOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatTeamFinishOptionType;
-import com.phoenixdarts.toss.repository.MatchFormatOptionRepository;
-import com.phoenixdarts.toss.service.dto.MatchFormatOptionDTO;
-import com.phoenixdarts.toss.service.mapper.MatchFormatOptionMapper;
+import com.phoenixdarts.toss.backend.domain.MatchFormatOption;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatBullOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatFreezeOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatInOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatOutOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatTeamFinishOptionType;
+import com.phoenixdarts.toss.backend.repository.MatchFormatOptionRepository;
+import com.phoenixdarts.toss.backend.service.dto.MatchFormatOptionDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MatchFormatOptionMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

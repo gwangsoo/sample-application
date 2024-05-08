@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.AffiliatedInfo;
-import com.phoenixdarts.toss.repository.AffiliatedInfoRepository;
-import com.phoenixdarts.toss.service.AffiliatedInfoService;
-import com.phoenixdarts.toss.service.dto.AffiliatedInfoDTO;
-import com.phoenixdarts.toss.service.mapper.AffiliatedInfoMapper;
+import com.phoenixdarts.toss.backend.domain.AffiliatedInfo;
+import com.phoenixdarts.toss.backend.repository.AffiliatedInfoRepository;
+import com.phoenixdarts.toss.backend.service.AffiliatedInfoService;
+import com.phoenixdarts.toss.backend.service.dto.AffiliatedInfoDTO;
+import com.phoenixdarts.toss.backend.service.mapper.AffiliatedInfoMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.AffiliatedInfo}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.AffiliatedInfo}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -8,12 +8,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Authority;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.UserRepository;
-import com.phoenixdarts.toss.security.AuthoritiesConstants;
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
-import com.phoenixdarts.toss.service.mapper.UserMapper;
+import com.phoenixdarts.toss.backend.domain.Authority;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
+import com.phoenixdarts.toss.backend.security.AuthoritiesConstants;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.service.mapper.UserMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.util.*;

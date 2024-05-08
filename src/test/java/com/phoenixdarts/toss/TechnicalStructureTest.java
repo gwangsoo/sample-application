@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(TossApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.phoenixdarts.toss.config.Constants.class,
-            com.phoenixdarts.toss.config.ApplicationProperties.class
+            com.phoenixdarts.toss.backend.config.Constants.class,
+            com.phoenixdarts.toss.backend.config.ApplicationProperties.class
         ));
 }

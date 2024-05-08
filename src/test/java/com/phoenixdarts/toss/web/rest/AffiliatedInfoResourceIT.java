@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.AffiliatedInfoAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.AffiliatedInfoAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,11 +10,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.AffiliatedInfo;
-import com.phoenixdarts.toss.domain.enumeration.AffiliatedType;
-import com.phoenixdarts.toss.repository.AffiliatedInfoRepository;
-import com.phoenixdarts.toss.service.dto.AffiliatedInfoDTO;
-import com.phoenixdarts.toss.service.mapper.AffiliatedInfoMapper;
+import com.phoenixdarts.toss.backend.domain.AffiliatedInfo;
+import com.phoenixdarts.toss.backend.domain.enumeration.AffiliatedType;
+import com.phoenixdarts.toss.backend.repository.AffiliatedInfoRepository;
+import com.phoenixdarts.toss.backend.service.dto.AffiliatedInfoDTO;
+import com.phoenixdarts.toss.backend.service.mapper.AffiliatedInfoMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

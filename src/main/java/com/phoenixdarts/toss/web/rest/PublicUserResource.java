@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import com.phoenixdarts.toss.service.UserService;
-import com.phoenixdarts.toss.service.dto.UserDTO;
+import com.phoenixdarts.toss.backend.service.UserService;
+import com.phoenixdarts.toss.backend.service.dto.UserDTO;
 import java.util.*;
 import java.util.Collections;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import tech.jhipster.web.util.PaginationUtil;
+import com.phoenixdarts.toss.backend.util.PaginationUtil;
 
 @RestController
 @RequestMapping("/api")

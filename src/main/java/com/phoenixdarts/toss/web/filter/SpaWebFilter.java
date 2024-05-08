@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.filter;
+package com.phoenixdarts.toss.backend.web.filter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

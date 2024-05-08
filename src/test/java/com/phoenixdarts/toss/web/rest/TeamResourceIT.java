@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.TeamAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
-import static com.phoenixdarts.toss.web.rest.TestUtil.sameInstant;
+import static com.phoenixdarts.toss.backend.domain.TeamAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.sameInstant;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -11,11 +11,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Team;
-import com.phoenixdarts.toss.domain.enumeration.EntryApprovalStatusType;
-import com.phoenixdarts.toss.repository.TeamRepository;
-import com.phoenixdarts.toss.service.dto.TeamDTO;
-import com.phoenixdarts.toss.service.mapper.TeamMapper;
+import com.phoenixdarts.toss.backend.domain.Team;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApprovalStatusType;
+import com.phoenixdarts.toss.backend.repository.TeamRepository;
+import com.phoenixdarts.toss.backend.service.dto.TeamDTO;
+import com.phoenixdarts.toss.backend.service.mapper.TeamMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.ZoneId;

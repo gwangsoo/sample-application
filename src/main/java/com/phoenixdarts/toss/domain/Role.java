@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.AuthLevelType;
-import com.phoenixdarts.toss.domain.enumeration.AuthScopeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AuthLevelType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AuthScopeType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

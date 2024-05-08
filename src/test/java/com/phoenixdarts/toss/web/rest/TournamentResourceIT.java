@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.TournamentAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.TournamentAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,18 +10,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Tournament;
-import com.phoenixdarts.toss.domain.enumeration.DivisionAssignMethod;
-import com.phoenixdarts.toss.domain.enumeration.DivisionRuleType;
-import com.phoenixdarts.toss.domain.enumeration.EntryApprovalType;
-import com.phoenixdarts.toss.domain.enumeration.EntryGenderType;
-import com.phoenixdarts.toss.domain.enumeration.HandicapType;
-import com.phoenixdarts.toss.domain.enumeration.SeedingRuleType;
-import com.phoenixdarts.toss.domain.enumeration.TournamentPlayMode;
-import com.phoenixdarts.toss.domain.enumeration.TournamentType;
-import com.phoenixdarts.toss.repository.TournamentRepository;
-import com.phoenixdarts.toss.service.dto.TournamentDTO;
-import com.phoenixdarts.toss.service.mapper.TournamentMapper;
+import com.phoenixdarts.toss.backend.domain.Tournament;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionAssignMethod;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApprovalType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryGenderType;
+import com.phoenixdarts.toss.backend.domain.enumeration.HandicapType;
+import com.phoenixdarts.toss.backend.domain.enumeration.SeedingRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentPlayMode;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentType;
+import com.phoenixdarts.toss.backend.repository.TournamentRepository;
+import com.phoenixdarts.toss.backend.service.dto.TournamentDTO;
+import com.phoenixdarts.toss.backend.service.mapper.TournamentMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

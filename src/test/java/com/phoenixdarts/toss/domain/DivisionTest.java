@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.DivisionTestSamples.*;
-import static com.phoenixdarts.toss.domain.EventPointTestSamples.*;
-import static com.phoenixdarts.toss.domain.MatchFormatTestSamples.*;
-import static com.phoenixdarts.toss.domain.MatchTestSamples.*;
-import static com.phoenixdarts.toss.domain.TeamTestSamples.*;
-import static com.phoenixdarts.toss.domain.TournamentTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.DivisionTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.EventPointTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MatchTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.TeamTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.TournamentTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

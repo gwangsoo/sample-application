@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
-import com.phoenixdarts.toss.service.dto.UserDTO;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.service.dto.UserDTO;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

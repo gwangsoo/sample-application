@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.web.rest.errors;
+package com.phoenixdarts.toss.backend.web.rest.errors;
 
 import java.net.URI;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.ErrorResponseException;
-import tech.jhipster.web.rest.errors.ProblemDetailWithCause;
-import tech.jhipster.web.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
+import com.phoenixdarts.toss.backend.rest.errors.ProblemDetailWithCause;
+import com.phoenixdarts.toss.backend.rest.errors.ProblemDetailWithCause.ProblemDetailWithCauseBuilder;
 
 @SuppressWarnings("java:S110") // Inheritance tree of classes should not be too deep
 public class BadRequestAlertException extends ErrorResponseException {

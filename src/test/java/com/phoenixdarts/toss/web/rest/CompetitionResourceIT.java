@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.CompetitionAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.CompetitionAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,13 +10,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Competition;
-import com.phoenixdarts.toss.domain.enumeration.CompetitionStatus;
-import com.phoenixdarts.toss.domain.enumeration.EntryApplyType;
-import com.phoenixdarts.toss.domain.enumeration.EntryRatingType;
-import com.phoenixdarts.toss.repository.CompetitionRepository;
-import com.phoenixdarts.toss.service.dto.CompetitionDTO;
-import com.phoenixdarts.toss.service.mapper.CompetitionMapper;
+import com.phoenixdarts.toss.backend.domain.Competition;
+import com.phoenixdarts.toss.backend.domain.enumeration.CompetitionStatus;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApplyType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryRatingType;
+import com.phoenixdarts.toss.backend.repository.CompetitionRepository;
+import com.phoenixdarts.toss.backend.service.dto.CompetitionDTO;
+import com.phoenixdarts.toss.backend.service.mapper.CompetitionMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

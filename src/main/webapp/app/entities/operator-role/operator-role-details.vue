@@ -1,30 +1,30 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-8">
-      <div v-if="operatorRole">
+      <div v-if="role">
         <h2 class="jh-entity-heading" data-cy="operatorRoleDetailsHeading">
-          <span v-text="t$('tossApp.operatorRole.detail.title')"></span> {{ operatorRole.id }}
+          <span v-text="t$('tossApp.role.detail.title')"></span> {{ role.id }}
         </h2>
         <dl class="row jh-entity-details">
           <dt>
-            <span v-text="t$('tossApp.operatorRole.name')"></span>
+            <span v-text="t$('tossApp.role.name')"></span>
           </dt>
           <dd>
-            <span>{{ operatorRole.name }}</span>
+            <span>{{ role.name }}</span>
           </dd>
           <dt>
-            <span v-text="t$('tossApp.operatorRole.displayOrder')"></span>
+            <span v-text="t$('tossApp.role.displayOrder')"></span>
           </dt>
           <dd>
-            <span>{{ operatorRole.displayOrder }}</span>
+            <span>{{ role.displayOrder }}</span>
           </dd>
         </dl>
         <button type="submit" v-on:click.prevent="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <font-awesome-icon icon="arrow-left"></font-awesome-icon>&nbsp;<span v-text="t$('entity.action.back')"></span>
         </button>
         <router-link
-          v-if="operatorRole.id"
-          :to="{ name: 'OperatorRoleEdit', params: { operatorRoleId: operatorRole.id } }"
+          v-if="role.id"
+          :to="{ name: 'OperatorRoleEdit', params: { operatorRoleId: role.id } }"
           custom
           v-slot="{ navigate }"
         >
@@ -37,4 +37,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./operator-role-details.component.ts"></script>
+<script lang="ts" src="./operator-auth-details.component.ts"></script>

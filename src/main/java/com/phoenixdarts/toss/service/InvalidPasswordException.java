@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
 public class InvalidPasswordException extends RuntimeException {
 

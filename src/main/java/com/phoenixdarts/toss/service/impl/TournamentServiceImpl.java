@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Tournament;
-import com.phoenixdarts.toss.repository.TournamentRepository;
-import com.phoenixdarts.toss.service.TournamentService;
-import com.phoenixdarts.toss.service.dto.TournamentDTO;
-import com.phoenixdarts.toss.service.mapper.TournamentMapper;
+import com.phoenixdarts.toss.backend.domain.Tournament;
+import com.phoenixdarts.toss.backend.repository.TournamentRepository;
+import com.phoenixdarts.toss.backend.service.TournamentService;
+import com.phoenixdarts.toss.backend.service.dto.TournamentDTO;
+import com.phoenixdarts.toss.backend.service.mapper.TournamentMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Tournament}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Tournament}.
  */
 @Service
 @Transactional

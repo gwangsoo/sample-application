@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.PaymentMethodType;
-import com.phoenixdarts.toss.domain.enumeration.PaymentStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PaymentMethodType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PaymentStatusType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -9,7 +9,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.PaymentInfo} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.PaymentInfo} entity.
  */
 @Schema(description = "결제 정보")
 @SuppressWarnings("common-java:DuplicatedBlocks")

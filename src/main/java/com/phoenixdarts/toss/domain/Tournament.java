@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.DivisionAssignMethod;
-import com.phoenixdarts.toss.domain.enumeration.DivisionRuleType;
-import com.phoenixdarts.toss.domain.enumeration.EntryApprovalType;
-import com.phoenixdarts.toss.domain.enumeration.EntryGenderType;
-import com.phoenixdarts.toss.domain.enumeration.HandicapType;
-import com.phoenixdarts.toss.domain.enumeration.SeedingRuleType;
-import com.phoenixdarts.toss.domain.enumeration.TournamentPlayMode;
-import com.phoenixdarts.toss.domain.enumeration.TournamentType;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionAssignMethod;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApprovalType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryGenderType;
+import com.phoenixdarts.toss.backend.domain.enumeration.HandicapType;
+import com.phoenixdarts.toss.backend.domain.enumeration.SeedingRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentPlayMode;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

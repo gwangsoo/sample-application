@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -13,7 +13,7 @@ import org.springframework.data.domain.Persistable;
  * A Authority.
  */
 @Entity
-@Table(name = "jhi_authority")
+@Table(name = "tb_authority")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(value = { "new", "id" })
 @SuppressWarnings("common-java:DuplicatedBlocks")

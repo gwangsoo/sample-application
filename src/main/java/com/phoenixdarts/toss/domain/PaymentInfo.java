@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.PaymentMethodType;
-import com.phoenixdarts.toss.domain.enumeration.PaymentStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PaymentMethodType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PaymentStatusType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

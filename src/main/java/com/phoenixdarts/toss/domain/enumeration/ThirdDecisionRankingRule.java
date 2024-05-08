@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain.enumeration;
+package com.phoenixdarts.toss.backend.domain.enumeration;
 
 /**
  * 라운드로빈 3위 결승 진출 랭킹 기준

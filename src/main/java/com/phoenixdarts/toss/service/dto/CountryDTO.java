@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Country} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Country} entity.
  */
 @Schema(description = "국가")
 @SuppressWarnings("common-java:DuplicatedBlocks")

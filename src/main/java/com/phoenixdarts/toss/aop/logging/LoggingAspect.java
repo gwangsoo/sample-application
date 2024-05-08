@@ -43,9 +43,9 @@ public class LoggingAspect {
      * Pointcut that matches all Spring beans in the application's main packages.
      */
     @Pointcut(
-        "within(com.phoenixdarts.toss.repository..*)" +
-        " || within(com.phoenixdarts.toss.service..*)" +
-        " || within(com.phoenixdarts.toss.web.rest..*)"
+        "within(com.phoenixdarts.toss.backend.repository..*)" +
+        " || within(com.phoenixdarts.toss.backend.service..*)" +
+        " || within(com.phoenixdarts.toss.backend.web.rest..*)"
     )
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.

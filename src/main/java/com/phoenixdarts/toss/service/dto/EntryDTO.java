@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.AttendanceStatusType;
-import com.phoenixdarts.toss.domain.enumeration.GenderType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AttendanceStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.GenderType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Entry} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Entry} entity.
  */
 @Schema(description = "참가자")
 @SuppressWarnings("common-java:DuplicatedBlocks")

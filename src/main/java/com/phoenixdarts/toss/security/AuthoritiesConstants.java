@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.security;
+package com.phoenixdarts.toss.backend.security;
 
 /**
  * Constants for Spring Security authorities.

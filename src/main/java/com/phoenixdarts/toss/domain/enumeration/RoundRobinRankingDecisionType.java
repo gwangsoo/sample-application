@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain.enumeration;
+package com.phoenixdarts.toss.backend.domain.enumeration;
 
 /**
  * 라운드로빈 순위 결정 방식

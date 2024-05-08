@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.FirstThrowType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatType;
+import com.phoenixdarts.toss.backend.domain.enumeration.FirstThrowType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

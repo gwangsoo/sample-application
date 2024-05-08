@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.RoleAsserts.*;
-import static com.phoenixdarts.toss.domain.RoleTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.RoleAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.RoleTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

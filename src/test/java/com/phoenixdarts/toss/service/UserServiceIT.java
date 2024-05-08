@@ -1,13 +1,13 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.PersistentToken;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.PersistentTokenRepository;
-import com.phoenixdarts.toss.repository.UserRepository;
+import com.phoenixdarts.toss.backend.domain.PersistentToken;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.PersistentTokenRepository;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -22,7 +22,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.auditing.AuditingHandler;
 import org.springframework.data.auditing.DateTimeProvider;
 import org.springframework.transaction.annotation.Transactional;
-import tech.jhipster.security.RandomUtil;
+import com.phoenixdarts.toss.backend.util.RandomUtil;
 
 /**
  * Integration tests for {@link UserService}.

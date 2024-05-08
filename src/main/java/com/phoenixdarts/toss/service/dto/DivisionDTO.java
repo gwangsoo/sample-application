@@ -1,17 +1,17 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.EventRangeType;
-import com.phoenixdarts.toss.domain.enumeration.NextRoundDecisionType;
-import com.phoenixdarts.toss.domain.enumeration.RoundRobinGroupType;
-import com.phoenixdarts.toss.domain.enumeration.RoundRobinRankingDecisionType;
-import com.phoenixdarts.toss.domain.enumeration.ThirdDecisionRankingRule;
+import com.phoenixdarts.toss.backend.domain.enumeration.EventRangeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.NextRoundDecisionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RoundRobinGroupType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RoundRobinRankingDecisionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.ThirdDecisionRankingRule;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Division} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Division} entity.
  */
 @Schema(description = "디비전")
 @SuppressWarnings("common-java:DuplicatedBlocks")

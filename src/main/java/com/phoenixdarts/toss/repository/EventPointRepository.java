@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.repository;
+package com.phoenixdarts.toss.backend.repository;
 
-import com.phoenixdarts.toss.domain.EventPoint;
+import com.phoenixdarts.toss.backend.domain.EventPoint;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

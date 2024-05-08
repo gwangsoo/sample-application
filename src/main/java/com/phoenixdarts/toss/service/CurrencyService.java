@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.CurrencyDTO;
+import com.phoenixdarts.toss.backend.service.dto.CurrencyDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Currency}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Currency}.
  */
 public interface CurrencyService {
     /**

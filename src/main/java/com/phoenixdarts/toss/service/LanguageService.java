@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.LanguageDTO;
+import com.phoenixdarts.toss.backend.service.dto.LanguageDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Language}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Language}.
  */
 public interface LanguageService {
     /**

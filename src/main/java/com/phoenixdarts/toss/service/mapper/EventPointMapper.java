@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Division;
-import com.phoenixdarts.toss.domain.EventPoint;
-import com.phoenixdarts.toss.service.dto.DivisionDTO;
-import com.phoenixdarts.toss.service.dto.EventPointDTO;
+import com.phoenixdarts.toss.backend.domain.Division;
+import com.phoenixdarts.toss.backend.domain.EventPoint;
+import com.phoenixdarts.toss.backend.service.dto.DivisionDTO;
+import com.phoenixdarts.toss.backend.service.dto.EventPointDTO;
 import org.mapstruct.*;
 
 /**

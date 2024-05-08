@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
 import java.util.concurrent.Executor;
 import org.slf4j.Logger;

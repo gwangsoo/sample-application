@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.MatchFormatSet;
-import com.phoenixdarts.toss.repository.MatchFormatSetRepository;
-import com.phoenixdarts.toss.service.MatchFormatSetService;
-import com.phoenixdarts.toss.service.dto.MatchFormatSetDTO;
-import com.phoenixdarts.toss.service.mapper.MatchFormatSetMapper;
+import com.phoenixdarts.toss.backend.domain.MatchFormatSet;
+import com.phoenixdarts.toss.backend.repository.MatchFormatSetRepository;
+import com.phoenixdarts.toss.backend.service.MatchFormatSetService;
+import com.phoenixdarts.toss.backend.service.dto.MatchFormatSetDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MatchFormatSetMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.MatchFormatSet}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.MatchFormatSet}.
  */
 @Service
 @Transactional

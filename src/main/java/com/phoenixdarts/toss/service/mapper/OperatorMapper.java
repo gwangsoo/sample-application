@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Operator;
-import com.phoenixdarts.toss.domain.OperatorRole;
-import com.phoenixdarts.toss.domain.Region;
-import com.phoenixdarts.toss.service.dto.OperatorDTO;
-import com.phoenixdarts.toss.service.dto.OperatorRoleDTO;
-import com.phoenixdarts.toss.service.dto.RegionDTO;
+import com.phoenixdarts.toss.backend.domain.Operator;
+import com.phoenixdarts.toss.backend.domain.OperatorRole;
+import com.phoenixdarts.toss.backend.domain.Region;
+import com.phoenixdarts.toss.backend.service.dto.OperatorDTO;
+import com.phoenixdarts.toss.backend.service.dto.OperatorRoleDTO;
+import com.phoenixdarts.toss.backend.service.dto.RegionDTO;
 import org.mapstruct.*;
 
 /**

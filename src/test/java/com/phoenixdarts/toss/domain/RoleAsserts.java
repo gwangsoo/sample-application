@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

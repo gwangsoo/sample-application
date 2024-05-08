@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.User;
+import com.phoenixdarts.toss.backend.domain.User;
 import java.io.Serializable;
 
 /**

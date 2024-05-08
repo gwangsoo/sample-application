@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.FileInfo;
-import com.phoenixdarts.toss.repository.FileInfoRepository;
-import com.phoenixdarts.toss.service.FileInfoService;
-import com.phoenixdarts.toss.service.dto.FileInfoDTO;
-import com.phoenixdarts.toss.service.mapper.FileInfoMapper;
+import com.phoenixdarts.toss.backend.domain.FileInfo;
+import com.phoenixdarts.toss.backend.repository.FileInfoRepository;
+import com.phoenixdarts.toss.backend.service.FileInfoService;
+import com.phoenixdarts.toss.backend.service.dto.FileInfoDTO;
+import com.phoenixdarts.toss.backend.service.mapper.FileInfoMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.FileInfo}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.FileInfo}.
  */
 @Service
 @Transactional

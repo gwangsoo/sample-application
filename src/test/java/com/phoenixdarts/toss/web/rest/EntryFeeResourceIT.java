@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.EntryFeeAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.EntryFeeAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,13 +10,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.EntryFee;
-import com.phoenixdarts.toss.domain.enumeration.EntryFeeSubType;
-import com.phoenixdarts.toss.domain.enumeration.EntryFeeType;
-import com.phoenixdarts.toss.domain.enumeration.PaymentMethodType;
-import com.phoenixdarts.toss.repository.EntryFeeRepository;
-import com.phoenixdarts.toss.service.dto.EntryFeeDTO;
-import com.phoenixdarts.toss.service.mapper.EntryFeeMapper;
+import com.phoenixdarts.toss.backend.domain.EntryFee;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryFeeSubType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryFeeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PaymentMethodType;
+import com.phoenixdarts.toss.backend.repository.EntryFeeRepository;
+import com.phoenixdarts.toss.backend.service.dto.EntryFeeDTO;
+import com.phoenixdarts.toss.backend.service.mapper.EntryFeeMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.EventPointAsserts.*;
-import static com.phoenixdarts.toss.domain.EventPointTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.EventPointAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.EventPointTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

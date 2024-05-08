@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.config.Constants;
-import com.phoenixdarts.toss.domain.Authority;
-import com.phoenixdarts.toss.domain.User;
+import com.phoenixdarts.toss.backend.config.Constants;
+import com.phoenixdarts.toss.backend.domain.Authority;
+import com.phoenixdarts.toss.backend.domain.User;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

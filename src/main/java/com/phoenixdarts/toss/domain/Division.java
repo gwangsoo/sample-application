@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.EventRangeType;
-import com.phoenixdarts.toss.domain.enumeration.NextRoundDecisionType;
-import com.phoenixdarts.toss.domain.enumeration.RoundRobinGroupType;
-import com.phoenixdarts.toss.domain.enumeration.RoundRobinRankingDecisionType;
-import com.phoenixdarts.toss.domain.enumeration.ThirdDecisionRankingRule;
+import com.phoenixdarts.toss.backend.domain.enumeration.EventRangeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.NextRoundDecisionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RoundRobinGroupType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RoundRobinRankingDecisionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.ThirdDecisionRankingRule;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

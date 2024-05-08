@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
 import java.io.Serializable;
 

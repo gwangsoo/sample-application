@@ -1,8 +1,8 @@
 package com.phoenixdarts.toss;
 
-import com.phoenixdarts.toss.config.AsyncSyncConfiguration;
-import com.phoenixdarts.toss.config.EmbeddedSQL;
-import com.phoenixdarts.toss.config.JacksonConfiguration;
+import com.phoenixdarts.toss.backend.config.AsyncSyncConfiguration;
+import com.phoenixdarts.toss.backend.config.EmbeddedSQL;
+import com.phoenixdarts.toss.backend.config.JacksonConfiguration;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

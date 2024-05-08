@@ -1,15 +1,15 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.MachineKindType;
-import com.phoenixdarts.toss.domain.enumeration.RewardMethodSubType;
-import com.phoenixdarts.toss.domain.enumeration.RewardMethodType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MachineKindType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RewardMethodSubType;
+import com.phoenixdarts.toss.backend.domain.enumeration.RewardMethodType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Reward} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Reward} entity.
  */
 @Schema(description = "리워드")
 @SuppressWarnings("common-java:DuplicatedBlocks")

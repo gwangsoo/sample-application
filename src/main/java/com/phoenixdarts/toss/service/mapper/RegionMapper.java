@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Country;
-import com.phoenixdarts.toss.domain.Region;
-import com.phoenixdarts.toss.service.dto.CountryDTO;
-import com.phoenixdarts.toss.service.dto.RegionDTO;
+import com.phoenixdarts.toss.backend.domain.Country;
+import com.phoenixdarts.toss.backend.domain.Region;
+import com.phoenixdarts.toss.backend.service.dto.CountryDTO;
+import com.phoenixdarts.toss.backend.service.dto.RegionDTO;
 import org.mapstruct.*;
 
 /**

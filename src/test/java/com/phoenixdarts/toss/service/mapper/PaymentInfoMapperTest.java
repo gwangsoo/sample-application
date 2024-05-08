@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.PaymentInfoAsserts.*;
-import static com.phoenixdarts.toss.domain.PaymentInfoTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.PaymentInfoAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.PaymentInfoTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

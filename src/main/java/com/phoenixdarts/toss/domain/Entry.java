@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.phoenixdarts.toss.domain.enumeration.AttendanceStatusType;
-import com.phoenixdarts.toss.domain.enumeration.GenderType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AttendanceStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.GenderType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

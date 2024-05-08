@@ -1,20 +1,20 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.DivisionAssignMethod;
-import com.phoenixdarts.toss.domain.enumeration.DivisionRuleType;
-import com.phoenixdarts.toss.domain.enumeration.EntryApprovalType;
-import com.phoenixdarts.toss.domain.enumeration.EntryGenderType;
-import com.phoenixdarts.toss.domain.enumeration.HandicapType;
-import com.phoenixdarts.toss.domain.enumeration.SeedingRuleType;
-import com.phoenixdarts.toss.domain.enumeration.TournamentPlayMode;
-import com.phoenixdarts.toss.domain.enumeration.TournamentType;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionAssignMethod;
+import com.phoenixdarts.toss.backend.domain.enumeration.DivisionRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApprovalType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryGenderType;
+import com.phoenixdarts.toss.backend.domain.enumeration.HandicapType;
+import com.phoenixdarts.toss.backend.domain.enumeration.SeedingRuleType;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentPlayMode;
+import com.phoenixdarts.toss.backend.domain.enumeration.TournamentType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Tournament} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Tournament} entity.
  */
 @Schema(description = "토너먼트")
 @SuppressWarnings("common-java:DuplicatedBlocks")

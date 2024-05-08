@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.repository.timezone;
+package com.phoenixdarts.toss.backend.repository.timezone;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

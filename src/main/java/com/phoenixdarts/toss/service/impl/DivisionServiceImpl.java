@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Division;
-import com.phoenixdarts.toss.repository.DivisionRepository;
-import com.phoenixdarts.toss.service.DivisionService;
-import com.phoenixdarts.toss.service.dto.DivisionDTO;
-import com.phoenixdarts.toss.service.mapper.DivisionMapper;
+import com.phoenixdarts.toss.backend.domain.Division;
+import com.phoenixdarts.toss.backend.repository.DivisionRepository;
+import com.phoenixdarts.toss.backend.service.DivisionService;
+import com.phoenixdarts.toss.backend.service.dto.DivisionDTO;
+import com.phoenixdarts.toss.backend.service.mapper.DivisionMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Division}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Division}.
  */
 @Service
 @Transactional

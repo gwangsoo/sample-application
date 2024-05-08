@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest.vm;
+package com.phoenixdarts.toss.backend.web.rest.vm;
 
 /**
  * View Model object for storing the user's key and password.

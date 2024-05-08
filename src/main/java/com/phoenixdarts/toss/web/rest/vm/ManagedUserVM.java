@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.web.rest.vm;
+package com.phoenixdarts.toss.backend.web.rest.vm;
 
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
 import jakarta.validation.constraints.Size;
 
 /**

@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.RoleDTO;
+import com.phoenixdarts.toss.backend.service.dto.RoleDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Role}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Role}.
  */
 public interface RoleService {
     /**

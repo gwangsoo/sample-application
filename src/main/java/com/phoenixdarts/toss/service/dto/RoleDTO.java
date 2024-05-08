@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.AuthLevelType;
-import com.phoenixdarts.toss.domain.enumeration.AuthScopeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AuthLevelType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AuthScopeType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Role} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Role} entity.
  */
 @Schema(description = "권한")
 @SuppressWarnings("common-java:DuplicatedBlocks")

@@ -1,15 +1,15 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.config.Constants;
-import com.phoenixdarts.toss.domain.Authority;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.AuthorityRepository;
-import com.phoenixdarts.toss.repository.PersistentTokenRepository;
-import com.phoenixdarts.toss.repository.UserRepository;
-import com.phoenixdarts.toss.security.AuthoritiesConstants;
-import com.phoenixdarts.toss.security.SecurityUtils;
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
-import com.phoenixdarts.toss.service.dto.UserDTO;
+import com.phoenixdarts.toss.backend.config.Constants;
+import com.phoenixdarts.toss.backend.domain.Authority;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.AuthorityRepository;
+import com.phoenixdarts.toss.backend.repository.PersistentTokenRepository;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
+import com.phoenixdarts.toss.backend.security.AuthoritiesConstants;
+import com.phoenixdarts.toss.backend.security.SecurityUtils;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.service.dto.UserDTO;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -24,7 +24,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tech.jhipster.security.RandomUtil;
+import com.phoenixdarts.toss.backend.util.RandomUtil;
 
 /**
  * Service class for managing users.

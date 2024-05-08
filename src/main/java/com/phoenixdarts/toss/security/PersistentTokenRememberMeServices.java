@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.security;
+package com.phoenixdarts.toss.backend.security;
 
-import com.phoenixdarts.toss.domain.PersistentToken;
-import com.phoenixdarts.toss.repository.PersistentTokenRepository;
-import com.phoenixdarts.toss.repository.UserRepository;
+import com.phoenixdarts.toss.backend.domain.PersistentToken;
+import com.phoenixdarts.toss.backend.repository.PersistentTokenRepository;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.Serializable;
@@ -17,8 +17,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.rememberme.*;
 import org.springframework.stereotype.Service;
 import tech.jhipster.config.JHipsterProperties;
-import tech.jhipster.security.PersistentTokenCache;
-import tech.jhipster.security.RandomUtil;
+import com.phoenixdarts.toss.backend.util.PersistentTokenCache;
+import com.phoenixdarts.toss.backend.util.RandomUtil;
 
 /**
  * Custom implementation of Spring Security's RememberMeServices.

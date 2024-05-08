@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.AttendanceStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.AttendanceStatusType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchAttendance} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchAttendance} entity.
  */
 @Schema(description = "매치 출석")
 @SuppressWarnings("common-java:DuplicatedBlocks")

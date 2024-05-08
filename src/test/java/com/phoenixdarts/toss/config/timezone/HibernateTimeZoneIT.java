@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.config.timezone;
+package com.phoenixdarts.toss.backend.config.timezone;
 
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.repository.timezone.DateTimeWrapper;
-import com.phoenixdarts.toss.repository.timezone.DateTimeWrapperRepository;
+import com.phoenixdarts.toss.backend.repository.timezone.DateTimeWrapper;
+import com.phoenixdarts.toss.backend.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import org.junit.jupiter.api.BeforeEach;

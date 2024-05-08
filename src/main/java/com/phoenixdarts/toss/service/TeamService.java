@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.TeamDTO;
+import com.phoenixdarts.toss.backend.service.dto.TeamDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Team}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Team}.
  */
 public interface TeamService {
     /**

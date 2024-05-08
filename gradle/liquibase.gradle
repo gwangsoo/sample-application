@@ -32,7 +32,7 @@ liquibase {
       url "jdbc:postgresql://localhost:5432/toss"
       username "toss"
       changelogFile project.ext.diffChangelogFile
-      referenceUrl "hibernate:spring:com.phoenixdarts.toss.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+      referenceUrl "hibernate:spring:com.phoenixdarts.toss.backend.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
       logLevel "debug"
       classpath "$buildDir/classes/java/main"
     }

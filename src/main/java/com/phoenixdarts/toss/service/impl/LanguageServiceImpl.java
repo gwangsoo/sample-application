@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Language;
-import com.phoenixdarts.toss.repository.LanguageRepository;
-import com.phoenixdarts.toss.service.LanguageService;
-import com.phoenixdarts.toss.service.dto.LanguageDTO;
-import com.phoenixdarts.toss.service.mapper.LanguageMapper;
+import com.phoenixdarts.toss.backend.domain.Language;
+import com.phoenixdarts.toss.backend.repository.LanguageRepository;
+import com.phoenixdarts.toss.backend.service.LanguageService;
+import com.phoenixdarts.toss.backend.service.dto.LanguageDTO;
+import com.phoenixdarts.toss.backend.service.mapper.LanguageMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Language}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Language}.
  */
 @Service
 @Transactional

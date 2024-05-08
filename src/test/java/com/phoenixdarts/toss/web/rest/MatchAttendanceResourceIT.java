@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.MatchAttendanceAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
-import static com.phoenixdarts.toss.web.rest.TestUtil.sameInstant;
+import static com.phoenixdarts.toss.backend.domain.MatchAttendanceAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.sameInstant;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -11,11 +11,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.MatchAttendance;
-import com.phoenixdarts.toss.domain.enumeration.AttendanceStatusType;
-import com.phoenixdarts.toss.repository.MatchAttendanceRepository;
-import com.phoenixdarts.toss.service.dto.MatchAttendanceDTO;
-import com.phoenixdarts.toss.service.mapper.MatchAttendanceMapper;
+import com.phoenixdarts.toss.backend.domain.MatchAttendance;
+import com.phoenixdarts.toss.backend.domain.enumeration.AttendanceStatusType;
+import com.phoenixdarts.toss.backend.repository.MatchAttendanceRepository;
+import com.phoenixdarts.toss.backend.service.dto.MatchAttendanceDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MatchAttendanceMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.ZoneId;

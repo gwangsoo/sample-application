@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.MachineAreaDTO;
+import com.phoenixdarts.toss.backend.service.dto.MachineAreaDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.MachineArea}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.MachineArea}.
  */
 public interface MachineAreaService {
     /**

@@ -1,4 +1,4 @@
 /**
  * Domain objects.
  */
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;

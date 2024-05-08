@@ -1,16 +1,16 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.CompetitionTestSamples.*;
-import static com.phoenixdarts.toss.domain.CountryTestSamples.*;
-import static com.phoenixdarts.toss.domain.EntryFeeTestSamples.*;
-import static com.phoenixdarts.toss.domain.FileInfoTestSamples.*;
-import static com.phoenixdarts.toss.domain.MachineAreaTestSamples.*;
-import static com.phoenixdarts.toss.domain.OperatorTestSamples.*;
-import static com.phoenixdarts.toss.domain.RewardTestSamples.*;
-import static com.phoenixdarts.toss.domain.TournamentTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.CompetitionTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.CountryTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.EntryFeeTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.FileInfoTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MachineAreaTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.OperatorTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.RewardTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.TournamentTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

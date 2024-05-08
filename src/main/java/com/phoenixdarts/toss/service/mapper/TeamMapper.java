@@ -1,15 +1,15 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.AffiliatedInfo;
-import com.phoenixdarts.toss.domain.Division;
-import com.phoenixdarts.toss.domain.Entry;
-import com.phoenixdarts.toss.domain.PaymentInfo;
-import com.phoenixdarts.toss.domain.Team;
-import com.phoenixdarts.toss.service.dto.AffiliatedInfoDTO;
-import com.phoenixdarts.toss.service.dto.DivisionDTO;
-import com.phoenixdarts.toss.service.dto.EntryDTO;
-import com.phoenixdarts.toss.service.dto.PaymentInfoDTO;
-import com.phoenixdarts.toss.service.dto.TeamDTO;
+import com.phoenixdarts.toss.backend.domain.AffiliatedInfo;
+import com.phoenixdarts.toss.backend.domain.Division;
+import com.phoenixdarts.toss.backend.domain.Entry;
+import com.phoenixdarts.toss.backend.domain.PaymentInfo;
+import com.phoenixdarts.toss.backend.domain.Team;
+import com.phoenixdarts.toss.backend.service.dto.AffiliatedInfoDTO;
+import com.phoenixdarts.toss.backend.service.dto.DivisionDTO;
+import com.phoenixdarts.toss.backend.service.dto.EntryDTO;
+import com.phoenixdarts.toss.backend.service.dto.PaymentInfoDTO;
+import com.phoenixdarts.toss.backend.service.dto.TeamDTO;
 import org.mapstruct.*;
 
 /**

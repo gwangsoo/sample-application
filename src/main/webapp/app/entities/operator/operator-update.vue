@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-8">
-      <form name="editForm" role="form" novalidate v-on:submit.prevent="save()">
+      <form name="editForm" auth="form" novalidate v-on:submit.prevent="save()">
         <h2
           id="tossApp.operator.home.createOrEditLabel"
           data-cy="OperatorCreateUpdateHeading"
@@ -106,18 +106,18 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.operator.operatorRole')" for="operator-operatorRole"></label>
+            <label class="form-control-label" v-text="t$('tossApp.operator.role')" for="operator-role"></label>
             <select
               class="form-control"
-              id="operator-operatorRole"
-              data-cy="operatorRole"
-              name="operatorRole"
-              v-model="operator.operatorRole"
+              id="operator-role"
+              data-cy="role"
+              name="role"
+              v-model="operator.role"
             >
               <option v-bind:value="null"></option>
               <option
                 v-bind:value="
-                  operator.operatorRole && operatorRoleOption.id === operator.operatorRole.id ? operator.operatorRole : operatorRoleOption
+                  operator.role && operatorRoleOption.id === operator.role.id ? operator.role : operatorRoleOption
                 "
                 v-for="operatorRoleOption in operatorRoles"
                 :key="operatorRoleOption.id"

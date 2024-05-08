@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -9,18 +9,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.config.Constants;
-import com.phoenixdarts.toss.domain.PersistentToken;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.AuthorityRepository;
-import com.phoenixdarts.toss.repository.PersistentTokenRepository;
-import com.phoenixdarts.toss.repository.UserRepository;
-import com.phoenixdarts.toss.security.AuthoritiesConstants;
-import com.phoenixdarts.toss.service.UserService;
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
-import com.phoenixdarts.toss.service.dto.PasswordChangeDTO;
-import com.phoenixdarts.toss.web.rest.vm.KeyAndPasswordVM;
-import com.phoenixdarts.toss.web.rest.vm.ManagedUserVM;
+import com.phoenixdarts.toss.backend.config.Constants;
+import com.phoenixdarts.toss.backend.domain.PersistentToken;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.AuthorityRepository;
+import com.phoenixdarts.toss.backend.repository.PersistentTokenRepository;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
+import com.phoenixdarts.toss.backend.security.AuthoritiesConstants;
+import com.phoenixdarts.toss.backend.service.UserService;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.service.dto.PasswordChangeDTO;
+import com.phoenixdarts.toss.backend.web.rest.vm.KeyAndPasswordVM;
+import com.phoenixdarts.toss.backend.web.rest.vm.ManagedUserVM;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.*;

@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.CurrencyAsserts.*;
-import static com.phoenixdarts.toss.domain.CurrencyTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.CurrencyAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.CurrencyTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

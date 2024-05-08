@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.CurrencyTestSamples.*;
-import static com.phoenixdarts.toss.domain.EntryFeeTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.CurrencyTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.EntryFeeTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

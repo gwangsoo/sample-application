@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.PaymentInfo;
-import com.phoenixdarts.toss.service.dto.PaymentInfoDTO;
+import com.phoenixdarts.toss.backend.domain.PaymentInfo;
+import com.phoenixdarts.toss.backend.service.dto.PaymentInfoDTO;
 import org.mapstruct.*;
 
 /**

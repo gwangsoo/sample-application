@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.security;
+package com.phoenixdarts.toss.backend.security;
 
-import com.phoenixdarts.toss.domain.Authority;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.UserRepository;
+import com.phoenixdarts.toss.backend.domain.Authority;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
 import java.util.*;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;

@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.MachineArea;
-import com.phoenixdarts.toss.repository.MachineAreaRepository;
-import com.phoenixdarts.toss.service.MachineAreaService;
-import com.phoenixdarts.toss.service.dto.MachineAreaDTO;
-import com.phoenixdarts.toss.service.mapper.MachineAreaMapper;
+import com.phoenixdarts.toss.backend.domain.MachineArea;
+import com.phoenixdarts.toss.backend.repository.MachineAreaRepository;
+import com.phoenixdarts.toss.backend.service.MachineAreaService;
+import com.phoenixdarts.toss.backend.service.dto.MachineAreaDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MachineAreaMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.MachineArea}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.MachineArea}.
  */
 @Service
 @Transactional

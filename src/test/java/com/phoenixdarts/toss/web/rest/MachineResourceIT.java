@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.MachineAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.MachineAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,11 +10,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Machine;
-import com.phoenixdarts.toss.domain.enumeration.MachineStatusType;
-import com.phoenixdarts.toss.repository.MachineRepository;
-import com.phoenixdarts.toss.service.dto.MachineDTO;
-import com.phoenixdarts.toss.service.mapper.MachineMapper;
+import com.phoenixdarts.toss.backend.domain.Machine;
+import com.phoenixdarts.toss.backend.domain.enumeration.MachineStatusType;
+import com.phoenixdarts.toss.backend.repository.MachineRepository;
+import com.phoenixdarts.toss.backend.service.dto.MachineDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MachineMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,15 +1,15 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import com.phoenixdarts.toss.config.Constants;
-import com.phoenixdarts.toss.domain.User;
-import com.phoenixdarts.toss.repository.UserRepository;
-import com.phoenixdarts.toss.security.AuthoritiesConstants;
-import com.phoenixdarts.toss.service.MailService;
-import com.phoenixdarts.toss.service.UserService;
-import com.phoenixdarts.toss.service.dto.AdminUserDTO;
-import com.phoenixdarts.toss.web.rest.errors.BadRequestAlertException;
-import com.phoenixdarts.toss.web.rest.errors.EmailAlreadyUsedException;
-import com.phoenixdarts.toss.web.rest.errors.LoginAlreadyUsedException;
+import com.phoenixdarts.toss.backend.config.Constants;
+import com.phoenixdarts.toss.backend.domain.User;
+import com.phoenixdarts.toss.backend.repository.UserRepository;
+import com.phoenixdarts.toss.backend.security.AuthoritiesConstants;
+import com.phoenixdarts.toss.backend.service.MailService;
+import com.phoenixdarts.toss.backend.service.UserService;
+import com.phoenixdarts.toss.backend.service.dto.AdminUserDTO;
+import com.phoenixdarts.toss.backend.web.rest.errors.BadRequestAlertException;
+import com.phoenixdarts.toss.backend.web.rest.errors.EmailAlreadyUsedException;
+import com.phoenixdarts.toss.backend.web.rest.errors.LoginAlreadyUsedException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import java.net.URI;
@@ -28,14 +28,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import tech.jhipster.web.util.HeaderUtil;
-import tech.jhipster.web.util.PaginationUtil;
-import tech.jhipster.web.util.ResponseUtil;
+import com.phoenixdarts.toss.backend.util.HeaderUtil;
+import com.phoenixdarts.toss.backend.util.PaginationUtil;
+import com.phoenixdarts.toss.backend.util.ResponseUtil;
 
 /**
  * REST controller for managing users.
  * <p>
- * This class accesses the {@link com.phoenixdarts.toss.domain.User} entity, and needs to fetch its collection of authorities.
+ * This class accesses the {@link com.phoenixdarts.toss.backend.domain.User} entity, and needs to fetch its collection of authorities.
  * <p>
  * For a normal use-case, it would be better to have an eager relationship between User and Authority,
  * and send everything to the client side: there would be no View Model and DTO, a lot less code, and an outer-join

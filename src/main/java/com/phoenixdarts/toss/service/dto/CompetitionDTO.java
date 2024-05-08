@@ -1,8 +1,8 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.CompetitionStatus;
-import com.phoenixdarts.toss.domain.enumeration.EntryApplyType;
-import com.phoenixdarts.toss.domain.enumeration.EntryRatingType;
+import com.phoenixdarts.toss.backend.domain.enumeration.CompetitionStatus;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryApplyType;
+import com.phoenixdarts.toss.backend.domain.enumeration.EntryRatingType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.Competition} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.Competition} entity.
  */
 @Schema(description = "대회")
 @SuppressWarnings("common-java:DuplicatedBlocks")

@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

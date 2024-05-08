@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.AssertUtils.zonedDataTimeSameInstant;
+import static com.phoenixdarts.toss.backend.domain.AssertUtils.zonedDataTimeSameInstant;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TeamAsserts {

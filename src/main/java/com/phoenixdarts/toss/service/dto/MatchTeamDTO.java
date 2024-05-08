@@ -1,13 +1,13 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.PlayerCallModeType;
+import com.phoenixdarts.toss.backend.domain.enumeration.PlayerCallModeType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchTeam} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchTeam} entity.
  */
 @Schema(description = "매치상세정보")
 @SuppressWarnings("common-java:DuplicatedBlocks")

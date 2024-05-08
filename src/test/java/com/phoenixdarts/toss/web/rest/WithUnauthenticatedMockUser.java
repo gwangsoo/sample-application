@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

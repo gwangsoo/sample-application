@@ -35,7 +35,7 @@
             <th scope="row"><span v-text="t$('tossApp.operator.email')"></span></th>
             <th scope="row"><span v-text="t$('tossApp.operator.address')"></span></th>
             <th scope="row"><span v-text="t$('tossApp.operator.approvalStatus')"></span></th>
-            <th scope="row"><span v-text="t$('tossApp.operator.operatorRole')"></span></th>
+            <th scope="row"><span v-text="t$('tossApp.operator.role')"></span></th>
             <th scope="row"><span v-text="t$('tossApp.operator.region')"></span></th>
             <th scope="row"></th>
           </tr>
@@ -52,9 +52,9 @@
             <td>{{ operator.address }}</td>
             <td>{{ operator.approvalStatus }}</td>
             <td>
-              <div v-if="operator.operatorRole">
-                <router-link :to="{ name: 'OperatorRoleView', params: { operatorRoleId: operator.operatorRole.id } }">{{
-                  operator.operatorRole.id
+              <div v-if="operator.role">
+                <router-link :to="{ name: 'OperatorRoleView', params: { operatorRoleId: operator.role.id } }">{{
+                  operator.role.id
                 }}</router-link>
               </div>
             </td>

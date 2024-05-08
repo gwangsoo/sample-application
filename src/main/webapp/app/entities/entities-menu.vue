@@ -16,11 +16,11 @@
       <font-awesome-icon icon="asterisk" />
       <span v-text="t$('global.menu.entities.region')"></span>
     </b-dropdown-item>
-    <b-dropdown-item to="/role">
+    <b-dropdown-item to="/auth">
       <font-awesome-icon icon="asterisk" />
-      <span v-text="t$('global.menu.entities.role')"></span>
+      <span v-text="t$('global.menu.entities.auth')"></span>
     </b-dropdown-item>
-    <b-dropdown-item to="/operator-role">
+    <b-dropdown-item to="/operator-auth">
       <font-awesome-icon icon="asterisk" />
       <span v-text="t$('global.menu.entities.operatorRole')"></span>
     </b-dropdown-item>

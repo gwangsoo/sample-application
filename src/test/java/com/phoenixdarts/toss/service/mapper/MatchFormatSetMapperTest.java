@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.MatchFormatSetAsserts.*;
-import static com.phoenixdarts.toss.domain.MatchFormatSetTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatSetAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.MatchFormatSetTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

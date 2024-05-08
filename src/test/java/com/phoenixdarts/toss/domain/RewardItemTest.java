@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.domain;
+package com.phoenixdarts.toss.backend.domain;
 
-import static com.phoenixdarts.toss.domain.FileInfoTestSamples.*;
-import static com.phoenixdarts.toss.domain.RewardDetailTestSamples.*;
-import static com.phoenixdarts.toss.domain.RewardItemTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.FileInfoTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.RewardDetailTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.RewardItemTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.phoenixdarts.toss.web.rest.TestUtil;
+import com.phoenixdarts.toss.backend.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class RewardItemTest {

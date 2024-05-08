@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.MatchTeamAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.MatchTeamAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,11 +10,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.MatchTeam;
-import com.phoenixdarts.toss.domain.enumeration.PlayerCallModeType;
-import com.phoenixdarts.toss.repository.MatchTeamRepository;
-import com.phoenixdarts.toss.service.dto.MatchTeamDTO;
-import com.phoenixdarts.toss.service.mapper.MatchTeamMapper;
+import com.phoenixdarts.toss.backend.domain.MatchTeam;
+import com.phoenixdarts.toss.backend.domain.enumeration.PlayerCallModeType;
+import com.phoenixdarts.toss.backend.repository.MatchTeamRepository;
+import com.phoenixdarts.toss.backend.service.dto.MatchTeamDTO;
+import com.phoenixdarts.toss.backend.service.mapper.MatchTeamMapper;
 import jakarta.persistence.EntityManager;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;

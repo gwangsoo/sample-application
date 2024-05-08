@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.config;
+package com.phoenixdarts.toss.backend.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.phoenixdarts.toss.security.*;
-import com.phoenixdarts.toss.web.filter.SpaWebFilter;
+import com.phoenixdarts.toss.backend.security.*;
+import com.phoenixdarts.toss.backend.web.filter.SpaWebFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -25,7 +25,7 @@ import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 import tech.jhipster.config.JHipsterProperties;
-import tech.jhipster.web.filter.CookieCsrfFilter;
+import com.phoenixdarts.toss.backend.filter.CookieCsrfFilter;
 
 @Configuration
 @EnableMethodSecurity(securedEnabled = true)

@@ -1,17 +1,17 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatBullOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatFreezeOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatInOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatOutOptionType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatTeamFinishOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatBullOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatFreezeOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatInOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatOutOptionType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatTeamFinishOptionType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchFormatOption} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchFormatOption} entity.
  */
 @Schema(description = "매치포맷 옵션")
 @SuppressWarnings("common-java:DuplicatedBlocks")

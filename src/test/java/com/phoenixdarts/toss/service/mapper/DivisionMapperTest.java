@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.DivisionAsserts.*;
-import static com.phoenixdarts.toss.domain.DivisionTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.DivisionAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.DivisionTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import com.phoenixdarts.toss.repository.MatchAttendanceRepository;
-import com.phoenixdarts.toss.service.MatchAttendanceService;
-import com.phoenixdarts.toss.service.dto.MatchAttendanceDTO;
-import com.phoenixdarts.toss.web.rest.errors.BadRequestAlertException;
+import com.phoenixdarts.toss.backend.repository.MatchAttendanceRepository;
+import com.phoenixdarts.toss.backend.service.MatchAttendanceService;
+import com.phoenixdarts.toss.backend.service.dto.MatchAttendanceDTO;
+import com.phoenixdarts.toss.backend.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -16,11 +16,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tech.jhipster.web.util.HeaderUtil;
-import tech.jhipster.web.util.ResponseUtil;
+import com.phoenixdarts.toss.backend.util.HeaderUtil;
+import com.phoenixdarts.toss.backend.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.phoenixdarts.toss.domain.MatchAttendance}.
+ * REST controller for managing {@link com.phoenixdarts.toss.backend.domain.MatchAttendance}.
  */
 @RestController
 @RequestMapping("/api/match-attendances")

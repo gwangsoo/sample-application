@@ -43,12 +43,12 @@
             <span>{{ operator.approvalStatus }}</span>
           </dd>
           <dt>
-            <span v-text="t$('tossApp.operator.operatorRole')"></span>
+            <span v-text="t$('tossApp.operator.role')"></span>
           </dt>
           <dd>
-            <div v-if="operator.operatorRole">
-              <router-link :to="{ name: 'OperatorRoleView', params: { operatorRoleId: operator.operatorRole.id } }">{{
-                operator.operatorRole.id
+            <div v-if="operator.role">
+              <router-link :to="{ name: 'OperatorRoleView', params: { operatorRoleId: operator.role.id } }">{{
+                operator.role.id
               }}</router-link>
             </div>
           </dd>

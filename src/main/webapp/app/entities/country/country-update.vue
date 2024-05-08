@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-8">
-      <form name="editForm" role="form" novalidate v-on:submit.prevent="save()">
+      <form name="editForm" auth="form" novalidate v-on:submit.prevent="save()">
         <h2
           id="tossApp.country.home.createOrEditLabel"
           data-cy="CountryCreateUpdateHeading"

@@ -1,14 +1,14 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.FirstThrowType;
-import com.phoenixdarts.toss.domain.enumeration.MatchFormatType;
+import com.phoenixdarts.toss.backend.domain.enumeration.FirstThrowType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MatchFormatType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchFormat} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchFormat} entity.
  */
 @Schema(description = "매치포맷")
 @SuppressWarnings("common-java:DuplicatedBlocks")

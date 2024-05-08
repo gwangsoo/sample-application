@@ -1,17 +1,17 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Competition;
-import com.phoenixdarts.toss.domain.Country;
-import com.phoenixdarts.toss.domain.EntryFee;
-import com.phoenixdarts.toss.domain.FileInfo;
-import com.phoenixdarts.toss.domain.Operator;
-import com.phoenixdarts.toss.domain.Reward;
-import com.phoenixdarts.toss.service.dto.CompetitionDTO;
-import com.phoenixdarts.toss.service.dto.CountryDTO;
-import com.phoenixdarts.toss.service.dto.EntryFeeDTO;
-import com.phoenixdarts.toss.service.dto.FileInfoDTO;
-import com.phoenixdarts.toss.service.dto.OperatorDTO;
-import com.phoenixdarts.toss.service.dto.RewardDTO;
+import com.phoenixdarts.toss.backend.domain.Competition;
+import com.phoenixdarts.toss.backend.domain.Country;
+import com.phoenixdarts.toss.backend.domain.EntryFee;
+import com.phoenixdarts.toss.backend.domain.FileInfo;
+import com.phoenixdarts.toss.backend.domain.Operator;
+import com.phoenixdarts.toss.backend.domain.Reward;
+import com.phoenixdarts.toss.backend.service.dto.CompetitionDTO;
+import com.phoenixdarts.toss.backend.service.dto.CountryDTO;
+import com.phoenixdarts.toss.backend.service.dto.EntryFeeDTO;
+import com.phoenixdarts.toss.backend.service.dto.FileInfoDTO;
+import com.phoenixdarts.toss.backend.service.dto.OperatorDTO;
+import com.phoenixdarts.toss.backend.service.dto.RewardDTO;
 import org.mapstruct.*;
 
 /**

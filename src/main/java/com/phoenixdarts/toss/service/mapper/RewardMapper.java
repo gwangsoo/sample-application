@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Reward;
-import com.phoenixdarts.toss.service.dto.RewardDTO;
+import com.phoenixdarts.toss.backend.domain.Reward;
+import com.phoenixdarts.toss.backend.service.dto.RewardDTO;
 import org.mapstruct.*;
 
 /**

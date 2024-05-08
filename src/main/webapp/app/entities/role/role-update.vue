@@ -1,24 +1,24 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-8">
-      <form name="editForm" role="form" novalidate v-on:submit.prevent="save()">
+      <form name="editForm" auth="form" novalidate v-on:submit.prevent="save()">
         <h2
-          id="tossApp.role.home.createOrEditLabel"
+          id="tossApp.auth.home.createOrEditLabel"
           data-cy="RoleCreateUpdateHeading"
-          v-text="t$('tossApp.role.home.createOrEditLabel')"
+          v-text="t$('tossApp.auth.home.createOrEditLabel')"
         ></h2>
         <div>
-          <div class="form-group" v-if="role.id">
+          <div class="form-group" v-if="auth.id">
             <label for="id" v-text="t$('global.field.id')"></label>
-            <input type="text" class="form-control" id="id" name="id" v-model="role.id" readonly />
+            <input type="text" class="form-control" id="id" name="id" v-model="auth.id" readonly />
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.role.name')" for="role-name"></label>
+            <label class="form-control-label" v-text="t$('tossApp.auth.name')" for="auth-name"></label>
             <input
               type="text"
               class="form-control"
               name="name"
-              id="role-name"
+              id="auth-name"
               data-cy="name"
               :class="{ valid: !v$.name.$invalid, invalid: v$.name.$invalid }"
               v-model="v$.name.$model"
@@ -29,13 +29,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.role.authScopeType')" for="role-authScopeType"></label>
+            <label class="form-control-label" v-text="t$('tossApp.auth.authScopeType')" for="auth-authScopeType"></label>
             <select
               class="form-control"
               name="authScopeType"
               :class="{ valid: !v$.authScopeType.$invalid, invalid: v$.authScopeType.$invalid }"
               v-model="v$.authScopeType.$model"
-              id="role-authScopeType"
+              id="auth-authScopeType"
               data-cy="authScopeType"
               required
             >
@@ -53,13 +53,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.role.authLevelType')" for="role-authLevelType"></label>
+            <label class="form-control-label" v-text="t$('tossApp.auth.authLevelType')" for="auth-authLevelType"></label>
             <select
               class="form-control"
               name="authLevelType"
               :class="{ valid: !v$.authLevelType.$invalid, invalid: v$.authLevelType.$invalid }"
               v-model="v$.authLevelType.$model"
-              id="role-authLevelType"
+              id="auth-authLevelType"
               data-cy="authLevelType"
               required
             >
@@ -77,12 +77,12 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.role.displayOrder')" for="role-displayOrder"></label>
+            <label class="form-control-label" v-text="t$('tossApp.auth.displayOrder')" for="auth-displayOrder"></label>
             <input
               type="number"
               class="form-control"
               name="displayOrder"
-              id="role-displayOrder"
+              id="auth-displayOrder"
               data-cy="displayOrder"
               :class="{ valid: !v$.displayOrder.$invalid, invalid: v$.displayOrder.$invalid }"
               v-model.number="v$.displayOrder.$model"
@@ -93,11 +93,11 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="t$('tossApp.role.operatorRole')" for="role-operatorRole"></label>
-            <select class="form-control" id="role-operatorRole" data-cy="operatorRole" name="operatorRole" v-model="role.operatorRole">
+            <label class="form-control-label" v-text="t$('tossApp.auth.role')" for="auth-role"></label>
+            <select class="form-control" id="auth-role" data-cy="role" name="role" v-model="auth.role">
               <option v-bind:value="null"></option>
               <option
-                v-bind:value="role.operatorRole && operatorRoleOption.id === role.operatorRole.id ? role.operatorRole : operatorRoleOption"
+                v-bind:value="auth.role && operatorRoleOption.id === auth.role.id ? auth.role : operatorRoleOption"
                 v-for="operatorRoleOption in operatorRoles"
                 :key="operatorRoleOption.id"
               >
@@ -124,4 +124,4 @@
     </div>
   </div>
 </template>
-<script lang="ts" src="./role-update.component.ts"></script>
+<script lang="ts" src="./auth-update.component.ts"></script>

@@ -1,12 +1,12 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.config.Constants;
-import com.phoenixdarts.toss.domain.User;
+import com.phoenixdarts.toss.backend.config.Constants;
+import com.phoenixdarts.toss.backend.domain.User;
 import jakarta.mail.Multipart;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeBodyPart;

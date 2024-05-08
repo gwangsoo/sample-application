@@ -1,9 +1,9 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.Competition;
-import com.phoenixdarts.toss.domain.MachineArea;
-import com.phoenixdarts.toss.service.dto.CompetitionDTO;
-import com.phoenixdarts.toss.service.dto.MachineAreaDTO;
+import com.phoenixdarts.toss.backend.domain.Competition;
+import com.phoenixdarts.toss.backend.domain.MachineArea;
+import com.phoenixdarts.toss.backend.service.dto.CompetitionDTO;
+import com.phoenixdarts.toss.backend.service.dto.MachineAreaDTO;
 import org.mapstruct.*;
 
 /**

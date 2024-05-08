@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.repository;
+package com.phoenixdarts.toss.backend.repository;
 
-import com.phoenixdarts.toss.domain.MatchCall;
+import com.phoenixdarts.toss.backend.domain.MatchCall;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import static com.phoenixdarts.toss.domain.EntryFeeAsserts.*;
-import static com.phoenixdarts.toss.domain.EntryFeeTestSamples.*;
+import static com.phoenixdarts.toss.backend.domain.EntryFeeAsserts.*;
+import static com.phoenixdarts.toss.backend.domain.EntryFeeTestSamples.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

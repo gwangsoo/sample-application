@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.FileInfoDTO;
+import com.phoenixdarts.toss.backend.service.dto.FileInfoDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.FileInfo}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.FileInfo}.
  */
 public interface FileInfoService {
     /**

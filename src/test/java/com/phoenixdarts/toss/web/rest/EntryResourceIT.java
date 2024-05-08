@@ -1,7 +1,7 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
-import static com.phoenixdarts.toss.domain.EntryAsserts.*;
-import static com.phoenixdarts.toss.web.rest.TestUtil.createUpdateProxyForBean;
+import static com.phoenixdarts.toss.backend.domain.EntryAsserts.*;
+import static com.phoenixdarts.toss.backend.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -10,12 +10,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.phoenixdarts.toss.IntegrationTest;
-import com.phoenixdarts.toss.domain.Entry;
-import com.phoenixdarts.toss.domain.enumeration.AttendanceStatusType;
-import com.phoenixdarts.toss.domain.enumeration.GenderType;
-import com.phoenixdarts.toss.repository.EntryRepository;
-import com.phoenixdarts.toss.service.dto.EntryDTO;
-import com.phoenixdarts.toss.service.mapper.EntryMapper;
+import com.phoenixdarts.toss.backend.domain.Entry;
+import com.phoenixdarts.toss.backend.domain.enumeration.AttendanceStatusType;
+import com.phoenixdarts.toss.backend.domain.enumeration.GenderType;
+import com.phoenixdarts.toss.backend.repository.EntryRepository;
+import com.phoenixdarts.toss.backend.service.dto.EntryDTO;
+import com.phoenixdarts.toss.backend.service.mapper.EntryMapper;
 import jakarta.persistence.EntityManager;
 import java.time.LocalDate;
 import java.time.ZoneId;

@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service.mapper;
+package com.phoenixdarts.toss.backend.service.mapper;
 
-import com.phoenixdarts.toss.domain.FileInfo;
-import com.phoenixdarts.toss.domain.RewardDetail;
-import com.phoenixdarts.toss.domain.RewardItem;
-import com.phoenixdarts.toss.service.dto.FileInfoDTO;
-import com.phoenixdarts.toss.service.dto.RewardDetailDTO;
-import com.phoenixdarts.toss.service.dto.RewardItemDTO;
+import com.phoenixdarts.toss.backend.domain.FileInfo;
+import com.phoenixdarts.toss.backend.domain.RewardDetail;
+import com.phoenixdarts.toss.backend.domain.RewardItem;
+import com.phoenixdarts.toss.backend.service.dto.FileInfoDTO;
+import com.phoenixdarts.toss.backend.service.dto.RewardDetailDTO;
+import com.phoenixdarts.toss.backend.service.dto.RewardItemDTO;
 import org.mapstruct.*;
 
 /**

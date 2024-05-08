@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Operator;
-import com.phoenixdarts.toss.repository.OperatorRepository;
-import com.phoenixdarts.toss.service.OperatorService;
-import com.phoenixdarts.toss.service.dto.OperatorDTO;
-import com.phoenixdarts.toss.service.mapper.OperatorMapper;
+import com.phoenixdarts.toss.backend.domain.Operator;
+import com.phoenixdarts.toss.backend.repository.OperatorRepository;
+import com.phoenixdarts.toss.backend.service.OperatorService;
+import com.phoenixdarts.toss.backend.service.dto.OperatorDTO;
+import com.phoenixdarts.toss.backend.service.mapper.OperatorMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Operator}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Operator}.
  */
 @Service
 @Transactional

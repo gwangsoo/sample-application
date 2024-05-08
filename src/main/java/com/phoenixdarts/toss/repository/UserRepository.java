@@ -1,6 +1,6 @@
-package com.phoenixdarts.toss.repository;
+package com.phoenixdarts.toss.backend.repository;
 
-import com.phoenixdarts.toss.domain.User;
+import com.phoenixdarts.toss.backend.domain.User;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;

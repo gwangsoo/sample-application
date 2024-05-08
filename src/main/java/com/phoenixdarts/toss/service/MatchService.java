@@ -1,11 +1,11 @@
-package com.phoenixdarts.toss.service;
+package com.phoenixdarts.toss.backend.service;
 
-import com.phoenixdarts.toss.service.dto.MatchDTO;
+import com.phoenixdarts.toss.backend.service.dto.MatchDTO;
 import java.util.List;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.phoenixdarts.toss.domain.Match}.
+ * Service Interface for managing {@link com.phoenixdarts.toss.backend.domain.Match}.
  */
 public interface MatchService {
     /**

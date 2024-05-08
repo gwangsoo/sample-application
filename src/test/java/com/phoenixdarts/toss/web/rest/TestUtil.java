@@ -1,4 +1,4 @@
-package com.phoenixdarts.toss.web.rest;
+package com.phoenixdarts.toss.backend.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

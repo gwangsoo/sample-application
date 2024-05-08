@@ -1,15 +1,15 @@
-package com.phoenixdarts.toss.service.dto;
+package com.phoenixdarts.toss.backend.service.dto;
 
-import com.phoenixdarts.toss.domain.enumeration.GameCategoryType;
-import com.phoenixdarts.toss.domain.enumeration.GameType;
-import com.phoenixdarts.toss.domain.enumeration.MachineCreditType;
+import com.phoenixdarts.toss.backend.domain.enumeration.GameCategoryType;
+import com.phoenixdarts.toss.backend.domain.enumeration.GameType;
+import com.phoenixdarts.toss.backend.domain.enumeration.MachineCreditType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.phoenixdarts.toss.domain.MatchFormatGame} entity.
+ * A DTO for the {@link com.phoenixdarts.toss.backend.domain.MatchFormatGame} entity.
  */
 @Schema(description = "매치포맷 게임")
 @SuppressWarnings("common-java:DuplicatedBlocks")

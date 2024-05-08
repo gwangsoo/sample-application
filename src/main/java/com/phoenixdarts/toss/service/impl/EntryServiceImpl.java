@@ -1,10 +1,10 @@
-package com.phoenixdarts.toss.service.impl;
+package com.phoenixdarts.toss.backend.service.impl;
 
-import com.phoenixdarts.toss.domain.Entry;
-import com.phoenixdarts.toss.repository.EntryRepository;
-import com.phoenixdarts.toss.service.EntryService;
-import com.phoenixdarts.toss.service.dto.EntryDTO;
-import com.phoenixdarts.toss.service.mapper.EntryMapper;
+import com.phoenixdarts.toss.backend.domain.Entry;
+import com.phoenixdarts.toss.backend.repository.EntryRepository;
+import com.phoenixdarts.toss.backend.service.EntryService;
+import com.phoenixdarts.toss.backend.service.dto.EntryDTO;
+import com.phoenixdarts.toss.backend.service.mapper.EntryMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.phoenixdarts.toss.domain.Entry}.
+ * Service Implementation for managing {@link com.phoenixdarts.toss.backend.domain.Entry}.
  */
 @Service
 @Transactional

@@ -1,7 +1,7 @@
 package com.phoenixdarts.toss;
 
-import com.phoenixdarts.toss.config.ApplicationProperties;
-import com.phoenixdarts.toss.config.CRLFLogConverter;
+import com.phoenixdarts.toss.backend.config.ApplicationProperties;
+import com.phoenixdarts.toss.backend.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
